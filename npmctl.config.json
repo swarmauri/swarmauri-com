@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "site": "swarmauri.com",
+  "repository": "swarmauri/swarmauri-com",
+  "orchestrator": "npmctl",
+  "dns": {
+    "provider": "namecheap",
+    "zone": "swarmauri.com",
+    "records": [
+      {
+        "type": "A",
+        "host": "@",
+        "value": "SELF_HOSTED_DOCKER_IP",
+        "ttl": 300
+      },
+      {
+        "type": "CNAME",
+        "host": "www",
+        "value": "swarmauri.com",
+        "ttl": 300
+      }
+    ]
+  },
+  "deploy": {
+    "target": "self-hosted-docker",
+    "service": "swarmauri-com",
+    "composeFile": "docker-compose.yaml"
+  },
+  "commands": {
+    "install": "npm ci",
+    "check": "npm run check",
+    "build": "npm run build",
+    "docker:build": "docker compose build swarmauri-com",
+    "dns:plan": "node scripts/namecheap-dns.mjs --plan",
+    "deploy:dry-run": "node scripts/deploy.mjs --dry-run",
+    "deploy": "docker compose up -d --build --force-recreate --no-deps swarmauri-com"
+  }
+}

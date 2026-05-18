@@ -1,0 +1,24 @@
+{
+  "host": "swarmauri.com",
+  "zone": "swarmauri.com",
+  "repository": "swarmauri/swarmauri-com",
+  "siteKind": "mdwrk-lander",
+  "orchestrator": "npmctl",
+  "dnsProvider": "namecheap",
+  "deployment": "self-hosted-docker",
+  "dockerService": "swarmauri-com",
+  "records": [
+    {
+      "type": "A",
+      "host": "@",
+      "value": "SELF_HOSTED_DOCKER_IP",
+      "ttl": 300
+    },
+    {
+      "type": "CNAME",
+      "host": "www",
+      "value": "swarmauri.com",
+      "ttl": 300
+    }
+  ]
+}
