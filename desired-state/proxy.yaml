@@ -1,0 +1,18 @@
+---
+apiVersion: npmctl.com/v1
+schemaVersion: 2
+proxy_hosts:
+  - domain_names:
+      - swarmauri.com
+      - www.swarmauri.com
+    forward_scheme: http
+    forward_host: swarmauri-com
+    forward_port: 80
+    ssl_forced: 1
+    http2_support: 1
+    allow_websocket_upgrade: 1
+    block_exploits: 1
+    meta:
+      managed_by: npmctl
+      owner: swarmauri-com
+      resource_id: proxy.swarmauri-com

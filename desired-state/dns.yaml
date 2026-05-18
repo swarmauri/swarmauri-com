@@ -1,0 +1,24 @@
+---
+apiVersion: npmctl.com/v1
+schemaVersion: 2
+dns_records:
+  - provider: namecheap
+    zone: swarmauri.com
+    type: A
+    name: "@"
+    value: 149.255.33.251
+    ttl: 300
+    meta:
+      managed_by: npmctl
+      owner: swarmauri-com
+      resource_id: dns.swarmauri-com.root-a
+  - provider: namecheap
+    zone: swarmauri.com
+    type: CNAME
+    name: "www"
+    value: swarmauri.com
+    ttl: 300
+    meta:
+      managed_by: npmctl
+      owner: swarmauri-com
+      resource_id: dns.swarmauri-com.www-cname

@@ -1,5 +1,7 @@
+import { useEffect, useState } from "react";
 import { LanderPage } from "@mdwrk/lander-react";
 import siteContent from "../packages/site-content-pack/src/index";
+import type { ImportedArticle } from "../packages/site-content-pack/src/articles.generated";
 
 const root = siteContent.product.canonicalUrl.replace(/\/+$/, "");
 const normalizePath = (value: string) => {
@@ -29,9 +31,18 @@ function currentPage() {
   const path = normalizePath(browserPath);
   return compilePage(siteContent.pages.find((candidate) => normalizePath(candidate.slug) === path) ?? siteContent.pages[0]);
 }
-export function App() {
-  const page = currentPage();
-  const compiledSite = { ...siteContent, pages: [page], pageByPath: new Map([[page.path, page]]), diagnostics: [] };
+function currentPath() {
+  const browserPath = typeof window === "undefined" ? "/" : window.location.pathname;
+  return normalizePath(browserPath);
+}
+function stripHtml(value: string) {
+  return value.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+}
+function formatDate(value: string) {
+  if (!value) return "";
+  return new Intl.DateTimeFormat("en", { dateStyle: "long", timeZone: "UTC" }).format(new Date(value));
+}
+function SiteChrome({ children }: { children: React.ReactNode }) {
   return (
     <div className="site-shell" style={{ ["--accent" as string]: "#0F766E" }}>
       <header className="site-header">
@@ -41,8 +52,71 @@ export function App() {
         </a>
         <nav aria-label="Primary navigation">{siteContent.nav?.primary.map((item) => <a key={item.href} href={item.href}>{item.label}</a>)}</nav>
       </header>
-      <main><LanderPage site={compiledSite as any} page={page as any} /></main>
+      <main>{children}</main>
       <footer><p>{siteContent.footer?.note}</p></footer>
     </div>
+  );
+}
+function ArticlePage({ article }: { article: ImportedArticle }) {
+  return (
+    <article className="article-page">
+      <nav className="article-breadcrumb" aria-label="Breadcrumb"><a href="/">Swarmauri</a><span>/</span><span>{article.title}</span></nav>
+      <header className="article-hero">
+        <p className="article-kicker">{formatDate(article.date)}</p>
+        <h1 dangerouslySetInnerHTML={{ __html: article.title }} />
+        {article.excerptHtml ? <div className="article-excerpt" dangerouslySetInnerHTML={{ __html: article.excerptHtml }} /> : null}
+        <p className="article-meta">
+          {article.authorName ? <>By {article.authorLink ? <a href={article.authorLink}>{article.authorName}</a> : article.authorName} / </> : null}
+          {[...article.categories, ...article.tags].slice(0, 8).join(" / ")}
+        </p>
+      </header>
+      {article.featuredImage ? <img className="article-image" src={article.featuredImage} alt="" /> : null}
+      <section className="article-content" dangerouslySetInnerHTML={{ __html: article.contentHtml }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": article.wpType === "page" ? "WebPage" : "Article",
+            headline: stripHtml(article.title),
+            datePublished: article.date,
+            dateModified: article.modified,
+            mainEntityOfPage: article.canonicalUrl,
+            image: article.featuredImage ? [article.featuredImage] : undefined
+          })
+        }}
+      />
+    </article>
+  );
+}
+export function App() {
+  const path = currentPath();
+  const pageMatch = siteContent.pages.find((candidate) => normalizePath(candidate.slug) === path);
+  const [article, setArticle] = useState<ImportedArticle | null>(null);
+  const [articleLoaded, setArticleLoaded] = useState(false);
+
+  useEffect(() => {
+    if (pageMatch) return;
+    let active = true;
+    import("../packages/site-content-pack/src/articles.generated").then((module) => {
+      if (!active) return;
+      setArticle(module.importedArticles.find((candidate) => normalizePath(candidate.legacyPath) === path) ?? null);
+      setArticleLoaded(true);
+    });
+    return () => {
+      active = false;
+    };
+  }, [pageMatch, path]);
+
+  if (article) {
+    return <SiteChrome><ArticlePage article={article} /></SiteChrome>;
+  }
+  if (!pageMatch && !articleLoaded) {
+    return <SiteChrome><p className="article-kicker">Loading article...</p></SiteChrome>;
+  }
+  const page = currentPage();
+  const compiledSite = { ...siteContent, pages: [page], pageByPath: new Map([[page.path, page]]), diagnostics: [] };
+  return (
+    <SiteChrome><LanderPage site={compiledSite as any} page={page as any} /></SiteChrome>
   );
 }
