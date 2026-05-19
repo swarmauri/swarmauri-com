@@ -83,6 +83,8 @@ jobs:
       - name: Check Nginx Proxy Manager API schema
         continue-on-error: true
         run: npmctl schema check
+      - name: Remove legacy conflicting NPM proxy hosts
+        run: python scripts/remove-conflicting-proxy-hosts.py desired-state/proxy.yaml
       - name: Adopt matching unmanaged NPM resources
         run: npmctl adopt desired-state/proxy.yaml --owner swarmauri-com --force
       - name: Plan Nginx Proxy Manager proxy host and certificates with npmctl
