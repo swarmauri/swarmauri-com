@@ -91,6 +91,7 @@ jobs:
       - name: Remove legacy conflicting NPM proxy hosts
         run: python scripts/remove-conflicting-proxy-hosts.py .tmp/npmctl/proxy.yaml
       - name: Adopt matching unmanaged NPM resources
+        continue-on-error: true
         run: npmctl adopt .tmp/npmctl/proxy.yaml --owner swarmauri-com --force
       - name: Plan Nginx Proxy Manager proxy host and certificates with npmctl
         run: npmctl plan .tmp/npmctl/proxy.yaml --owner swarmauri-com
