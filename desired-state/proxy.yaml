@@ -1,6 +1,25 @@
 ---
 apiVersion: npmctl.com/v1
 schemaVersion: 2
+certificates:
+  - name: swarmauri-com-letsencrypt
+    domain_names:
+      - swarmauri.com
+      - www.swarmauri.com
+    certificate_type: letsencrypt
+    api_payload:
+      provider: letsencrypt
+      meta:
+        letsencrypt_email: "__NPM_IDENTITY__"
+        letsencrypt_agree: true
+        dns_challenge: false
+        managed_by: npmctl
+        owner: swarmauri-com
+        resource_id: cert.swarmauri-com
+    meta:
+      managed_by: npmctl
+      owner: swarmauri-com
+      resource_id: cert.swarmauri-com
 proxy_hosts:
   - domain_names:
       - swarmauri.com
@@ -8,8 +27,11 @@ proxy_hosts:
     forward_scheme: http
     forward_host: swarmauri-com
     forward_port: 80
+    certificate_ref: cert.swarmauri-com
     ssl_forced: 1
     http2_support: 1
+    hsts_enabled: 1
+    hsts_subdomains: 0
     allow_websocket_upgrade: 1
     block_exploits: 1
     meta:
