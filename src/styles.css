@@ -46,8 +46,8 @@ footer {
 
 .site-brand img {
   display: block;
-  width: 42px;
-  height: auto;
+  width: auto;
+  height: 42px;
 }
 
 .site-header nav,

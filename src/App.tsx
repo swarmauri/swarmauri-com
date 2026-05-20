@@ -29,7 +29,7 @@ function SiteChrome({ children }: { children: React.ReactNode }) {
     <div className="site-shell">
       <header className="site-header">
         <a className="site-brand" href="/" aria-label="Swarmauri home">
-          <img src="/assets/brand/swarmauri/swarmauri-head-orange.png" alt="Swarmauri" />
+          <img src="/assets/brand/swarmauri/swarmauri-brand-horizontal.png" alt="Swarmauri" />
         </a>
         <nav aria-label="Primary navigation">
           <a href="https://github.com/swarmauri/swarmauri-sdk">GitHub</a>
