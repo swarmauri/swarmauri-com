@@ -24,6 +24,15 @@ function excerptText(article: ImportedArticle) {
   return value.length > 185 ? `${value.slice(0, 182).trim()}...` : value;
 }
 
+const currentYear = new Date().getUTCFullYear();
+const footerLinks = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about/" },
+  { label: "Contact", href: "/contact/" },
+  { label: "Privacy", href: "/privacy-policy/" },
+  ...(siteContent.footer?.links ?? []),
+].filter((link, index, array) => array.findIndex((candidate) => candidate.href === link.href) === index);
+
 function SiteChrome({ children }: { children: React.ReactNode }) {
   return (
     <div className="site-shell">
@@ -39,11 +48,14 @@ function SiteChrome({ children }: { children: React.ReactNode }) {
       </header>
       <main>{children}</main>
       <footer>
-        <p>Swarmauri builds composable Python infrastructure for agentic and AI-native software.</p>
-        <div>
-          <a href="https://github.com/swarmauri">GitHub</a>
-          <a href="https://docs.swarmauri.com">Documentation</a>
-          <a href="/privacy-policy/">Privacy</a>
+        <div className="footer-copy">
+          <p>{siteContent.footer?.note || "Swarmauri builds composable Python infrastructure for agentic and AI-native software."}</p>
+          <small>Copyright {currentYear} {siteContent.product.name}. All rights reserved.</small>
+        </div>
+        <div className="footer-links">
+          {footerLinks.map((link) => (
+            <a key={link.href} href={link.href}>{link.label}</a>
+          ))}
         </div>
       </footer>
     </div>
