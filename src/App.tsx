@@ -75,7 +75,7 @@ function HomePage() {
   return (
     <SiteChrome>
       <section className="home-hero" aria-labelledby="hero-title">
-        <p className="eyebrow">Swarmauri</p>
+        <p className="eyebrow">Composable AI systems</p>
         <h1 id="hero-title">Composable intelligence infrastructure.</h1>
         <p>
           Open source packages, SDK primitives, and governed workflows for teams building AI systems that need to be
@@ -104,6 +104,7 @@ function HomePage() {
       </section>
 
       <section className="compact-links" aria-label="Project links">
+        <a href="https://docs.swarmauri.com">Docs</a>
         <a href="/2024/04/08/swarmauri-sdk/">SDK overview</a>
         <a href="/services-and-solutions/">Services and solutions</a>
         <a href="/about/">About</a>
