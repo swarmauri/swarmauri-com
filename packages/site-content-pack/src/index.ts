@@ -19,7 +19,7 @@ export const siteContent = {
   footer: {
     note: "Swarmauri is maintained by swarmauri.",
     links: [
-      { label: "GitHub", href: "https://github.com/swarmauri/swarmauri-com" },
+      { label: "GitHub", href: "https://github.com/swarmauri/swarmauri-sdk" },
       { label: "Docs", href: "https://docs.swarmauri.com" }
     ]
   },
