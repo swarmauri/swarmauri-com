@@ -8,6 +8,8 @@ import StructuredData from "../components/StructuredData";
 import GuideListItem from "../components/GuideListItem";
 import GuideViewer from "../components/GuideViewer";
 import SEO from "../components/SEO";
+import FaqQuestionAnswerList from "../components/uix/FaqQuestionAnswerList";
+import { FAQ_ITEMS } from "../data/faq";
 
 export default function GuidesPage() {
   const { guideId } = useParams<{ guideId?: string }>();
@@ -38,20 +40,10 @@ export default function GuidesPage() {
 
       const faqs = faqPageSchema({
         id: "https://swarmauri.com/guides/#faq",
-        items: [
-          {
-            question: "What is Swarmauri's packaging philosophy?",
-            answer: "Swarmauri separates pure Python interface definitions from execution packages. This avoids dragging massive SaaS client libraries into environments where they are not required."
-          },
-          {
-            question: "How do I swap model providers?",
-            answer: "Because all LLMs subclass the common IModel protocol, you can hot-swap providers like OpenAI, Groq, or Gemini by changing exactly one line of model initialization."
-          },
-          {
-            question: "Is Swarmauri fully typed?",
-            answer: "Yes, Swarmauri uses Python protocols and strict typing layers to enforce contract correctness at static analysis time."
-          }
-        ]
+        items: FAQ_ITEMS.slice(0, 3).map((item) => ({
+          question: item.question,
+          answer: item.answer.replace(/`|\*\*|\[([^\]]+)\]\([^)]+\)/g, "$1")
+        }))
       });
 
       // Construct a compliant HowTo schema for the guide
@@ -137,26 +129,7 @@ export default function GuidesPage() {
               <span>Frequently Asked Questions</span>
             </h3>
 
-            <div className="space-y-4 text-xs">
-              <div className="space-y-1">
-                <h4 className="font-bold text-zinc-800">What is Swarmauri's packaging philosophy?</h4>
-                <p className="text-zinc-600 leading-relaxed">
-                  Swarmauri separates pure Python interface definitions from execution packages. This avoids dragging massive SaaS client libraries into environments where they are not required.
-                </p>
-              </div>
-              <div className="space-y-1">
-                <h4 className="font-bold text-zinc-800">How do I swap model providers?</h4>
-                <p className="text-zinc-600 leading-relaxed">
-                  Because all LLMs subclass the common IModel protocol, you can hot-swap providers like OpenAI, Groq, or Gemini by changing exactly one line of model initialization.
-                </p>
-              </div>
-              <div className="space-y-1">
-                <h4 className="font-bold text-zinc-800">Is Swarmauri fully typed?</h4>
-                <p className="text-zinc-600 leading-relaxed">
-                  Yes, Swarmauri uses Python protocols and strict typing layers to enforce contract correctness at static analysis time.
-                </p>
-              </div>
-            </div>
+            <FaqQuestionAnswerList items={FAQ_ITEMS.slice(0, 3)} />
           </section>
         </div>
       </div>

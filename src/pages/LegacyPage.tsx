@@ -5,6 +5,7 @@ import { breadcrumbListSchema } from "@mdwrk/structured-data";
 import StructuredData from "../components/StructuredData";
 import SEO from "../components/SEO";
 import { findLegacyPageByPath } from "../data/legacyContent";
+import MarkdownBody from "../components/MarkdownBody";
 
 export default function LegacyPage() {
   const location = useLocation();
@@ -71,9 +72,7 @@ export default function LegacyPage() {
           <p className="font-medium text-zinc-800 text-base leading-relaxed bg-zinc-50 p-4 rounded-lg border border-zinc-200/50">
             {page.summary}
           </p>
-          <div className="whitespace-pre-wrap pt-4">
-            {page.content}
-          </div>
+          <MarkdownBody markdown={page.content} className="pt-4" />
         </div>
       </article>
     </div>

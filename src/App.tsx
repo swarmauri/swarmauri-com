@@ -14,6 +14,7 @@ import CommunityPage from "./pages/CommunityPage";
 import PrivacyTermsPage from "./pages/PrivacyTermsPage";
 import LegacyPage from "./pages/LegacyPage";
 import LegacyUpdateRedirect from "./pages/LegacyUpdateRedirect";
+import FaqPage from "./pages/FaqPage";
 
 export default function App() {
   return (
@@ -56,7 +57,7 @@ export default function App() {
           <Route path="about" element={<LegacyPage />} />
           <Route path="contact" element={<LegacyPage />} />
           <Route path="docs" element={<LegacyPage />} />
-          <Route path="faq" element={<LegacyPage />} />
+          <Route path="faq" element={<FaqPage />} />
           <Route path="services-and-solutions" element={<LegacyPage />} />
 
           {/* Previous WordPress post URL shape */}

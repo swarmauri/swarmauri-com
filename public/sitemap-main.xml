@@ -38,6 +38,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://swarmauri.com/faq</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://swarmauri.com/privacy-terms</loc>
     <lastmod>2026-06-26</lastmod>
     <changefreq>yearly</changefreq>
@@ -69,12 +75,6 @@
   </url>
   <url>
     <loc>https://swarmauri.com/docs</loc>
-    <lastmod>2026-06-26</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://swarmauri.com/faq</loc>
     <lastmod>2026-06-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>

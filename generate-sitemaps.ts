@@ -47,7 +47,7 @@ function generateMasterIndex(): string {
 }
 
 function generateMainSitemap(): string {
-  const emptyLegacyPages = new Set(['careers', 'privacy-policy', 'terms-of-service']);
+  const emptyLegacyPages = new Set(['careers', 'faq', 'privacy-policy', 'terms-of-service']);
   const legacyRoutes = LEGACY_PAGES
     .filter(page => !emptyLegacyPages.has(page.id))
     .map(page => ({
@@ -63,6 +63,7 @@ function generateMainSitemap(): string {
     { path: 'composer', changefreq: 'daily', priority: '0.8' },
     { path: 'claims', changefreq: 'monthly', priority: '0.7' },
     { path: 'community', changefreq: 'weekly', priority: '0.7' },
+    { path: 'faq', changefreq: 'weekly', priority: '0.7' },
     { path: 'privacy-terms', changefreq: 'yearly', priority: '0.3' },
     { path: 'privacy-policy', changefreq: 'yearly', priority: '0.3' },
     { path: 'terms-of-service', changefreq: 'yearly', priority: '0.3' },

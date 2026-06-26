@@ -8,6 +8,7 @@ import { generateTechArticleSchema } from "../utils/schema";
 import StructuredData from "../components/StructuredData";
 import UpdatePostCard from "../components/UpdatePostCard";
 import SEO from "../components/SEO";
+import MarkdownBody from "../components/MarkdownBody";
 
 export default function UpdatesPage() {
   const { postId } = useParams<{ postId?: string }>();
@@ -145,9 +146,7 @@ export default function UpdatesPage() {
             <p className="font-medium text-zinc-800 text-base leading-relaxed bg-zinc-50 p-4 rounded-lg border border-zinc-200/50">
               {activePost.summary}
             </p>
-            <div className="whitespace-pre-wrap pt-2">
-              {activePost.content}
-            </div>
+            <MarkdownBody markdown={activePost.content} className="pt-2" />
           </div>
         </div>
       ) : (

@@ -11,3 +11,68 @@
     animation: spin 8s linear infinite;
   }
 }
+
+@layer components {
+  .swarmauri-markdown-body {
+    font-size: 0.875rem;
+  }
+
+  .swarmauri-markdown-body h1,
+  .swarmauri-markdown-body h2,
+  .swarmauri-markdown-body h3,
+  .swarmauri-markdown-body h4 {
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #18181b;
+    font-family: var(--font-sans);
+    font-weight: 800;
+  }
+
+  .swarmauri-markdown-body h1 {
+    font-size: 1.5rem;
+  }
+
+  .swarmauri-markdown-body h2 {
+    font-size: 1.25rem;
+  }
+
+  .swarmauri-markdown-body h3 {
+    font-size: 1rem;
+  }
+
+  .swarmauri-markdown-body p,
+  .swarmauri-markdown-body ul,
+  .swarmauri-markdown-body ol,
+  .swarmauri-markdown-body pre,
+  .swarmauri-markdown-body table {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .swarmauri-markdown-body ul,
+  .swarmauri-markdown-body ol {
+    padding-left: 1.25rem;
+  }
+
+  .swarmauri-markdown-body li {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .swarmauri-markdown-body a {
+    color: #4f46e5;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .swarmauri-markdown-body pre {
+    border-radius: 0.5rem;
+    border: 1px solid #27272a;
+    padding: 1rem;
+  }
+
+  .swarmauri-markdown-body code {
+    font-family: var(--font-mono);
+  }
+}
