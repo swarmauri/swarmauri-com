@@ -5,13 +5,14 @@ import "@mdwrk/markdown-renderer-react/styles/default.css";
 interface MarkdownBodyProps {
   markdown: string;
   className?: string;
+  compact?: boolean;
 }
 
-export default function MarkdownBody({ markdown, className = "" }: MarkdownBodyProps) {
+export default function MarkdownBody({ markdown, className = "", compact = false }: MarkdownBodyProps) {
   return (
     <MarkdownRenderer
       markdown={markdown}
-      className={`markdown-body swarmauri-markdown-body ${className}`.trim()}
+      className={`markdown-body swarmauri-markdown-body ${compact ? "swarmauri-markdown-body-compact" : ""} ${className}`.trim()}
       htmlHandling="escape"
       getLinkAttributes={(href) =>
         href?.startsWith("http")
@@ -24,10 +25,10 @@ export default function MarkdownBody({ markdown, className = "" }: MarkdownBodyP
         background: "transparent",
         border: "#e4e4e7",
         accent: "#4f46e5",
-        codeInlineBackground: "#f4f4f5",
+        codeInlineBackground: "#ececf0",
         codeInlineForeground: "#27272a",
-        codeBlockBackground: "#09090b",
-        codeBlockForeground: "#e0e7ff",
+        codeBlockBackground: "#f1f1f3",
+        codeBlockForeground: "#27272a",
         fontUi: "Inter, ui-sans-serif, system-ui, sans-serif",
         fontMono: "JetBrains Mono, ui-monospace, SFMono-Regular, monospace",
         lineHeight: "1.7",

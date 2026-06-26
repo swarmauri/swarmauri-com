@@ -12,67 +12,99 @@
   }
 }
 
-@layer components {
-  .swarmauri-markdown-body {
-    font-size: 0.875rem;
-  }
+.faq-qa-question {
+  color: #18181b;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.35;
+}
 
-  .swarmauri-markdown-body h1,
-  .swarmauri-markdown-body h2,
-  .swarmauri-markdown-body h3,
-  .swarmauri-markdown-body h4 {
-    margin-top: 1.25rem;
-    margin-bottom: 0.5rem;
-    color: #18181b;
-    font-family: var(--font-sans);
-    font-weight: 800;
-  }
+.swarmauri-markdown-body {
+  color: #52525b;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.875rem;
+}
 
-  .swarmauri-markdown-body h1 {
-    font-size: 1.5rem;
-  }
+.swarmauri-markdown-body-compact {
+  font-size: 0.75rem;
+}
 
-  .swarmauri-markdown-body h2 {
-    font-size: 1.25rem;
-  }
+.swarmauri-markdown-body h1,
+.swarmauri-markdown-body h2,
+.swarmauri-markdown-body h3,
+.swarmauri-markdown-body h4 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #18181b;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 800;
+}
 
-  .swarmauri-markdown-body h3 {
-    font-size: 1rem;
-  }
+.swarmauri-markdown-body h1 {
+  font-size: 1.5rem;
+}
 
-  .swarmauri-markdown-body p,
-  .swarmauri-markdown-body ul,
-  .swarmauri-markdown-body ol,
-  .swarmauri-markdown-body pre,
-  .swarmauri-markdown-body table {
-    margin-top: 0.75rem;
-    margin-bottom: 0.75rem;
-  }
+.swarmauri-markdown-body h2 {
+  font-size: 1.25rem;
+}
 
-  .swarmauri-markdown-body ul,
-  .swarmauri-markdown-body ol {
-    padding-left: 1.25rem;
-  }
+.swarmauri-markdown-body h3 {
+  font-size: 1rem;
+}
 
-  .swarmauri-markdown-body li {
-    margin-top: 0.25rem;
-    margin-bottom: 0.25rem;
-  }
+.swarmauri-markdown-body p,
+.swarmauri-markdown-body ul,
+.swarmauri-markdown-body ol,
+.swarmauri-markdown-body pre,
+.swarmauri-markdown-body table {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
 
-  .swarmauri-markdown-body a {
-    color: #4f46e5;
-    font-weight: 600;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-  }
+.faq-qa-answer .swarmauri-markdown-body p:first-child {
+  margin-top: 0;
+}
 
-  .swarmauri-markdown-body pre {
-    border-radius: 0.5rem;
-    border: 1px solid #27272a;
-    padding: 1rem;
-  }
+.swarmauri-markdown-body ul,
+.swarmauri-markdown-body ol {
+  padding-left: 1.25rem;
+}
 
-  .swarmauri-markdown-body code {
-    font-family: var(--font-mono);
-  }
+.swarmauri-markdown-body li {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.swarmauri-markdown-body a {
+  color: #4f46e5;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.swarmauri-markdown-body .md-inline-code {
+  border: 1px solid #dedee3;
+  border-radius: 0.25rem;
+  background: #ececf0;
+  padding: 0.05rem 0.25rem;
+}
+
+.swarmauri-markdown-body .md-code-block,
+.swarmauri-markdown-body .md-code-surface {
+  border: 1px solid #dedee3;
+  background: #f1f1f3;
+  color: #27272a;
+}
+
+.swarmauri-markdown-body pre {
+  border-radius: 0.5rem;
+  border: 1px solid #dedee3;
+  background: #f1f1f3;
+  padding: 1rem;
+}
+
+.swarmauri-markdown-body code,
+.swarmauri-markdown-body .md-code-content {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 }
