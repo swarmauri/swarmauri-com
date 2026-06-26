@@ -1,0 +1,40 @@
+# ====================================================================
+# robots.txt - Swarmauri AI Composable Platform Crawling Instructions
+# Optimized for traditional search engines (SEO) and modern AI/LLM crawlers (AEO/AiEO)
+# ====================================================================
+
+# Global Instructions for standard Search Engines
+User-agent: *
+Allow: /
+Allow: /sitemap.xml
+Allow: /sitemap-main.xml
+Allow: /sitemap-packages.xml
+Allow: /sitemap-guides.xml
+Allow: /sitemap-updates.xml
+Allow: /sitemap-careers.xml
+Allow: /llms.txt
+Disallow: /api/
+
+# Specialized Guidelines for modern AI Engine scrapers and AI Agents
+User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+
+User-agent: ClaudeBot
+Allow: /
+Allow: /llms.txt
+
+User-agent: PerplexityBot
+Allow: /
+Allow: /llms.txt
+
+User-agent: Applebot-Extended
+Allow: /
+Allow: /llms.txt
+
+User-agent: Google-Extended
+Allow: /
+Allow: /llms.txt
+
+# Specify XML Sitemap Locations
+Sitemap: https://swarmauri.com/sitemap.xml

@@ -1,12 +1,17 @@
 # swarmauri.com
 
-Standalone MdWrk lander repository for [swarmauri.com](https://swarmauri.com).
+Standalone Vite/React portfolio website for [swarmauri.com](https://swarmauri.com).
+
+The app includes Swarmauri platform, package portfolio, architecture, composer,
+guides, claims, updates, careers, community, and legal routes. Sitemap files are
+generated from the local app data before development and production builds.
 
 ## Commands
 
 - `npm ci`
 - `npm run check`
 - `npm run build`
+- `npm run dev`
 - `npm run docker:build`
 - `npm run dns:plan` (uses PyPI `npmctl>=0.3.10` plus `npmctl-namecheap>=0.3.10`)
 - `npm run proxy:plan` (uses PyPI `npmctl`)
