@@ -338,6 +338,8 @@ function main() {
   const members = new Set(workspaceMembers);
   const duplicateWorkspaceMembers = [...new Set(workspaceMembers.filter((member, index) => workspaceMembers.indexOf(member) !== index))];
   const rootProject = workspace.project || {};
+  const namespacePackage = safeReadToml(path.join(sdkPkgsRoot, "swarmauri", "pyproject.toml"));
+  const namespaceProject = namespacePackage.project || {};
 
   const layerCounts = new Map();
   const familyCounts = new Map();
@@ -416,7 +418,9 @@ function main() {
 
   writeDataFile({
     metadata: {
-      version: rootProject.version || "unknown",
+      version: namespaceProject.version || rootProject.version || "unknown",
+      versionPackage: namespaceProject.name || "swarmauri",
+      monorepoVersion: rootProject.version || "unknown",
       pythonSupport: rootProject["requires-python"] || ">=3.10,<3.15",
       totalWorkspaceMemberEntries: workspaceMembers.length,
       totalWorkspaceMembers: members.size,

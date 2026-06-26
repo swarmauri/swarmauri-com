@@ -140,7 +140,7 @@ export default function Footer() {
           <div className="flex space-x-4 mt-4 md:mt-0">
             <span className="flex items-center space-x-1 text-green-500">
               <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-              <span className="text-[10px] uppercase font-mono tracking-wider font-bold">CATALOG SNAPSHOT - {SDK_METADATA.version}</span>
+              <span className="text-[10px] uppercase font-mono tracking-wider font-bold">SWARMAURI PACKAGE - {SDK_METADATA.version}</span>
             </span>
             <Link to="/privacy-terms" onClick={handleScrollTop} className="hover:text-zinc-300">Privacy & Terms</Link>
           </div>
