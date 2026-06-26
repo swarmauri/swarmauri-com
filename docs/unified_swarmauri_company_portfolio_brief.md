@@ -186,8 +186,8 @@ Attached artifact:
 
 - File: `E:\Downloads\swarmauri-sdk-portfolio (3).zip`
 - Extracted review path: `E:\swarmauri_github\.tmp\swarmauri-sdk-portfolio-3`
-- App type: Vite/React app generated from an AI Studio-style scaffold.
-- Dependencies include React, React Router, Tailwind/Vite, lucide-react, motion, and `@google/genai`.
+- App type: Vite/React portfolio app.
+- Dependencies include React, React Router, Tailwind/Vite, lucide-react, and motion.
 - Main routes:
   - `/`
   - `/architecture`
@@ -222,7 +222,7 @@ Portfolio app gaps:
 - Some package examples are not present as split packages in the live repo. Example: `swarmauri_tool_calculator` and `swarmauri_tool_websearch` are not current `pkgs/standards` split-package directories, while `CalculatorTool` exists under `swarmauri_standard`.
 - Several UI copy strings overstate verification, for example "Repository Audit Complete" and "Google Rich Results Compliant"; these should only appear after current automated validation.
 - Structured data currently claims `numberOfItems: 305`; it must be generated from current data.
-- The app should not use `@google/genai` unless there is a real user-facing AI feature with a secure backend boundary.
+- The app should not add model-provider SDKs unless there is a real user-facing AI feature with a secure backend boundary.
 
 ## Unified Domain And Routing Vision
 
@@ -612,7 +612,7 @@ Phase 2: Harden the existing portfolio app
 - Replace the existing app's hard-coded catalog facts with generated JSON while preserving its UX model.
 - Generate clean package routes and sitemap entries from the existing app's route structure.
 - Replace 305-count structured data with generated counts.
-- Remove or justify `@google/genai`.
+- Keep model-provider SDKs out of the browser bundle unless a secure backend feature requires them.
 
 Phase 3: Docs cleanup
 

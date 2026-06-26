@@ -12,6 +12,8 @@ import UpdatesPage from "./pages/UpdatesPage";
 import CareersPage from "./pages/CareersPage";
 import CommunityPage from "./pages/CommunityPage";
 import PrivacyTermsPage from "./pages/PrivacyTermsPage";
+import LegacyPage from "./pages/LegacyPage";
+import LegacyUpdateRedirect from "./pages/LegacyUpdateRedirect";
 
 export default function App() {
   return (
@@ -47,6 +49,18 @@ export default function App() {
           
           <Route path="community" element={<CommunityPage />} />
           <Route path="privacy-terms" element={<PrivacyTermsPage />} />
+          <Route path="privacy-policy" element={<PrivacyTermsPage />} />
+          <Route path="terms-of-service" element={<PrivacyTermsPage />} />
+
+          {/* Migrated legacy website pages */}
+          <Route path="about" element={<LegacyPage />} />
+          <Route path="contact" element={<LegacyPage />} />
+          <Route path="docs" element={<LegacyPage />} />
+          <Route path="faq" element={<LegacyPage />} />
+          <Route path="services-and-solutions" element={<LegacyPage />} />
+
+          {/* Previous WordPress post URL shape */}
+          <Route path=":year/:month/:day/:legacySlug" element={<LegacyUpdateRedirect />} />
           
           {/* Fallback routing */}
           <Route path="*" element={<Navigate to="/" replace />} />

@@ -67,6 +67,16 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/docs" onClick={handleScrollTop} className="hover:text-white transition-colors">
+                  Legacy Docs Overview
+                </Link>
+              </li>
+              <li>
+                <Link to="/faq" onClick={handleScrollTop} className="hover:text-white transition-colors">
+                  FAQ
+                </Link>
+              </li>
+              <li>
                 <a href="https://github.com/swarmauri/swarmauri-sdk" target="_blank" rel="noreferrer" className="hover:text-white transition-colors flex items-center space-x-1">
                   <span>GitHub Source</span>
                 </a>
@@ -89,6 +99,11 @@ export default function Footer() {
             <h3 className="text-white text-xs font-semibold uppercase tracking-wider mb-3">Company</h3>
             <ul className="space-y-2 text-xs">
               <li>
+                <Link to="/about" onClick={handleScrollTop} className="hover:text-white transition-colors">
+                  About Swarmauri
+                </Link>
+              </li>
+              <li>
                 <Link to="/careers" onClick={handleScrollTop} className="hover:text-white transition-colors">
                   Careers & Culture
                 </Link>
@@ -99,8 +114,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/community" onClick={handleScrollTop} className="hover:text-white transition-colors">
-                  Support & Contact
+                <Link to="/services-and-solutions" onClick={handleScrollTop} className="hover:text-white transition-colors">
+                  Services & Solutions
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" onClick={handleScrollTop} className="hover:text-white transition-colors">
+                  Contact
                 </Link>
               </li>
               <li>

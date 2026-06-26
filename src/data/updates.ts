@@ -1,6 +1,7 @@
 import { UpdatePost } from "../types";
+import { LEGACY_UPDATE_POSTS } from "./legacyContent";
 
-export const UPDATE_POSTS: UpdatePost[] = [
+const CURRENT_UPDATE_POSTS: UpdatePost[] = [
   {
     id: "up-01",
     title: "Swarmauri SDK 0.6.2.dev3 Release: Granular Workspace Refactoring",
@@ -33,4 +34,9 @@ export const UPDATE_POSTS: UpdatePost[] = [
     summary: "Step-by-step developer guide on subclassing ModelBase or ToolBase to wrap proprietary business logic.",
     content: "This guide details how easy it is to leverage Pydantic v2 validation inside custom adapter packages. Learn about field parsing constraints, dynamic schema metadata exports, and seamless integration into Swarmauri's dynamic importer engine."
   }
+];
+
+export const UPDATE_POSTS: UpdatePost[] = [
+  ...CURRENT_UPDATE_POSTS,
+  ...LEGACY_UPDATE_POSTS
 ];

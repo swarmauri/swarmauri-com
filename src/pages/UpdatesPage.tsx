@@ -14,7 +14,10 @@ export default function UpdatesPage() {
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
-  const categories = ["all", "Release Notes", "Package Highlights", "Architecture Notes", "Tutorials"];
+  const categories = useMemo(
+    () => ["all", ...Array.from(new Set(UPDATE_POSTS.map((post) => post.category)))],
+    []
+  );
 
   // Identify active post
   const activePost = useMemo(() => {

@@ -31,4 +31,52 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://swarmauri.com/updates/archive-sdk-release-v0-7-0</loc>
+    <lastmod>2025-03-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://swarmauri.com/updates/archive-sdk-release-v0-6-1</loc>
+    <lastmod>2025-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://swarmauri.com/updates/archive-crouton-v0-0-4-dev</loc>
+    <lastmod>2024-12-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://swarmauri.com/updates/archive-sdk-release-v0-5-2</loc>
+    <lastmod>2024-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://swarmauri.com/updates/archive-swarmauri-sdk-release-0_5_0</loc>
+    <lastmod>2024-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://swarmauri.com/updates/archive-release-v0-4-1-sdk</loc>
+    <lastmod>2024-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://swarmauri.com/updates/archive-serialization-and-swarmauri</loc>
+    <lastmod>2024-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://swarmauri.com/updates/archive-swarmauri-sdk</loc>
+    <lastmod>2024-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>

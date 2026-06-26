@@ -1,6 +1,0 @@
-{
-  "name": "Swarmauri Portfolio",
-  "description": "Unified open-source product portfolio, package catalog, architecture explorer, and workflow composer for Swarmauri's composable intelligence infrastructure.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
