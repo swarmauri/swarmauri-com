@@ -25,14 +25,18 @@ export default function MarkdownBody({ markdown, className = "", compact = false
         background: "transparent",
         border: "#e4e4e7",
         accent: "#4f46e5",
-        codeInlineBackground: "#ececf0",
+        codeInlineBackground: "#f1f1f3",
         codeInlineForeground: "#27272a",
-        codeBlockBackground: "#f1f1f3",
+        codeBlockBackground: "#f4f4f5",
         codeBlockForeground: "#27272a",
+        codeHeaderBackground: "#ececf0",
+        codeHeaderForeground: "#52525b",
+        codeLanguageBackground: "transparent",
+        codeLanguageForeground: "#52525b",
         fontUi: "Inter, ui-sans-serif, system-ui, sans-serif",
         fontMono: "JetBrains Mono, ui-monospace, SFMono-Regular, monospace",
-        lineHeight: "1.7",
-        headingLineHeight: "1.2",
+        lineHeight: "1.65",
+        headingLineHeight: "1.25",
       }}
     />
   );
