@@ -2,9 +2,21 @@ import React from "react";
 
 interface PythonCodeHighlightProps {
   code: string;
+  language?: "python" | "bash";
 }
 
-export default function PythonCodeHighlight({ code }: PythonCodeHighlightProps) {
+export default function PythonCodeHighlight({
+  code,
+  language = "python",
+}: PythonCodeHighlightProps) {
+  if (language === "bash") {
+    return <code className="font-mono">{highlightBash(code)}</code>;
+  }
+
+  return <code className="font-mono">{highlightPython(code)}</code>;
+}
+
+function highlightPython(code: string) {
   // Regex to capture python elements:
   // 1. Comments: #[^\r\n]*
   // 2. Triple-quoted strings or single-quoted/double-quoted strings:
@@ -75,5 +87,59 @@ export default function PythonCodeHighlight({ code }: PythonCodeHighlightProps) 
     addText(code.substring(lastIndex));
   }
 
-  return <code className="font-mono">{elements}</code>;
+  return elements;
+}
+
+function highlightBash(code: string) {
+  const regex =
+    /(\$)|(#.*$)|\b(uv|pip|python|python3|npm|npx|pnpm|yarn|git|docker|pytest|ruff)\b|(--)?[A-Za-z][\w-]*(?=\s|$)|(".*?"|'.*?')/gm;
+
+  let match;
+  let lastIndex = 0;
+  const elements: React.ReactNode[] = [];
+  let key = 0;
+
+  const addText = (text: string) => {
+    if (!text) return;
+    elements.push(<span key={key++}>{text}</span>);
+  };
+
+  const addSpan = (text: string, className: string) => {
+    elements.push(
+      <span key={key++} className={className}>
+        {text}
+      </span>
+    );
+  };
+
+  while ((match = regex.exec(code)) !== null) {
+    const matchIndex = match.index;
+    const matchText = match[0];
+
+    if (matchIndex > lastIndex) {
+      addText(code.substring(lastIndex, matchIndex));
+    }
+
+    if (match[1]) {
+      addSpan(matchText, "text-zinc-500 select-none");
+    } else if (match[2]) {
+      addSpan(matchText, "text-zinc-500 italic");
+    } else if (match[3]) {
+      addSpan(matchText, "text-sky-300 font-semibold");
+    } else if (match[4]) {
+      addSpan(matchText, "text-violet-300 font-medium");
+    } else if (match[5]) {
+      addSpan(matchText, "text-emerald-300 font-medium");
+    } else {
+      addText(matchText);
+    }
+
+    lastIndex = regex.lastIndex;
+  }
+
+  if (lastIndex < code.length) {
+    addText(code.substring(lastIndex));
+  }
+
+  return elements;
 }

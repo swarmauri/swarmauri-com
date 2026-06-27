@@ -2,11 +2,20 @@ import React, { useState } from "react";
 import { LAYERS } from "../data/packages";
 import { Code } from "lucide-react";
 import SEO from "../components/SEO";
+import PythonCodeHighlight from "../components/PythonCodeHighlight";
 
 export default function ArchitecturePage() {
   const [selectedLayerId, setSelectedLayerId] = useState("10-interfaces");
 
   const currentLayer = LAYERS.find((l) => l.id === selectedLayerId) || LAYERS[1];
+  const importPatternCode =
+    selectedLayerId === "10-interfaces"
+      ? "# Direct clean interface boundaries. NO EXECUTION LOGIC\nfrom swarmauri_core.models.IModel import IModel"
+      : selectedLayerId === "20-bases"
+        ? "# Inheriting standard Pydantic models for custom components\nfrom swarmauri_base.tools.ToolBase import ToolBase"
+        : selectedLayerId === "50-community"
+          ? "# Third-party SaaS provider wrapper imports\nfrom swarmauri_llm_openai.models.OpenAIModel import OpenAIModel"
+          : "# Typical component access path\nfrom swarmauri.standard import LocalModel";
 
   return (
     <div className="space-y-12 py-6" id="architecture-page">
@@ -88,32 +97,9 @@ export default function ArchitecturePage() {
             {/* Direct Import vs Namespace Import */}
             <div>
               <h4 className="font-bold text-zinc-800 uppercase tracking-wider text-[10px] mb-2">Import & Execution Pattern</h4>
-              <div className="bg-zinc-900 rounded-lg p-4 font-mono text-[11px] text-zinc-100 space-y-2 leading-relaxed">
-                {selectedLayerId === "10-interfaces" && (
-                  <>
-                    <div className="text-zinc-500"># Direct clean interface boundaries. NO EXECUTION LOGIC</div>
-                    <div>from swarmauri_core.models.IModel import IModel</div>
-                  </>
-                )}
-                {selectedLayerId === "20-bases" && (
-                  <>
-                    <div className="text-zinc-500"># Inheriting standard Pydantic models for custom components</div>
-                    <div>from swarmauri_base.tools.ToolBase import ToolBase</div>
-                  </>
-                )}
-                {selectedLayerId === "50-community" && (
-                  <>
-                    <div className="text-zinc-500"># Third-party SaaS provider wrapper imports</div>
-                    <div>from swarmauri_llm_openai.models.OpenAIModel import OpenAIModel</div>
-                  </>
-                )}
-                {selectedLayerId !== "10-interfaces" && selectedLayerId !== "20-bases" && selectedLayerId !== "50-community" && (
-                  <>
-                    <div className="text-zinc-500"># Typical component access path</div>
-                    <div>from swarmauri.standard import LocalModel</div>
-                  </>
-                )}
-              </div>
+              <pre className="bg-zinc-900 rounded-lg p-4 font-mono text-[11px] text-zinc-100 leading-relaxed overflow-x-auto whitespace-pre">
+                <PythonCodeHighlight code={importPatternCode} language="python" />
+              </pre>
             </div>
 
             {/* Extension pathway */}

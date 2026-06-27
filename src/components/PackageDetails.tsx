@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, BookOpen, ExternalLink, AlertTriangle } from "lucide-react";
 import { Package } from "../types";
+import PythonCodeHighlight from "./PythonCodeHighlight";
 
 interface PackageDetailsProps {
   selectedPackage: Package;
@@ -18,6 +19,10 @@ export default function PackageDetails({
   copiedText,
   copyToClipboard,
 }: PackageDetailsProps) {
+  const installCommand =
+    installTool === "uv"
+      ? `uv add ${selectedPackage.name}`
+      : `pip install ${selectedPackage.name}`;
   const maturityClass = selectedPackage.maturity === "deprecated"
     ? "bg-zinc-100 text-zinc-700 border border-zinc-200"
     : selectedPackage.maturity === "experimental" || selectedPackage.maturity.includes("incubat")
@@ -77,12 +82,11 @@ export default function PackageDetails({
               </div>
             </div>
             <div className="bg-zinc-950 p-4 rounded-lg flex items-center justify-between border border-zinc-800 shadow-inner">
-              <div className="font-mono text-xs text-zinc-100 break-all pr-4">
-                <span className="text-zinc-500 select-none mr-2">$</span>
-                {installTool === "uv" ? `uv add ${selectedPackage.name}` : `pip install ${selectedPackage.name}`}
-              </div>
+              <pre className="font-mono text-xs text-zinc-100 overflow-x-auto whitespace-pre pr-4">
+                <PythonCodeHighlight code={`$ ${installCommand}`} language="bash" />
+              </pre>
               <button
-                onClick={() => copyToClipboard(installTool === "uv" ? `uv add ${selectedPackage.name}` : `pip install ${selectedPackage.name}`, "detail-install")}
+                onClick={() => copyToClipboard(installCommand, "detail-install")}
                 className="px-2.5 py-1 text-[10px] uppercase font-mono rounded bg-zinc-800 hover:bg-zinc-700 text-zinc-300 transition-all border border-zinc-700 cursor-pointer shrink-0"
               >
                 {copiedText === "detail-install" ? "Copied!" : "Copy"}
@@ -95,7 +99,7 @@ export default function PackageDetails({
             <h3 className="text-xs font-bold uppercase tracking-wider text-zinc-500">Import & Usage Examples</h3>
             <div className="bg-zinc-900 p-4 rounded-lg border border-zinc-800 relative">
               <pre className="font-mono text-xs text-indigo-200 overflow-x-auto whitespace-pre-wrap leading-relaxed pr-8">
-                {selectedPackage.importExample}
+                <PythonCodeHighlight code={selectedPackage.importExample} language="python" />
               </pre>
               <button
                 onClick={() => copyToClipboard(selectedPackage.importExample, "detail-import")}
