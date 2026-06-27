@@ -53,7 +53,7 @@
                   <div class="stats">
                     <div class="stat"><div class="label">Type</div><div class="value">Index</div></div>
                     <div class="stat"><div class="label">Nested Sitemaps</div><div class="value"><xsl:value-of select="count(/s:sitemapindex/s:sitemap)"/></div></div>
-                    <div class="stat"><div class="label">Last Generated</div><div class="value mono">2026-06-27T09:15:48.497Z</div></div>
+                    <div class="stat"><div class="label">Last Generated</div><div class="value mono">2026-06-27T10:19:07.943Z</div></div>
                   </div>
                 </div>
                 <table>
@@ -92,7 +92,7 @@
                   <div class="stats">
                     <div class="stat"><div class="label">Type</div><div class="value">URL Set</div></div>
                     <div class="stat"><div class="label">URLs</div><div class="value"><xsl:value-of select="count(/s:urlset/s:url)"/></div></div>
-                    <div class="stat"><div class="label">Last Generated</div><div class="value mono">2026-06-27T09:15:48.497Z</div></div>
+                    <div class="stat"><div class="label">Last Generated</div><div class="value mono">2026-06-27T10:19:07.943Z</div></div>
                   </div>
                 </div>
                 <table>

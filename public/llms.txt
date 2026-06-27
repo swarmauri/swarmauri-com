@@ -1,6 +1,6 @@
 # Swarmauri
 
-Swarmauri is a composable Python package ecosystem for tools, agents, models, parsers, middleware, storage, cryptography, signing, certificates, identity, tokens, transports, evaluators, skills, workflows, and provider integrations.
+Swarmauri is Composable Intelligence infrastructure: a contract-first Python ecosystem for tools, agents, models, parsers, middleware, storage, cryptography, signing, certificates, identity, tokens, transports, evaluators, skills, workflows, and provider integrations.
 
 ## Canonical Pages
 
@@ -26,7 +26,7 @@ Swarmauri is a composable Python package ecosystem for tools, agents, models, pa
 - Workspace members: 310
 - Indexed package records: 337
 - Source: swarmauri-sdk/pkgs/package-index.toml
-- Site metadata generated: 2026-06-27T09:15:48.497Z
+- Site metadata generated: 2026-06-27T10:19:07.943Z
 
 ## Layer Summary
 

@@ -15,7 +15,7 @@ export default function PlatformPage() {
     try {
       return webApplicationNode({
         id: "https://swarmauri.com/platform/#application",
-        name: "Swarmauri AI Composition Platform",
+        name: "Swarmauri Composable Intelligence Platform",
         description: CANONICAL_TAXONOMY_DESCRIPTION,
         url: "https://swarmauri.com/platform",
         applicationCategory: "DeveloperApplication",
@@ -31,7 +31,7 @@ export default function PlatformPage() {
   return (
     <div className="space-y-12 py-6" id="platform-page">
       <SEO
-        title="Composable Python Package Platform"
+        title="Composable Intelligence Platform"
         description={CANONICAL_TAXONOMY_DESCRIPTION}
         keywords={CANONICAL_TAXONOMY_KEYWORDS}
       />

@@ -72,7 +72,7 @@ function metaBlock(meta: RouteMeta): string {
     <meta property="og:image:secure_url" content="${escapeHtml(image)}" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Swarmauri composable Python SDK package ecosystem" />
+    <meta property="og:image:alt" content="Swarmauri Composable Intelligence infrastructure" />
     <meta property="og:type" content="${type}" />
     <meta property="og:url" content="${escapeHtml(url)}" />
     <meta property="og:site_name" content="Swarmauri" />
@@ -124,7 +124,7 @@ const routes: RouteMeta[] = [
   },
   {
     route: "platform",
-    title: "Composable Python Package Platform",
+    title: "Composable Intelligence Platform",
     description:
       `Explore ${FAMILIES.length} generated Swarmauri component families across tools, agents, models, parsers, middleware, crypto, storage, identity, evaluators, workflows, and integrations.`,
   },

@@ -38,7 +38,7 @@ export default function HomePage() {
   return (
     <div className="space-y-16 py-8" id="homepage-container">
       <SEO
-        title="Composable Python Package Ecosystem"
+        title="Composable Intelligence Infrastructure"
         description={CANONICAL_TAXONOMY_DESCRIPTION}
         keywords={CANONICAL_TAXONOMY_KEYWORDS}
       />
