@@ -2,7 +2,11 @@ import fs from "node:fs";
 import path from "node:path";
 import { CAREER_ROLES } from "../src/data/careers";
 import { GUIDE_TOPICS } from "../src/data/guides";
-import { PACKAGES } from "../src/data/packages";
+import { FAMILIES, PACKAGES } from "../src/data/packages";
+import {
+  CANONICAL_TAXONOMY_DESCRIPTION,
+  CANONICAL_TAXONOMY_KEYWORDS,
+} from "../src/data/taxonomy";
 import { UPDATE_POSTS } from "../src/data/updates";
 import { getUpdateSlug } from "../src/utils/updateSlugs";
 
@@ -56,7 +60,7 @@ function metaBlock(meta: RouteMeta): string {
   const type = meta.type ?? "website";
   const keywords =
     meta.keywords?.join(", ") ??
-    "swarmauri, python sdk, ai agents, modular ai, package catalog, vector stores, cryptography";
+    CANONICAL_TAXONOMY_KEYWORDS.join(", ");
 
   return `${META_START}
     <meta name="description" content="${escapeHtml(description)}" />
@@ -115,15 +119,14 @@ const routes: RouteMeta[] = [
   {
     route: "",
     title: "Swarmauri Ecosystem",
-    description:
-      "Explore Swarmauri: a modular, contract-first open source Python framework for agents, language models, vector stores, and security-certified adapters.",
-    keywords: ["swarmauri", "python sdk", "ai agents", "package catalog"],
+    description: CANONICAL_TAXONOMY_DESCRIPTION,
+    keywords: CANONICAL_TAXONOMY_KEYWORDS,
   },
   {
     route: "platform",
-    title: "AI Composition Platform",
+    title: "Composable Python Package Platform",
     description:
-      "Deep-dive into the Swarmauri AI platform: contract-first Python packages for secure, composable agent and integration architectures.",
+      `Explore ${FAMILIES.length} generated Swarmauri component families across tools, agents, models, parsers, middleware, crypto, storage, identity, evaluators, workflows, and integrations.`,
   },
   {
     route: "packages",
@@ -147,7 +150,7 @@ const routes: RouteMeta[] = [
     route: "guides",
     title: "SDK Guides",
     description:
-      "Learn how to install, import, compose, and extend Swarmauri packages under typed Python contracts.",
+      "Learn how to install, import, compose, and extend Swarmauri packages across tools, skills, parsers, middleware, storage, crypto, identity, evaluators, workflows, and package authoring.",
   },
   {
     route: "claims",

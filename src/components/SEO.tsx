@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { CANONICAL_TAXONOMY_KEYWORDS } from "../data/taxonomy";
 
 interface SEOProps {
   title: string;
@@ -50,7 +51,11 @@ export default function SEO({
       setMetaTag("name", "keywords", keywords.join(", "));
     } else {
       // Default keywords if none provided
-      setMetaTag("name", "keywords", "swarmauri, python sdk, cryptography, modular ai, agent framework, vector store");
+      setMetaTag(
+        "name",
+        "keywords",
+        CANONICAL_TAXONOMY_KEYWORDS.join(", "),
+      );
     }
 
     // 3. OpenGraph Tags

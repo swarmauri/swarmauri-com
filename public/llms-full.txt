@@ -1,6 +1,6 @@
 # Swarmauri Full LLM Index
 
-Generated: 2026-06-27T08:56:34.572Z
+Generated: 2026-06-27T09:15:48.497Z
 
 This file is the complete assistant-facing index for swarmauri.com. It is generated from the same source data as the nested XML sitemaps.
 
@@ -8,7 +8,7 @@ This file is the complete assistant-facing index for swarmauri.com. It is genera
 
 - [Main Pages](https://swarmauri.com/sitemap-main.xml): 20 entries
 - [Package Catalog](https://swarmauri.com/sitemap-packages.xml): 338 entries
-- [Guides](https://swarmauri.com/sitemap-guides.xml): 6 entries
+- [Guides](https://swarmauri.com/sitemap-guides.xml): 13 entries
 - [Updates](https://swarmauri.com/sitemap-updates.xml): 13 entries
 - [Careers](https://swarmauri.com/sitemap-careers.xml): 4 entries
 
@@ -8211,11 +8211,11 @@ print(package_module.__name__)
 
 ## Guides
 
-### 1. The Unified Quickstart
+### 1. Unified Namespace Quickstart
 
 - URL: https://swarmauri.com/guides/quickstart
-- Description: Learn how to import and initialize standard components using the main namespace package.
-- Explanation: Using the main namespace allows high-level imports. The dynamic namespace is safe and doesn't pollute global path configurations.
+- Description: Install the main namespace package when you want broad access to standard Swarmauri components.
+- Explanation: The aggregate swarmauri package is a convenience facade. It is best for notebooks, tutorials, prototypes, and applications that benefit from clean imports across the standard library.
 
 ```python
 from swarmauri.standard import LocalModel
@@ -8223,104 +8223,214 @@ from swarmauri_standard.tools.CalculatorTool import (
     CalculatorTool,
 )
 
-# Initialize a standard local component
 model = LocalModel(name="offline-first")
 tool = CalculatorTool()
 
 print(f"Loaded: {model.name} with tool: {tool.name}")
-# Output: Loaded: offline-first with tool: CalculatorTool
 ```
 
-### 2. The Minimalist Contract Setup
+### 2. Minimal Contract Install
 
-- URL: https://swarmauri.com/guides/minimalist
-- Description: Install only the contracts and typing layers if you are building highly secure runtime nodes.
-- Explanation: This allows servers to run with zero heavy external libraries. Perfect for serverless environments requiring fast cold starts and absolute isolation.
+- URL: https://swarmauri.com/guides/minimalist-contracts
+- Description: Install only interface and typing packages when a service needs contracts without implementation dependencies.
+- Explanation: The core and typing packages define boundaries without pulling in provider clients. Use this shape for runtime nodes that need strict import control and fast cold starts.
 
 ```python
-# Install only core boundaries and typing helpers
 # command: uv add swarmauri_core swarmauri_typing
 
 from swarmauri_core.tools.ITool import ITool
 from swarmauri_typing import SubclassUnion
 
-class CustomSecureTool(ITool):
+class SecureVaultTool(ITool):
     @property
     def name(self) -> str:
         return "SecureVault"
-        
+
     def execute(self, secret_key: str) -> bool:
-        # Custom execution adhering strictly to ITool contract
         return len(secret_key) > 32
+
+tool_types: SubclassUnion[ITool] = SecureVaultTool
 ```
 
-### 3. Hot-Swapping Model Providers
+### 3. Tools and Skills
 
-- URL: https://swarmauri.com/guides/llm-swap
-- Description: Because every LLM wrapper conforms to the IModel contract, swapping providers requires exactly one line of change.
-- Explanation: This abstraction is robust and avoids binding your software workflows to specific underlying SaaS vendors.
+- URL: https://swarmauri.com/guides/tools-and-skills
+- Description: Use tool and skill packages as executable capabilities that can be composed by agents, workflows, or your own runtime.
+- Explanation: Tools expose callable actions; skills package reusable capabilities that tools or orchestrators can invoke. They are a major family in the catalog, not a minor agent example.
 
 ```python
-from swarmauri_llm_openai.models.OpenAIModel import (
-    OpenAIModel,
-)
-from swarmauri_llm_groq.models.GroqModel import GroqModel
+# command: uv add swarmauri_tool_skill_execution
+# command: uv add swarmauri_skill_filesystem
 
-# Swapping from OpenAI to Groq
-# model = OpenAIModel(api_key="sk-...")
-model = GroqModel(api_key="gsk_...")
+import swarmauri_tool_skill_execution as skill_tool
+import swarmauri_skill_filesystem as filesystem_skill
 
-# Execution remains exactly identical
-response = model.predict(prompt="Compose a security audit strategy.")
-print(response.text)
+print(skill_tool.__name__)
+print(filesystem_skill.__name__)
 ```
 
-### 4. Authoring Custom Pluggable Components
+### 4. Parsers and OCR Pipelines
 
-- URL: https://swarmauri.com/guides/custom-component
-- Description: Extend Pydantic-backed base classes so your custom modules instantly inherit standard serialization.
-- Explanation: By subclassing ToolBase, Pydantic will validate all fields on initialization and generate correct dynamic schemas automatically.
+- URL: https://swarmauri.com/guides/parsers-and-ocr
+- Description: Install parser packages directly when your application needs document, text, PDF, OCR, or extraction behavior.
+- Explanation: Parser and OCR packages let ingestion pipelines stay separate from model inference. This keeps document handling, extraction, and downstream reasoning independently replaceable.
 
 ```python
-from swarmauri_base.tools.ToolBase import ToolBase
+# command: uv add swarmauri_parser_keywordextractor
+# command: uv add swarmauri_ocr_pytesseract
+
+import swarmauri_parser_keywordextractor as keyword_parser
+import swarmauri_ocr_pytesseract as ocr_adapter
+
+print(keyword_parser.__name__)
+print(ocr_adapter.__name__)
+```
+
+### 5. Middleware Boundaries
+
+- URL: https://swarmauri.com/guides/middleware-patterns
+- Description: Use middleware packages for auth, headers, rate limits, CORS, JSON-RPC, logging, and transport boundary behavior.
+- Explanation: Middleware is a first-class package family. Use it to wrap execution boundaries and keep transport, policy, and security concerns outside application business logic.
+
+```python
+# command: uv add swarmauri_middleware_jwt
+# command: uv add swarmauri_middleware_securityheaders
+
+import swarmauri_middleware_jwt as jwt_middleware
+import swarmauri_middleware_securityheaders as headers
+
+print(jwt_middleware.__name__)
+print(headers.__name__)
+```
+
+### 6. Signing, Certificates, and Tokens
+
+- URL: https://swarmauri.com/guides/signing-certs-tokens
+- Description: Compose signing, certificate, and token packages when messages and identities need explicit cryptographic boundaries.
+- Explanation: Security-sensitive systems can install only the signers, certificate utilities, and token handlers they audit. This is separate from LLM provider selection.
+
+```python
+# command: uv add swarmauri_signing_ed25519
+# command: uv add swarmauri_certs_x509
+# command: uv add swarmauri_tokens_jwt
+
+import swarmauri_certs_x509 as certs
+import swarmauri_signing_ed25519 as signing
+import swarmauri_tokens_jwt as tokens
+
+print(signing.__name__)
+print(certs.__name__)
+print(tokens.__name__)
+```
+
+### 7. Auth Identity Providers
+
+- URL: https://swarmauri.com/guides/auth-identity
+- Description: Install auth IDP packages for provider-specific identity integrations without folding them into the rest of the runtime.
+- Explanation: Identity provider packages make GitHub, Keycloak, Okta, Google, AWS, Azure, and related auth surfaces visible as installable integration units.
+
+```python
+# command: uv add swarmauri_auth_idp_github
+# command: uv add swarmauri_auth_idp_keycloak
+
+import swarmauri_auth_idp_github as github_idp
+import swarmauri_auth_idp_keycloak as keycloak_idp
+
+print(github_idp.__name__)
+print(keycloak_idp.__name__)
+```
+
+### 8. Storage and Publishers
+
+- URL: https://swarmauri.com/guides/storage-and-publishers
+- Description: Install storage and publisher adapters when your system needs durable state, object storage, queues, or webhook delivery.
+- Explanation: Storage and publisher packages keep persistence and event delivery replaceable. They sit beside AI components rather than underneath them.
+
+```python
+# command: uv add swarmauri_storage_s3
+# command: uv add swarmauri_publisher_redis
+
+import swarmauri_publisher_redis as redis_publisher
+import swarmauri_storage_s3 as s3_storage
+
+print(s3_storage.__name__)
+print(redis_publisher.__name__)
+```
+
+### 9. Evaluators and Measurement
+
+- URL: https://swarmauri.com/guides/evaluators-measurement
+- Description: Use evaluator packages to measure runtime behavior, accessibility, subprocess use, imports, and other quality boundaries.
+- Explanation: Evaluation is part of the SDK portfolio. These packages help teams measure implementation quality, policy compliance, and runtime behavior.
+
+```python
+# command: uv add swarmauri_evaluator_subprocess
+# command: uv add swarmauri_evaluator_externalimports
+
+import swarmauri_evaluator_externalimports as imports_eval
+import swarmauri_evaluator_subprocess as subprocess_eval
+
+print(imports_eval.__name__)
+print(subprocess_eval.__name__)
+```
+
+### 10. Models, Embeddings, and Vector Stores
+
+- URL: https://swarmauri.com/guides/models-vectorstores-embeddings
+- Description: Treat models and vector stores as one family of examples among many, with the same package isolation rules as the rest of the SDK.
+- Explanation: Agents, language models, embeddings, and vector stores remain important, but they are examples of a wider component taxonomy rather than the full definition of Swarmauri.
+
+```python
+# command: uv add swarmauri_llm_groq
+# command: uv add swarmauri_embedding_doc2vec
+# command: uv add swarmauri_vectorstore_pinecone
+
+import swarmauri_embedding_doc2vec as embeddings
+import swarmauri_llm_groq as groq_llm
+import swarmauri_vectorstore_pinecone as pinecone
+
+print(groq_llm.__name__)
+print(embeddings.__name__)
+print(pinecone.__name__)
+```
+
+### 11. Workflows and Toolkits
+
+- URL: https://swarmauri.com/guides/workflow-and-toolkits
+- Description: Use workflow and toolkit packages for higher-level composition without losing direct package ownership.
+- Explanation: Toolkits group related tools, while workflow packages express execution structure. Both are catalog families that sit above the lower-level component packages.
+
+```python
+# command: uv add swarmauri_workflow_statedriven
+# command: uv add swarmauri_toolkit_jupytertoolkit
+
+import swarmauri_toolkit_jupytertoolkit as jupyter_tools
+import swarmauri_workflow_statedriven as workflow
+
+print(workflow.__name__)
+print(jupyter_tools.__name__)
+```
+
+### 12. Package Authoring
+
+- URL: https://swarmauri.com/guides/package-authoring
+- Description: Author new packages against core interfaces and base classes so they fit the package index, docs, and import rules.
+- Explanation: New Swarmauri packages should land in the right layer, expose direct package imports, and use base classes only when they remove real duplication or enforce shared contracts.
+
+```python
+# command: uv add swarmauri_base swarmauri_core
+
 from pydantic import Field
+from swarmauri_base.tools.ToolBase import ToolBase
 
-class WeatherSensorTool(ToolBase):
-    station_id: str = Field(description="Unique telemetry identifier")
-    
-    def execute(self) -> dict:
-        # Real-time retrieval or mock reading
-        return {"station": self.station_id, "celsius": 18.5}
+class ProjectTool(ToolBase):
+    project_id: str = Field(description="Stable project identifier")
 
-# Serialization is automatically free!
-serialized_json = WeatherSensorTool(station_id="ST-999").json()
-print(serialized_json)
-```
+    def execute(self) -> dict[str, str]:
+        return {"project_id": self.project_id}
 
-### 5. Signing payloads with Ed25519
-
-- URL: https://swarmauri.com/guides/payload-integrity
-- Description: Protect messages in transit with elliptic curve signers and symmetric encryptions.
-- Explanation: Swarmauri separates cryptosystems from general workflows. Teams requiring FIPS or custom air-gapped security can audit individual packages independently.
-
-```python
-from swarmauri_signing_ed25519.signing.Ed25519Signer import (
-    Ed25519Signer,
-)
-from swarmauri_cipher_suite_aes.ciphers.AesGcmCipher import (
-    AesGcmCipher,
-)
-
-signer = Ed25519Signer()
-cipher = AesGcmCipher(secret_key=b"32_byte_cryptographic_key_here")
-
-payload = b"Authorized execution task"
-signature = signer.sign(payload)
-encrypted_state = cipher.encrypt(payload)
-
-# Verify payload integrity
-is_valid = signer.verify(payload, signature)
-print(f"Decrypted payload is authentic: {is_valid}")
+tool = ProjectTool(project_id="docs-site")
+print(tool.model_dump_json())
 ```
 
 ## Updates

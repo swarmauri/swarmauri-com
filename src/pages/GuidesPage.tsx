@@ -10,6 +10,8 @@ import GuideViewer from "../components/GuideViewer";
 import SEO from "../components/SEO";
 import FaqQuestionAnswerList from "../components/uix/FaqQuestionAnswerList";
 import { FAQ_ITEMS } from "../data/faq";
+import ComponentFamilyOverview from "../components/ComponentFamilyOverview";
+import { CANONICAL_TAXONOMY_KEYWORDS } from "../data/taxonomy";
 
 export default function GuidesPage() {
   const { guideId } = useParams<{ guideId?: string }>();
@@ -82,7 +84,13 @@ export default function GuidesPage() {
       <SEO
         title={`${activeGuide.title} Guide`}
         description={activeGuide.description}
-        keywords={[activeGuide.title, "guide", "documentation", "how-to", "swarmauri", "python"]}
+        keywords={[
+          activeGuide.title,
+          "guide",
+          "documentation",
+          "how-to",
+          ...CANONICAL_TAXONOMY_KEYWORDS,
+        ]}
       />
       {/* Guides & FAQs JSON-LD */}
       <StructuredData data={structuredData} />
@@ -96,6 +104,12 @@ export default function GuidesPage() {
           Learn how to compose, extend, and deploy Swarmauri packages under uniform contracts.
         </p>
       </div>
+
+      <ComponentFamilyOverview
+        variant="detailed"
+        title="Guide Coverage by Component Family"
+        description="Use the guides as examples across the full SDK portfolio: tools, skills, parsers, middleware, signing, certificates, auth, storage, tokens, evaluators, publishers, workflows, and package authoring."
+      />
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* Left Side: Interactive Quick Navigation */}

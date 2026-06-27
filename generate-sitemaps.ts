@@ -11,6 +11,7 @@ import {
   PACKAGES,
   SDK_METADATA,
 } from "./src/data/packages";
+import { CANONICAL_TAXONOMY_DESCRIPTION } from "./src/data/taxonomy";
 import { UPDATE_POSTS } from "./src/data/updates";
 import { getUpdateSlug } from "./src/utils/updateSlugs";
 
@@ -324,7 +325,7 @@ function buildLlmsTxt(): string {
 
   return `# Swarmauri
 
-Swarmauri is a composable Python SDK and company portfolio for contract-first AI, agent, crypto, transport, storage, and provider integration packages.
+${CANONICAL_TAXONOMY_DESCRIPTION}
 
 ## Canonical Pages
 

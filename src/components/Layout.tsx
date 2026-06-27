@@ -4,6 +4,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import StructuredData from "./StructuredData";
 import { organizationNode, webSiteSchema } from "@mdwrk/structured-data";
+import { CANONICAL_TAXONOMY_DESCRIPTION } from "../data/taxonomy";
 
 export default function Layout() {
   const globalStructuredData = useMemo(() => {
@@ -11,7 +12,7 @@ export default function Layout() {
       const org = organizationNode({
         id: "https://swarmauri.com/#organization",
         name: "Swarmauri",
-        description: "An open-source python platform for building composable, typed AI structures.",
+        description: CANONICAL_TAXONOMY_DESCRIPTION,
         url: "https://swarmauri.com",
         logo: "https://swarmauri.com/logo.png",
         sameAs: [
@@ -23,7 +24,7 @@ export default function Layout() {
       const website = webSiteSchema({
         id: "https://swarmauri.com/#website",
         name: "Swarmauri Ecosystem",
-        description: "Explore Swarmauri: A modular, contract-first open source framework for agents, language models, vector stores, and security-certified adapters.",
+        description: CANONICAL_TAXONOMY_DESCRIPTION,
         url: "https://swarmauri.com",
         publisher: { "@id": "https://swarmauri.com/#organization" },
         potentialAction: {
@@ -63,4 +64,3 @@ export default function Layout() {
     </div>
   );
 }
-

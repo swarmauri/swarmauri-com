@@ -1,12 +1,28 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight, Terminal, Layers, ShieldCheck, Briefcase, Sparkles, BookOpen, Cpu, Code } from "lucide-react";
-import { SDK_METADATA } from "../data/packages";
+import { FAMILIES, SDK_METADATA } from "../data/packages";
+import {
+  CANONICAL_TAXONOMY_DESCRIPTION,
+  CANONICAL_TAXONOMY_KEYWORDS,
+} from "../data/taxonomy";
 import SEO from "../components/SEO";
+import ComponentFamilyOverview from "../components/ComponentFamilyOverview";
+
+function familyLabel(name: string) {
+  const labels: Record<string, string> = {
+    llm: "LLM",
+    cipher_suite: "Cipher Suites",
+    vectorstore: "Vector Stores",
+  };
+
+  return labels[name] ?? name.replace(/_/g, " ");
+}
 
 export default function HomePage() {
   const [copiedText, setCopiedText] = useState("");
   const navigate = useNavigate();
+  const featuredFamilies = FAMILIES.slice(0, 4);
 
   const copyToClipboard = (text: string, id: string) => {
     navigator.clipboard.writeText(text);
@@ -22,9 +38,9 @@ export default function HomePage() {
   return (
     <div className="space-y-16 py-8" id="homepage-container">
       <SEO
-        title="Composable Intelligence Infrastructure for Agents"
-        description="Explore Swarmauri: A modular, contract-first open source Python framework for agents, language models, vector stores, and security-certified adapters."
-        keywords={["python", "ai-framework", "agents", "machine-learning", "security", "composability"]}
+        title="Composable Python Package Ecosystem"
+        description={CANONICAL_TAXONOMY_DESCRIPTION}
+        keywords={CANONICAL_TAXONOMY_KEYWORDS}
       />
       {/* 1. Hero Viewport */}
       <section className="relative overflow-hidden bg-white border border-zinc-200/80 rounded-2xl p-8 sm:p-12 lg:p-16 shadow-sm" id="hero-banner">
@@ -42,7 +58,9 @@ export default function HomePage() {
           </h1>
           
           <p className="text-lg text-zinc-600 max-w-2xl mx-auto leading-relaxed">
-            Build AI, agent, security, runtime, and integration workflows from independently installable Python packages with stable contracts, Pydantic-backed models, and provider-specific components.
+            Build AI, agent, security, runtime, data, and integration workflows
+            from independently installable Python packages with stable
+            contracts, Pydantic-backed models, and provider-specific components.
           </p>
 
           {/* Quick CTAs */}
@@ -129,16 +147,24 @@ export default function HomePage() {
       <section className="bg-[#FAF9F6] border border-zinc-200 rounded-xl p-8 flex flex-col md:flex-row justify-between items-center gap-8" id="portfolio-teaser">
         <div className="space-y-4 max-w-xl">
           <h2 className="text-2xl font-bold tracking-tight text-zinc-900">
-            A Pluggable Ecosystem of 336 Indexed Packages
+            A Pluggable Ecosystem of {SDK_METADATA.totalIndexedRecords} Indexed Records
           </h2>
           <p className="text-sm text-zinc-600 leading-relaxed">
-            Our package ecosystem divides utilities into 10 structural layers—from interfaces and base classes to standard kernels, community provider integrations, and experimental planners. Filter by maturity, family (like llm, cipher_suite, or vectorstore), or role to build the optimal runtime.
+            The package ecosystem spans {FAMILIES.length} component families
+            across 10 structural layers, from interfaces and base classes to
+            standard kernels, community integrations, plugins, facades, and
+            experimental planners. Filter by maturity, family, or role to build
+            the exact runtime your application needs.
           </p>
           <div className="flex flex-wrap gap-2 text-xs">
-            <span className="px-2.5 py-1 rounded bg-zinc-100 text-zinc-700 border border-zinc-200 font-mono">42 Tools</span>
-            <span className="px-2.5 py-1 rounded bg-zinc-100 text-zinc-700 border border-zinc-200 font-mono">17 LLM Adapters</span>
-            <span className="px-2.5 py-1 rounded bg-zinc-100 text-zinc-700 border border-zinc-200 font-mono">13 Vector Stores</span>
-            <span className="px-2.5 py-1 rounded bg-zinc-100 text-zinc-700 border border-zinc-200 font-mono">17 Signers</span>
+            {featuredFamilies.map((family) => (
+              <span
+                key={family.name}
+                className="px-2.5 py-1 rounded bg-zinc-100 text-zinc-700 border border-zinc-200 font-mono"
+              >
+                {family.count} {familyLabel(family.name)}
+              </span>
+            ))}
           </div>
         </div>
         <div className="w-full md:w-auto flex flex-col space-y-3 min-w-[200px]">
@@ -157,6 +183,11 @@ export default function HomePage() {
           </button>
         </div>
       </section>
+
+      <ComponentFamilyOverview
+        title="All Component Families"
+        description="Agents, models, and vector stores are examples in a broader package ecosystem. The generated catalog also includes tools, skills, parsers, middleware, signing, certificates, identity, tokens, storage, publishers, evaluators, workflows, and many other families."
+      />
 
       {/* 4. Layer Architecture Preview */}
       <section className="space-y-6" id="architecture-teaser">
@@ -229,7 +260,7 @@ export default function HomePage() {
               <h3 className="font-sans font-bold text-lg text-zinc-950">Join Swarmauri Careers</h3>
             </div>
             <p className="text-xs text-zinc-600 leading-relaxed">
-              We operate an async-first, open-source organization. We actively hire from our contributor pool—build provider plugins, audit crypto primitives, or write guides, and transition from open-source author to staff member.
+              We operate an async-first, open-source organization. We actively hire from our contributor pool: build provider plugins, audit crypto primitives, or write guides, and transition from open-source author to staff member.
             </p>
           </div>
           <button

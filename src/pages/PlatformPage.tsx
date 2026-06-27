@@ -3,6 +3,12 @@ import { Cpu, ShieldCheck, Zap, Code, Server, CheckCircle } from "lucide-react";
 import { webApplicationNode } from "@mdwrk/structured-data";
 import StructuredData from "../components/StructuredData";
 import SEO from "../components/SEO";
+import ComponentFamilyOverview from "../components/ComponentFamilyOverview";
+import { SDK_METADATA } from "../data/packages";
+import {
+  CANONICAL_TAXONOMY_DESCRIPTION,
+  CANONICAL_TAXONOMY_KEYWORDS,
+} from "../data/taxonomy";
 
 export default function PlatformPage() {
   const structuredData = useMemo(() => {
@@ -10,11 +16,11 @@ export default function PlatformPage() {
       return webApplicationNode({
         id: "https://swarmauri.com/platform/#application",
         name: "Swarmauri AI Composition Platform",
-        description: "An open-source, multi-layer framework separating interface contracts from implementation libraries to build secure, composable AI architectures.",
+        description: CANONICAL_TAXONOMY_DESCRIPTION,
         url: "https://swarmauri.com/platform",
         applicationCategory: "DeveloperApplication",
         operatingSystem: "Windows, Linux, macOS",
-        softwareVersion: "0.6.2.dev3"
+        softwareVersion: SDK_METADATA.version
       });
     } catch (e) {
       console.error("Failed to build WebApplication structured data", e);
@@ -25,9 +31,9 @@ export default function PlatformPage() {
   return (
     <div className="space-y-12 py-6" id="platform-page">
       <SEO
-        title="AI Composition Platform"
-        description="Deep-dive into the architectural mechanics of the Swarmauri AI Platform: decoupling abstract contracts from multi-layer Python packages for secure, robust, and clean agency orchestration."
-        keywords={["contracts", "interfaces", "pydantic", "decoupling", "ai-platform", "composition"]}
+        title="Composable Python Package Platform"
+        description={CANONICAL_TAXONOMY_DESCRIPTION}
+        keywords={CANONICAL_TAXONOMY_KEYWORDS}
       />
       {/* Platform WebApplication JSON-LD */}
       <StructuredData data={structuredData} />
@@ -38,7 +44,10 @@ export default function PlatformPage() {
           The Swarmauri Platform
         </h1>
         <p className="text-sm text-zinc-500 mt-2 max-w-2xl">
-          Swarmauri separates contracts from implementations, enabling developers to build composable AI architectures that scale smoothly.
+          Swarmauri separates contracts from implementations, enabling
+          developers to compose tools, agents, models, parsers, middleware,
+          storage, crypto, identity, evaluators, workflows, and provider
+          integrations under stable Python package boundaries.
         </p>
       </div>
 
@@ -59,6 +68,12 @@ export default function PlatformPage() {
           </p>
         </div>
       </section>
+
+      <ComponentFamilyOverview
+        variant="detailed"
+        title="Every Component Family in the Catalog"
+        description="The platform is not limited to agents, models, or vector stores. These families are generated from the SDK package index and represent the full public component taxonomy."
+      />
 
       {/* Suggested Sections Grid */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8" id="platform-pillars">
