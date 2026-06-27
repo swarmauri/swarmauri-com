@@ -1,6 +1,6 @@
 # Swarmauri Full LLM Index
 
-Generated: 2026-06-27T01:30:34.520Z
+Generated: 2026-06-27T01:41:13.362Z
 
 This file is the complete assistant-facing index for swarmauri.com. It is generated from the same source data as the nested XML sitemaps.
 
@@ -23,7 +23,7 @@ This file is the complete assistant-facing index for swarmauri.com. It is genera
 - Workspace-backed indexed records: 310
 - Duplicate workspace members: none
 - SDK metadata source: swarmauri-sdk/pkgs/package-index.toml
-- SDK metadata generated: 2026-06-26T15:00:37.051Z
+- SDK metadata generated: 2026-06-27T01:38:57.400Z
 
 ## Layers
 
@@ -144,9 +144,9 @@ This file is the complete assistant-facing index for swarmauri.com. It is genera
 - Import example:
 
 ```python
-import swarmauri_typing
+import swarmauri_typing as package_module
 
-print(swarmauri_typing.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/typing
@@ -168,9 +168,9 @@ print(swarmauri_typing.__name__)
 - Import example:
 
 ```python
-import swarmauri_core
+import swarmauri_core as package_module
 
-print(swarmauri_core.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/core
@@ -192,9 +192,9 @@ print(swarmauri_core.__name__)
 - Import example:
 
 ```python
-import swarmauri_base
+import swarmauri_base as package_module
 
-print(swarmauri_base.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/base
@@ -216,9 +216,9 @@ print(swarmauri_base.__name__)
 - Import example:
 
 ```python
-import swarmauri_standard
+import swarmauri_standard as package_module
 
-print(swarmauri_standard.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/swarmauri_standard
@@ -240,9 +240,9 @@ print(swarmauri_standard.__name__)
 - Import example:
 
 ```python
-import swarmauri_agent_skill
+import swarmauri_agent_skill as package_module
 
-print(swarmauri_agent_skill.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_agent_skill
@@ -264,9 +264,9 @@ print(swarmauri_agent_skill.__name__)
 - Import example:
 
 ```python
-import swarmauri_auth_idp_apple
+import swarmauri_auth_idp_apple as package_module
 
-print(swarmauri_auth_idp_apple.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_auth_idp_apple
@@ -288,9 +288,9 @@ print(swarmauri_auth_idp_apple.__name__)
 - Import example:
 
 ```python
-import swarmauri_auth_idp_aws
+import swarmauri_auth_idp_aws as package_module
 
-print(swarmauri_auth_idp_aws.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_auth_idp_aws
@@ -312,9 +312,9 @@ print(swarmauri_auth_idp_aws.__name__)
 - Import example:
 
 ```python
-import swarmauri_auth_idp_azure
+import swarmauri_auth_idp_azure as package_module
 
-print(swarmauri_auth_idp_azure.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_auth_idp_azure
@@ -336,9 +336,9 @@ print(swarmauri_auth_idp_azure.__name__)
 - Import example:
 
 ```python
-import swarmauri_auth_idp_cognito
+import swarmauri_auth_idp_cognito as package_module
 
-print(swarmauri_auth_idp_cognito.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_auth_idp_cognito
@@ -360,9 +360,9 @@ print(swarmauri_auth_idp_cognito.__name__)
 - Import example:
 
 ```python
-import swarmauri_auth_idp_facebook
+import swarmauri_auth_idp_facebook as package_module
 
-print(swarmauri_auth_idp_facebook.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_auth_idp_facebook
@@ -384,9 +384,9 @@ print(swarmauri_auth_idp_facebook.__name__)
 - Import example:
 
 ```python
-import swarmauri_auth_idp_gitea
+import swarmauri_auth_idp_gitea as package_module
 
-print(swarmauri_auth_idp_gitea.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_auth_idp_gitea
@@ -408,9 +408,9 @@ print(swarmauri_auth_idp_gitea.__name__)
 - Import example:
 
 ```python
-import swarmauri_auth_idp_github
+import swarmauri_auth_idp_github as package_module
 
-print(swarmauri_auth_idp_github.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_auth_idp_github
@@ -432,9 +432,9 @@ print(swarmauri_auth_idp_github.__name__)
 - Import example:
 
 ```python
-import swarmauri_auth_idp_gitlab
+import swarmauri_auth_idp_gitlab as package_module
 
-print(swarmauri_auth_idp_gitlab.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_auth_idp_gitlab
@@ -456,9 +456,9 @@ print(swarmauri_auth_idp_gitlab.__name__)
 - Import example:
 
 ```python
-import swarmauri_auth_idp_google
+import swarmauri_auth_idp_google as package_module
 
-print(swarmauri_auth_idp_google.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_auth_idp_google
@@ -480,9 +480,9 @@ print(swarmauri_auth_idp_google.__name__)
 - Import example:
 
 ```python
-import swarmauri_auth_idp_keycloak
+import swarmauri_auth_idp_keycloak as package_module
 
-print(swarmauri_auth_idp_keycloak.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_auth_idp_keycloak
@@ -504,9 +504,9 @@ print(swarmauri_auth_idp_keycloak.__name__)
 - Import example:
 
 ```python
-import swarmauri_auth_idp_okta
+import swarmauri_auth_idp_okta as package_module
 
-print(swarmauri_auth_idp_okta.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_auth_idp_okta
@@ -528,9 +528,9 @@ print(swarmauri_auth_idp_okta.__name__)
 - Import example:
 
 ```python
-import swarmauri_auth_idp_salesforce
+import swarmauri_auth_idp_salesforce as package_module
 
-print(swarmauri_auth_idp_salesforce.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_auth_idp_salesforce
@@ -552,9 +552,9 @@ print(swarmauri_auth_idp_salesforce.__name__)
 - Import example:
 
 ```python
-import swarmauri_billing_mock
+import swarmauri_billing_mock as package_module
 
-print(swarmauri_billing_mock.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_billing_mock
@@ -576,9 +576,9 @@ print(swarmauri_billing_mock.__name__)
 - Import example:
 
 ```python
-import swarmauri_billing_stripe
+import swarmauri_billing_stripe as package_module
 
-print(swarmauri_billing_stripe.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_billing_stripe
@@ -600,9 +600,9 @@ print(swarmauri_billing_stripe.__name__)
 - Import example:
 
 ```python
-import swarmauri_certs_local_ca
+import swarmauri_certs_local_ca as package_module
 
-print(swarmauri_certs_local_ca.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_certs_local_ca
@@ -624,9 +624,9 @@ print(swarmauri_certs_local_ca.__name__)
 - Import example:
 
 ```python
-import swarmauri_certs_remote_ca
+import swarmauri_certs_remote_ca as package_module
 
-print(swarmauri_certs_remote_ca.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_certs_remote_ca
@@ -648,9 +648,9 @@ print(swarmauri_certs_remote_ca.__name__)
 - Import example:
 
 ```python
-import swarmauri_certs_self_signed
+import swarmauri_certs_self_signed as package_module
 
-print(swarmauri_certs_self_signed.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_certs_self_signed
@@ -672,9 +672,9 @@ print(swarmauri_certs_self_signed.__name__)
 - Import example:
 
 ```python
-import swarmauri_certs_x509verify
+import swarmauri_certs_x509verify as package_module
 
-print(swarmauri_certs_x509verify.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_certs_x509verify
@@ -696,9 +696,9 @@ print(swarmauri_certs_x509verify.__name__)
 - Import example:
 
 ```python
-import swarmauri_cipher_suite_cades
+import swarmauri_cipher_suite_cades as package_module
 
-print(swarmauri_cipher_suite_cades.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_cipher_suite_cades
@@ -720,9 +720,9 @@ print(swarmauri_cipher_suite_cades.__name__)
 - Import example:
 
 ```python
-import swarmauri_cipher_suite_cnsa20
+import swarmauri_cipher_suite_cnsa20 as package_module
 
-print(swarmauri_cipher_suite_cnsa20.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_cipher_suite_cnsa20
@@ -744,9 +744,9 @@ print(swarmauri_cipher_suite_cnsa20.__name__)
 - Import example:
 
 ```python
-import swarmauri_cipher_suite_cose
+import swarmauri_cipher_suite_cose as package_module
 
-print(swarmauri_cipher_suite_cose.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_cipher_suite_cose
@@ -768,9 +768,9 @@ print(swarmauri_cipher_suite_cose.__name__)
 - Import example:
 
 ```python
-import swarmauri_cipher_suite_fips1403
+import swarmauri_cipher_suite_fips1403 as package_module
 
-print(swarmauri_cipher_suite_fips1403.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_cipher_suite_fips1403
@@ -792,9 +792,9 @@ print(swarmauri_cipher_suite_fips1403.__name__)
 - Import example:
 
 ```python
-import swarmauri_cipher_suite_fips203
+import swarmauri_cipher_suite_fips203 as package_module
 
-print(swarmauri_cipher_suite_fips203.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_cipher_suite_fips203
@@ -816,9 +816,9 @@ print(swarmauri_cipher_suite_fips203.__name__)
 - Import example:
 
 ```python
-import swarmauri_cipher_suite_fips204
+import swarmauri_cipher_suite_fips204 as package_module
 
-print(swarmauri_cipher_suite_fips204.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_cipher_suite_fips204
@@ -840,9 +840,9 @@ print(swarmauri_cipher_suite_fips204.__name__)
 - Import example:
 
 ```python
-import swarmauri_cipher_suite_fips205
+import swarmauri_cipher_suite_fips205 as package_module
 
-print(swarmauri_cipher_suite_fips205.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_cipher_suite_fips205
@@ -864,9 +864,9 @@ print(swarmauri_cipher_suite_fips205.__name__)
 - Import example:
 
 ```python
-import swarmauri_cipher_suite_ipsec
+import swarmauri_cipher_suite_ipsec as package_module
 
-print(swarmauri_cipher_suite_ipsec.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_cipher_suite_ipsec
@@ -888,9 +888,9 @@ print(swarmauri_cipher_suite_ipsec.__name__)
 - Import example:
 
 ```python
-import swarmauri_cipher_suite_jwa
+import swarmauri_cipher_suite_jwa as package_module
 
-print(swarmauri_cipher_suite_jwa.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_cipher_suite_jwa
@@ -912,9 +912,9 @@ print(swarmauri_cipher_suite_jwa.__name__)
 - Import example:
 
 ```python
-import swarmauri_cipher_suite_pades
+import swarmauri_cipher_suite_pades as package_module
 
-print(swarmauri_cipher_suite_pades.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_cipher_suite_pades
@@ -936,9 +936,9 @@ print(swarmauri_cipher_suite_pades.__name__)
 - Import example:
 
 ```python
-import swarmauri_cipher_suite_pep458
+import swarmauri_cipher_suite_pep458 as package_module
 
-print(swarmauri_cipher_suite_pep458.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_cipher_suite_pep458
@@ -960,9 +960,9 @@ print(swarmauri_cipher_suite_pep458.__name__)
 - Import example:
 
 ```python
-import swarmauri_cipher_suite_sigstore
+import swarmauri_cipher_suite_sigstore as package_module
 
-print(swarmauri_cipher_suite_sigstore.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_cipher_suite_sigstore
@@ -984,9 +984,9 @@ print(swarmauri_cipher_suite_sigstore.__name__)
 - Import example:
 
 ```python
-import swarmauri_cipher_suite_ssh
+import swarmauri_cipher_suite_ssh as package_module
 
-print(swarmauri_cipher_suite_ssh.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_cipher_suite_ssh
@@ -1008,9 +1008,9 @@ print(swarmauri_cipher_suite_ssh.__name__)
 - Import example:
 
 ```python
-import swarmauri_cipher_suite_tls13
+import swarmauri_cipher_suite_tls13 as package_module
 
-print(swarmauri_cipher_suite_tls13.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_cipher_suite_tls13
@@ -1032,9 +1032,9 @@ print(swarmauri_cipher_suite_tls13.__name__)
 - Import example:
 
 ```python
-import swarmauri_cipher_suite_webauthn
+import swarmauri_cipher_suite_webauthn as package_module
 
-print(swarmauri_cipher_suite_webauthn.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_cipher_suite_webauthn
@@ -1056,9 +1056,9 @@ print(swarmauri_cipher_suite_webauthn.__name__)
 - Import example:
 
 ```python
-import swarmauri_cipher_suite_xades
+import swarmauri_cipher_suite_xades as package_module
 
-print(swarmauri_cipher_suite_xades.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_cipher_suite_xades
@@ -1080,9 +1080,9 @@ print(swarmauri_cipher_suite_xades.__name__)
 - Import example:
 
 ```python
-import swarmauri_cipher_suite_yubikey
+import swarmauri_cipher_suite_yubikey as package_module
 
-print(swarmauri_cipher_suite_yubikey.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_cipher_suite_yubikey
@@ -1104,9 +1104,9 @@ print(swarmauri_cipher_suite_yubikey.__name__)
 - Import example:
 
 ```python
-import swarmauri_cipher_suite_yubikey_fips
+import swarmauri_cipher_suite_yubikey_fips as package_module
 
-print(swarmauri_cipher_suite_yubikey_fips.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_cipher_suite_yubikey_fips
@@ -1128,9 +1128,9 @@ print(swarmauri_cipher_suite_yubikey_fips.__name__)
 - Import example:
 
 ```python
-import swarmauri_crypto_ecdh_es_a128kw
+import swarmauri_crypto_ecdh_es_a128kw as package_module
 
-print(swarmauri_crypto_ecdh_es_a128kw.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_crypto_ecdh_es_a128kw
@@ -1152,9 +1152,9 @@ print(swarmauri_crypto_ecdh_es_a128kw.__name__)
 - Import example:
 
 ```python
-import swarmauri_crypto_jwe
+import swarmauri_crypto_jwe as package_module
 
-print(swarmauri_crypto_jwe.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_crypto_jwe
@@ -1176,9 +1176,9 @@ print(swarmauri_crypto_jwe.__name__)
 - Import example:
 
 ```python
-import swarmauri_crypto_nacl_pkcs11
+import swarmauri_crypto_nacl_pkcs11 as package_module
 
-print(swarmauri_crypto_nacl_pkcs11.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_crypto_nacl_pkcs11
@@ -1200,9 +1200,9 @@ print(swarmauri_crypto_nacl_pkcs11.__name__)
 - Import example:
 
 ```python
-import swarmauri_crypto_paramiko
+import swarmauri_crypto_paramiko as package_module
 
-print(swarmauri_crypto_paramiko.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_crypto_paramiko
@@ -1224,9 +1224,9 @@ print(swarmauri_crypto_paramiko.__name__)
 - Import example:
 
 ```python
-import swarmauri_crypto_pgp
+import swarmauri_crypto_pgp as package_module
 
-print(swarmauri_crypto_pgp.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_crypto_pgp
@@ -1271,9 +1271,9 @@ print(swarmauri_crypto_pgp.__name__)
 - Import example:
 
 ```python
-import swarmauri_distance_canberra
+import swarmauri_distance_canberra as package_module
 
-print(swarmauri_distance_canberra.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_distance_canberra
@@ -1295,9 +1295,9 @@ print(swarmauri_distance_canberra.__name__)
 - Import example:
 
 ```python
-import swarmauri_distance_chebyshev
+import swarmauri_distance_chebyshev as package_module
 
-print(swarmauri_distance_chebyshev.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_distance_chebyshev
@@ -1319,9 +1319,9 @@ print(swarmauri_distance_chebyshev.__name__)
 - Import example:
 
 ```python
-import swarmauri_distance_chi_squared
+import swarmauri_distance_chi_squared as package_module
 
-print(swarmauri_distance_chi_squared.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_distance_chi_squared
@@ -1343,9 +1343,9 @@ print(swarmauri_distance_chi_squared.__name__)
 - Import example:
 
 ```python
-import swarmauri_distance_cosine
+import swarmauri_distance_cosine as package_module
 
-print(swarmauri_distance_cosine.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_distance_cosine
@@ -1367,9 +1367,9 @@ print(swarmauri_distance_cosine.__name__)
 - Import example:
 
 ```python
-import swarmauri_distance_euclidean
+import swarmauri_distance_euclidean as package_module
 
-print(swarmauri_distance_euclidean.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_distance_euclidean
@@ -1391,9 +1391,9 @@ print(swarmauri_distance_euclidean.__name__)
 - Import example:
 
 ```python
-import swarmauri_distance_haversine
+import swarmauri_distance_haversine as package_module
 
-print(swarmauri_distance_haversine.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_distance_haversine
@@ -1415,9 +1415,9 @@ print(swarmauri_distance_haversine.__name__)
 - Import example:
 
 ```python
-import swarmauri_distance_jaccard_index
+import swarmauri_distance_jaccard_index as package_module
 
-print(swarmauri_distance_jaccard_index.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_distance_jaccard_index
@@ -1439,9 +1439,9 @@ print(swarmauri_distance_jaccard_index.__name__)
 - Import example:
 
 ```python
-import swarmauri_distance_levenshtein
+import swarmauri_distance_levenshtein as package_module
 
-print(swarmauri_distance_levenshtein.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_distance_levenshtein
@@ -1463,9 +1463,9 @@ print(swarmauri_distance_levenshtein.__name__)
 - Import example:
 
 ```python
-import swarmauri_distance_manhattan
+import swarmauri_distance_manhattan as package_module
 
-print(swarmauri_distance_manhattan.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_distance_manhattan
@@ -1487,9 +1487,9 @@ print(swarmauri_distance_manhattan.__name__)
 - Import example:
 
 ```python
-import swarmauri_distance_minkowski
+import swarmauri_distance_minkowski as package_module
 
-print(swarmauri_distance_minkowski.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_distance_minkowski
@@ -1511,9 +1511,9 @@ print(swarmauri_distance_minkowski.__name__)
 - Import example:
 
 ```python
-import swarmauri_distance_sorensen_dice
+import swarmauri_distance_sorensen_dice as package_module
 
-print(swarmauri_distance_sorensen_dice.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_distance_sorensen_dice
@@ -1535,9 +1535,9 @@ print(swarmauri_distance_sorensen_dice.__name__)
 - Import example:
 
 ```python
-import swarmauri_distance_squared_euclidean
+import swarmauri_distance_squared_euclidean as package_module
 
-print(swarmauri_distance_squared_euclidean.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_distance_squared_euclidean
@@ -1559,9 +1559,9 @@ print(swarmauri_distance_squared_euclidean.__name__)
 - Import example:
 
 ```python
-import swarmauri_embedding_doc2vec
+import swarmauri_embedding_doc2vec as package_module
 
-print(swarmauri_embedding_doc2vec.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_embedding_doc2vec
@@ -1583,9 +1583,9 @@ print(swarmauri_embedding_doc2vec.__name__)
 - Import example:
 
 ```python
-import swarmauri_embedding_nmf
+import swarmauri_embedding_nmf as package_module
 
-print(swarmauri_embedding_nmf.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_embedding_nmf
@@ -1607,9 +1607,9 @@ print(swarmauri_embedding_nmf.__name__)
 - Import example:
 
 ```python
-import swarmauri_evaluator_abstractmethods
+import swarmauri_evaluator_abstractmethods as package_module
 
-print(swarmauri_evaluator_abstractmethods.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_evaluator_abstractmethods
@@ -1631,9 +1631,9 @@ print(swarmauri_evaluator_abstractmethods.__name__)
 - Import example:
 
 ```python
-import swarmauri_evaluator_anyusage
+import swarmauri_evaluator_anyusage as package_module
 
-print(swarmauri_evaluator_anyusage.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_evaluator_anyusage
@@ -1655,9 +1655,9 @@ print(swarmauri_evaluator_anyusage.__name__)
 - Import example:
 
 ```python
-import swarmauri_evaluator_constanttime
+import swarmauri_evaluator_constanttime as package_module
 
-print(swarmauri_evaluator_constanttime.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_evaluator_constanttime
@@ -1679,9 +1679,9 @@ print(swarmauri_evaluator_constanttime.__name__)
 - Import example:
 
 ```python
-import swarmauri_evaluator_externalimports
+import swarmauri_evaluator_externalimports as package_module
 
-print(swarmauri_evaluator_externalimports.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_evaluator_externalimports
@@ -1703,9 +1703,9 @@ print(swarmauri_evaluator_externalimports.__name__)
 - Import example:
 
 ```python
-import swarmauri_evaluator_subprocess
+import swarmauri_evaluator_subprocess as package_module
 
-print(swarmauri_evaluator_subprocess.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_evaluator_subprocess
@@ -1727,9 +1727,9 @@ print(swarmauri_evaluator_subprocess.__name__)
 - Import example:
 
 ```python
-import swarmauri_evaluatorpool_accessibility
+import swarmauri_evaluatorpool_accessibility as package_module
 
-print(swarmauri_evaluatorpool_accessibility.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_evaluatorpool_accessibility
@@ -1751,9 +1751,9 @@ print(swarmauri_evaluatorpool_accessibility.__name__)
 - Import example:
 
 ```python
-import swm_example_package
+import swm_example_package as package_module
 
-print(swm_example_package.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swm_example_package
@@ -1775,9 +1775,9 @@ print(swm_example_package.__name__)
 - Import example:
 
 ```python
-import swarmauri_gitfilter_gh_release
+import swarmauri_gitfilter_gh_release as package_module
 
-print(swarmauri_gitfilter_gh_release.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_gitfilter_gh_release
@@ -1799,9 +1799,9 @@ print(swarmauri_gitfilter_gh_release.__name__)
 - Import example:
 
 ```python
-import swarmauri_gitfilter_minio
+import swarmauri_gitfilter_minio as package_module
 
-print(swarmauri_gitfilter_minio.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_gitfilter_minio
@@ -1823,9 +1823,9 @@ print(swarmauri_gitfilter_minio.__name__)
 - Import example:
 
 ```python
-import swarmauri_gitfilter_s3fs
+import swarmauri_gitfilter_s3fs as package_module
 
-print(swarmauri_gitfilter_s3fs.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_gitfilter_s3fs
@@ -1847,9 +1847,9 @@ print(swarmauri_gitfilter_s3fs.__name__)
 - Import example:
 
 ```python
-import swarmauri_keyprovider_file
+import swarmauri_keyprovider_file as package_module
 
-print(swarmauri_keyprovider_file.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_keyprovider_file
@@ -1871,9 +1871,9 @@ print(swarmauri_keyprovider_file.__name__)
 - Import example:
 
 ```python
-import swarmauri_keyprovider_inmemory
+import swarmauri_keyprovider_inmemory as package_module
 
-print(swarmauri_keyprovider_inmemory.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_keyprovider_inmemory
@@ -1895,9 +1895,9 @@ print(swarmauri_keyprovider_inmemory.__name__)
 - Import example:
 
 ```python
-import swarmauri_keyprovider_local
+import swarmauri_keyprovider_local as package_module
 
-print(swarmauri_keyprovider_local.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_keyprovider_local
@@ -1919,9 +1919,9 @@ print(swarmauri_keyprovider_local.__name__)
 - Import example:
 
 ```python
-import swarmauri_keyprovider_ssh
+import swarmauri_keyprovider_ssh as package_module
 
-print(swarmauri_keyprovider_ssh.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_keyprovider_ssh
@@ -1943,9 +1943,9 @@ print(swarmauri_keyprovider_ssh.__name__)
 - Import example:
 
 ```python
-import swamauri_metric_wasserstein
+import swamauri_metric_wasserstein as package_module
 
-print(swamauri_metric_wasserstein.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swamauri_metric_wasserstein
@@ -1967,9 +1967,9 @@ print(swamauri_metric_wasserstein.__name__)
 - Import example:
 
 ```python
-import swarmauri_middleware_bulkhead
+import swarmauri_middleware_bulkhead as package_module
 
-print(swarmauri_middleware_bulkhead.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_middleware_bulkhead
@@ -1991,9 +1991,9 @@ print(swarmauri_middleware_bulkhead.__name__)
 - Import example:
 
 ```python
-import swarmauri_middleware_cachecontrol
+import swarmauri_middleware_cachecontrol as package_module
 
-print(swarmauri_middleware_cachecontrol.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_middleware_cachecontrol
@@ -2015,9 +2015,9 @@ print(swarmauri_middleware_cachecontrol.__name__)
 - Import example:
 
 ```python
-import swarmauri_middleware_cors
+import swarmauri_middleware_cors as package_module
 
-print(swarmauri_middleware_cors.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_middleware_cors
@@ -2039,9 +2039,9 @@ print(swarmauri_middleware_cors.__name__)
 - Import example:
 
 ```python
-import swarmauri_middleware_exceptionhandling
+import swarmauri_middleware_exceptionhandling as package_module
 
-print(swarmauri_middleware_exceptionhandling.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_middleware_exceptionhandling
@@ -2063,9 +2063,9 @@ print(swarmauri_middleware_exceptionhandling.__name__)
 - Import example:
 
 ```python
-import swarmauri_middleware_gzipcompression
+import swarmauri_middleware_gzipcompression as package_module
 
-print(swarmauri_middleware_gzipcompression.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_middleware_gzipcompression
@@ -2087,9 +2087,9 @@ print(swarmauri_middleware_gzipcompression.__name__)
 - Import example:
 
 ```python
-import swarmauri_middleware_httpsig
+import swarmauri_middleware_httpsig as package_module
 
-print(swarmauri_middleware_httpsig.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_middleware_httpsig
@@ -2111,9 +2111,9 @@ print(swarmauri_middleware_httpsig.__name__)
 - Import example:
 
 ```python
-import swarmauri_middleware_jsonrpc
+import swarmauri_middleware_jsonrpc as package_module
 
-print(swarmauri_middleware_jsonrpc.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_middleware_jsonrpc
@@ -2135,9 +2135,9 @@ print(swarmauri_middleware_jsonrpc.__name__)
 - Import example:
 
 ```python
-import swarmauri_middleware_jwksverifier
+import swarmauri_middleware_jwksverifier as package_module
 
-print(swarmauri_middleware_jwksverifier.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_middleware_jwksverifier
@@ -2159,9 +2159,9 @@ print(swarmauri_middleware_jwksverifier.__name__)
 - Import example:
 
 ```python
-import swarmauri_middleware_jwt
+import swarmauri_middleware_jwt as package_module
 
-print(swarmauri_middleware_jwt.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_middleware_jwt
@@ -2183,9 +2183,9 @@ print(swarmauri_middleware_jwt.__name__)
 - Import example:
 
 ```python
-import swarmauri_middleware_llamaguard
+import swarmauri_middleware_llamaguard as package_module
 
-print(swarmauri_middleware_llamaguard.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_middleware_llamaguard
@@ -2207,9 +2207,9 @@ print(swarmauri_middleware_llamaguard.__name__)
 - Import example:
 
 ```python
-import swarmauri_middleware_logging
+import swarmauri_middleware_logging as package_module
 
-print(swarmauri_middleware_logging.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_middleware_logging
@@ -2231,9 +2231,9 @@ print(swarmauri_middleware_logging.__name__)
 - Import example:
 
 ```python
-import swarmauri_middleware_ratelimit
+import swarmauri_middleware_ratelimit as package_module
 
-print(swarmauri_middleware_ratelimit.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_middleware_ratelimit
@@ -2255,9 +2255,9 @@ print(swarmauri_middleware_ratelimit.__name__)
 - Import example:
 
 ```python
-import swarmauri_middleware_securityheaders
+import swarmauri_middleware_securityheaders as package_module
 
-print(swarmauri_middleware_securityheaders.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_middleware_securityheaders
@@ -2279,9 +2279,9 @@ print(swarmauri_middleware_securityheaders.__name__)
 - Import example:
 
 ```python
-import swarmauri_middleware_session
+import swarmauri_middleware_session as package_module
 
-print(swarmauri_middleware_session.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_middleware_session
@@ -2303,9 +2303,9 @@ print(swarmauri_middleware_session.__name__)
 - Import example:
 
 ```python
-import swarmauri_middleware_stdio
+import swarmauri_middleware_stdio as package_module
 
-print(swarmauri_middleware_stdio.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_middleware_stdio
@@ -2327,9 +2327,9 @@ print(swarmauri_middleware_stdio.__name__)
 - Import example:
 
 ```python
-import swarmauri_middleware_time
+import swarmauri_middleware_time as package_module
 
-print(swarmauri_middleware_time.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_middleware_time
@@ -2351,9 +2351,9 @@ print(swarmauri_middleware_time.__name__)
 - Import example:
 
 ```python
-import swarmauri_mre_crypto_age
+import swarmauri_mre_crypto_age as package_module
 
-print(swarmauri_mre_crypto_age.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_mre_crypto_age
@@ -2375,9 +2375,9 @@ print(swarmauri_mre_crypto_age.__name__)
 - Import example:
 
 ```python
-import swarmauri_mre_crypto_ecdh_es_kw
+import swarmauri_mre_crypto_ecdh_es_kw as package_module
 
-print(swarmauri_mre_crypto_ecdh_es_kw.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_mre_crypto_ecdh_es_kw
@@ -2399,9 +2399,9 @@ print(swarmauri_mre_crypto_ecdh_es_kw.__name__)
 - Import example:
 
 ```python
-import swarmauri_mre_crypto_keyring
+import swarmauri_mre_crypto_keyring as package_module
 
-print(swarmauri_mre_crypto_keyring.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_mre_crypto_keyring
@@ -2423,9 +2423,9 @@ print(swarmauri_mre_crypto_keyring.__name__)
 - Import example:
 
 ```python
-import swarmauri_mre_crypto_pgp
+import swarmauri_mre_crypto_pgp as package_module
 
-print(swarmauri_mre_crypto_pgp.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_mre_crypto_pgp
@@ -2447,9 +2447,9 @@ print(swarmauri_mre_crypto_pgp.__name__)
 - Import example:
 
 ```python
-import swarmauri_mre_crypto_shamir
+import swarmauri_mre_crypto_shamir as package_module
 
-print(swarmauri_mre_crypto_shamir.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_mre_crypto_shamir
@@ -2471,9 +2471,9 @@ print(swarmauri_mre_crypto_shamir.__name__)
 - Import example:
 
 ```python
-import swarmauri_parser_beautifulsoupelement
+import swarmauri_parser_beautifulsoupelement as package_module
 
-print(swarmauri_parser_beautifulsoupelement.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_parser_beautifulsoupelement
@@ -2495,9 +2495,9 @@ print(swarmauri_parser_beautifulsoupelement.__name__)
 - Import example:
 
 ```python
-import swarmauri_parser_keywordextractor
+import swarmauri_parser_keywordextractor as package_module
 
-print(swarmauri_parser_keywordextractor.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_parser_keywordextractor
@@ -2519,9 +2519,9 @@ print(swarmauri_parser_keywordextractor.__name__)
 - Import example:
 
 ```python
-import swarmauri_pop_cwt
+import swarmauri_pop_cwt as package_module
 
-print(swarmauri_pop_cwt.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_pop_cwt
@@ -2543,9 +2543,9 @@ print(swarmauri_pop_cwt.__name__)
 - Import example:
 
 ```python
-import swarmauri_pop_dpop
+import swarmauri_pop_dpop as package_module
 
-print(swarmauri_pop_dpop.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_pop_dpop
@@ -2567,9 +2567,9 @@ print(swarmauri_pop_dpop.__name__)
 - Import example:
 
 ```python
-import swarmauri_pop_x509
+import swarmauri_pop_x509 as package_module
 
-print(swarmauri_pop_x509.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_pop_x509
@@ -2591,9 +2591,9 @@ print(swarmauri_pop_x509.__name__)
 - Import example:
 
 ```python
-import swarmauri_prompt_j2prompttemplate
+import swarmauri_prompt_j2prompttemplate as package_module
 
-print(swarmauri_prompt_j2prompttemplate.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_prompt_j2prompttemplate
@@ -2615,9 +2615,9 @@ print(swarmauri_prompt_j2prompttemplate.__name__)
 - Import example:
 
 ```python
-import swarmauri_publisher_rabbitmq
+import swarmauri_publisher_rabbitmq as package_module
 
-print(swarmauri_publisher_rabbitmq.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_publisher_rabbitmq
@@ -2639,9 +2639,9 @@ print(swarmauri_publisher_rabbitmq.__name__)
 - Import example:
 
 ```python
-import swarmauri_publisher_redis
+import swarmauri_publisher_redis as package_module
 
-print(swarmauri_publisher_redis.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_publisher_redis
@@ -2663,9 +2663,9 @@ print(swarmauri_publisher_redis.__name__)
 - Import example:
 
 ```python
-import swarmauri_publisher_webhook
+import swarmauri_publisher_webhook as package_module
 
-print(swarmauri_publisher_webhook.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_publisher_webhook
@@ -2687,9 +2687,9 @@ print(swarmauri_publisher_webhook.__name__)
 - Import example:
 
 ```python
-import swarmauri_signing_ca
+import swarmauri_signing_ca as package_module
 
-print(swarmauri_signing_ca.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_signing_ca
@@ -2711,9 +2711,9 @@ print(swarmauri_signing_ca.__name__)
 - Import example:
 
 ```python
-import swarmauri_signing_cms
+import swarmauri_signing_cms as package_module
 
-print(swarmauri_signing_cms.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_signing_cms
@@ -2735,9 +2735,9 @@ print(swarmauri_signing_cms.__name__)
 - Import example:
 
 ```python
-import swarmauri_signing_ecdsa
+import swarmauri_signing_ecdsa as package_module
 
-print(swarmauri_signing_ecdsa.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_signing_ecdsa
@@ -2759,9 +2759,9 @@ print(swarmauri_signing_ecdsa.__name__)
 - Import example:
 
 ```python
-import swarmauri_signing_ed25519
+import swarmauri_signing_ed25519 as package_module
 
-print(swarmauri_signing_ed25519.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_signing_ed25519
@@ -2783,9 +2783,9 @@ print(swarmauri_signing_ed25519.__name__)
 - Import example:
 
 ```python
-import swarmauri_signing_hmac
+import swarmauri_signing_hmac as package_module
 
-print(swarmauri_signing_hmac.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_signing_hmac
@@ -2807,9 +2807,9 @@ print(swarmauri_signing_hmac.__name__)
 - Import example:
 
 ```python
-import swarmauri_signing_openpgp
+import swarmauri_signing_openpgp as package_module
 
-print(swarmauri_signing_openpgp.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_signing_openpgp
@@ -2831,9 +2831,9 @@ print(swarmauri_signing_openpgp.__name__)
 - Import example:
 
 ```python
-import swarmauri_signing_pep458
+import swarmauri_signing_pep458 as package_module
 
-print(swarmauri_signing_pep458.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_signing_pep458
@@ -2855,9 +2855,9 @@ print(swarmauri_signing_pep458.__name__)
 - Import example:
 
 ```python
-import swarmauri_signing_pgp
+import swarmauri_signing_pgp as package_module
 
-print(swarmauri_signing_pgp.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_signing_pgp
@@ -2879,9 +2879,9 @@ print(swarmauri_signing_pgp.__name__)
 - Import example:
 
 ```python
-import swarmauri_signing_rsa
+import swarmauri_signing_rsa as package_module
 
-print(swarmauri_signing_rsa.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_signing_rsa
@@ -2903,9 +2903,9 @@ print(swarmauri_signing_rsa.__name__)
 - Import example:
 
 ```python
-import swarmauri_signing_secp256k1
+import swarmauri_signing_secp256k1 as package_module
 
-print(swarmauri_signing_secp256k1.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_signing_secp256k1
@@ -2927,9 +2927,9 @@ print(swarmauri_signing_secp256k1.__name__)
 - Import example:
 
 ```python
-import swarmauri_signing_sigv4
+import swarmauri_signing_sigv4 as package_module
 
-print(swarmauri_signing_sigv4.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_signing_sigv4
@@ -2951,9 +2951,9 @@ print(swarmauri_signing_sigv4.__name__)
 - Import example:
 
 ```python
-import swarmauri_signing_ssh
+import swarmauri_signing_ssh as package_module
 
-print(swarmauri_signing_ssh.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_signing_ssh
@@ -2975,9 +2975,9 @@ print(swarmauri_signing_ssh.__name__)
 - Import example:
 
 ```python
-import swarmauri_signing_xmld
+import swarmauri_signing_xmld as package_module
 
-print(swarmauri_signing_xmld.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_signing_xmld
@@ -2999,9 +2999,9 @@ print(swarmauri_signing_xmld.__name__)
 - Import example:
 
 ```python
-import swarmauri_skill_dummy_filesystem
+import swarmauri_skill_dummy_filesystem as package_module
 
-print(swarmauri_skill_dummy_filesystem.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_skill_dummy_filesystem
@@ -3023,9 +3023,9 @@ print(swarmauri_skill_dummy_filesystem.__name__)
 - Import example:
 
 ```python
-import swarmauri_skill_dummy_local
+import swarmauri_skill_dummy_local as package_module
 
-print(swarmauri_skill_dummy_local.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_skill_dummy_local
@@ -3047,9 +3047,9 @@ print(swarmauri_skill_dummy_local.__name__)
 - Import example:
 
 ```python
-import swarmauri_skill_filesystem
+import swarmauri_skill_filesystem as package_module
 
-print(swarmauri_skill_filesystem.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_skill_filesystem
@@ -3071,9 +3071,9 @@ print(swarmauri_skill_filesystem.__name__)
 - Import example:
 
 ```python
-import swarmauri_skill_local
+import swarmauri_skill_local as package_module
 
-print(swarmauri_skill_local.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_skill_local
@@ -3095,9 +3095,9 @@ print(swarmauri_skill_local.__name__)
 - Import example:
 
 ```python
-import swarmauri_storage_file
+import swarmauri_storage_file as package_module
 
-print(swarmauri_storage_file.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_storage_file
@@ -3119,9 +3119,9 @@ print(swarmauri_storage_file.__name__)
 - Import example:
 
 ```python
-import swarmauri_storage_github
+import swarmauri_storage_github as package_module
 
-print(swarmauri_storage_github.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_storage_github
@@ -3143,9 +3143,9 @@ print(swarmauri_storage_github.__name__)
 - Import example:
 
 ```python
-import swarmauri_storage_github_release
+import swarmauri_storage_github_release as package_module
 
-print(swarmauri_storage_github_release.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_storage_github_release
@@ -3167,9 +3167,9 @@ print(swarmauri_storage_github_release.__name__)
 - Import example:
 
 ```python
-import swarmauri_storage_memory
+import swarmauri_storage_memory as package_module
 
-print(swarmauri_storage_memory.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_storage_memory
@@ -3191,9 +3191,9 @@ print(swarmauri_storage_memory.__name__)
 - Import example:
 
 ```python
-import swarmauri_storage_minio
+import swarmauri_storage_minio as package_module
 
-print(swarmauri_storage_minio.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_storage_minio
@@ -3215,9 +3215,9 @@ print(swarmauri_storage_minio.__name__)
 - Import example:
 
 ```python
-import swarmauri_storage_s3
+import swarmauri_storage_s3 as package_module
 
-print(swarmauri_storage_s3.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_storage_s3
@@ -3239,9 +3239,9 @@ print(swarmauri_storage_s3.__name__)
 - Import example:
 
 ```python
-import swarmauri_storage_s3_over_sftp
+import swarmauri_storage_s3_over_sftp as package_module
 
-print(swarmauri_storage_s3_over_sftp.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_storage_s3_over_sftp
@@ -3263,9 +3263,9 @@ print(swarmauri_storage_s3_over_sftp.__name__)
 - Import example:
 
 ```python
-import swarmauri_storage_s3fs
+import swarmauri_storage_s3fs as package_module
 
-print(swarmauri_storage_s3fs.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_storage_s3fs
@@ -3287,9 +3287,9 @@ print(swarmauri_storage_s3fs.__name__)
 - Import example:
 
 ```python
-import swarmauri_tokens_dpopboundjwt
+import swarmauri_tokens_dpopboundjwt as package_module
 
-print(swarmauri_tokens_dpopboundjwt.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_tokens_dpopboundjwt
@@ -3311,9 +3311,9 @@ print(swarmauri_tokens_dpopboundjwt.__name__)
 - Import example:
 
 ```python
-import swarmauri_tokens_introspection
+import swarmauri_tokens_introspection as package_module
 
-print(swarmauri_tokens_introspection.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_tokens_introspection
@@ -3335,9 +3335,9 @@ print(swarmauri_tokens_introspection.__name__)
 - Import example:
 
 ```python
-import swarmauri_tokens_paseto_v4
+import swarmauri_tokens_paseto_v4 as package_module
 
-print(swarmauri_tokens_paseto_v4.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_tokens_paseto_v4
@@ -3359,9 +3359,9 @@ print(swarmauri_tokens_paseto_v4.__name__)
 - Import example:
 
 ```python
-import swarmauri_tokens_remoteoidc
+import swarmauri_tokens_remoteoidc as package_module
 
-print(swarmauri_tokens_remoteoidc.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_tokens_remoteoidc
@@ -3383,9 +3383,9 @@ print(swarmauri_tokens_remoteoidc.__name__)
 - Import example:
 
 ```python
-import swarmauri_tokens_rotatingjwt
+import swarmauri_tokens_rotatingjwt as package_module
 
-print(swarmauri_tokens_rotatingjwt.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_tokens_rotatingjwt
@@ -3407,9 +3407,9 @@ print(swarmauri_tokens_rotatingjwt.__name__)
 - Import example:
 
 ```python
-import swarmauri_tokens_sshcert
+import swarmauri_tokens_sshcert as package_module
 
-print(swarmauri_tokens_sshcert.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_tokens_sshcert
@@ -3431,9 +3431,9 @@ print(swarmauri_tokens_sshcert.__name__)
 - Import example:
 
 ```python
-import swarmauri_tokens_sshsig
+import swarmauri_tokens_sshsig as package_module
 
-print(swarmauri_tokens_sshsig.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_tokens_sshsig
@@ -3455,9 +3455,9 @@ print(swarmauri_tokens_sshsig.__name__)
 - Import example:
 
 ```python
-import swarmauri_tokens_tlsboundjwt
+import swarmauri_tokens_tlsboundjwt as package_module
 
-print(swarmauri_tokens_tlsboundjwt.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_tokens_tlsboundjwt
@@ -3479,9 +3479,9 @@ print(swarmauri_tokens_tlsboundjwt.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_containerfeedchars
+import swarmauri_tool_containerfeedchars as package_module
 
-print(swarmauri_tool_containerfeedchars.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_tool_containerfeedchars
@@ -3503,9 +3503,9 @@ print(swarmauri_tool_containerfeedchars.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_containermakepr
+import swarmauri_tool_containermakepr as package_module
 
-print(swarmauri_tool_containermakepr.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_tool_containermakepr
@@ -3527,9 +3527,9 @@ print(swarmauri_tool_containermakepr.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_containernewsession
+import swarmauri_tool_containernewsession as package_module
 
-print(swarmauri_tool_containernewsession.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_tool_containernewsession
@@ -3551,9 +3551,9 @@ print(swarmauri_tool_containernewsession.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_githubloader
+import swarmauri_tool_githubloader as package_module
 
-print(swarmauri_tool_githubloader.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_tool_githubloader
@@ -3575,9 +3575,9 @@ print(swarmauri_tool_githubloader.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_httploaded
+import swarmauri_tool_httploaded as package_module
 
-print(swarmauri_tool_httploaded.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_tool_httploaded
@@ -3599,9 +3599,9 @@ print(swarmauri_tool_httploaded.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_matplotlib
+import swarmauri_tool_matplotlib as package_module
 
-print(swarmauri_tool_matplotlib.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_tool_matplotlib
@@ -3623,9 +3623,9 @@ print(swarmauri_tool_matplotlib.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_skill_execution
+import swarmauri_tool_skill_execution as package_module
 
-print(swarmauri_tool_skill_execution.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_tool_skill_execution
@@ -3647,9 +3647,9 @@ print(swarmauri_tool_skill_execution.__name__)
 - Import example:
 
 ```python
-import swarmauri_transport_asgi
+import swarmauri_transport_asgi as package_module
 
-print(swarmauri_transport_asgi.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_transport_asgi
@@ -3671,9 +3671,9 @@ print(swarmauri_transport_asgi.__name__)
 - Import example:
 
 ```python
-import swarmauri_transport_h2
+import swarmauri_transport_h2 as package_module
 
-print(swarmauri_transport_h2.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_transport_h2
@@ -3695,9 +3695,9 @@ print(swarmauri_transport_h2.__name__)
 - Import example:
 
 ```python
-import swarmauri_transport_h2mux
+import swarmauri_transport_h2mux as package_module
 
-print(swarmauri_transport_h2mux.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_transport_h2mux
@@ -3719,9 +3719,9 @@ print(swarmauri_transport_h2mux.__name__)
 - Import example:
 
 ```python
-import swarmauri_transport_meshsidecarhttp2
+import swarmauri_transport_meshsidecarhttp2 as package_module
 
-print(swarmauri_transport_meshsidecarhttp2.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_transport_meshsidecarhttp2
@@ -3743,9 +3743,9 @@ print(swarmauri_transport_meshsidecarhttp2.__name__)
 - Import example:
 
 ```python
-import swarmauri_transport_mtlsunicast
+import swarmauri_transport_mtlsunicast as package_module
 
-print(swarmauri_transport_mtlsunicast.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_transport_mtlsunicast
@@ -3767,9 +3767,9 @@ print(swarmauri_transport_mtlsunicast.__name__)
 - Import example:
 
 ```python
-import swarmauri_transport_quic
+import swarmauri_transport_quic as package_module
 
-print(swarmauri_transport_quic.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_transport_quic
@@ -3791,9 +3791,9 @@ print(swarmauri_transport_quic.__name__)
 - Import example:
 
 ```python
-import swarmauri_transport_sseoutbound
+import swarmauri_transport_sseoutbound as package_module
 
-print(swarmauri_transport_sseoutbound.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_transport_sseoutbound
@@ -3815,9 +3815,9 @@ print(swarmauri_transport_sseoutbound.__name__)
 - Import example:
 
 ```python
-import swarmauri_transport_sshtunnel
+import swarmauri_transport_sshtunnel as package_module
 
-print(swarmauri_transport_sshtunnel.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_transport_sshtunnel
@@ -3839,9 +3839,9 @@ print(swarmauri_transport_sshtunnel.__name__)
 - Import example:
 
 ```python
-import swarmauri_transport_stdio
+import swarmauri_transport_stdio as package_module
 
-print(swarmauri_transport_stdio.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_transport_stdio
@@ -3863,9 +3863,9 @@ print(swarmauri_transport_stdio.__name__)
 - Import example:
 
 ```python
-import swarmauri_transport_tcpunicast
+import swarmauri_transport_tcpunicast as package_module
 
-print(swarmauri_transport_tcpunicast.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_transport_tcpunicast
@@ -3887,9 +3887,9 @@ print(swarmauri_transport_tcpunicast.__name__)
 - Import example:
 
 ```python
-import swarmauri_transport_tls_unicast
+import swarmauri_transport_tls_unicast as package_module
 
-print(swarmauri_transport_tls_unicast.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_transport_tls_unicast
@@ -3911,9 +3911,9 @@ print(swarmauri_transport_tls_unicast.__name__)
 - Import example:
 
 ```python
-import swarmauri_transport_udp
+import swarmauri_transport_udp as package_module
 
-print(swarmauri_transport_udp.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_transport_udp
@@ -3935,9 +3935,9 @@ print(swarmauri_transport_udp.__name__)
 - Import example:
 
 ```python
-import swarmauri_transport_uds_unicast
+import swarmauri_transport_uds_unicast as package_module
 
-print(swarmauri_transport_uds_unicast.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_transport_uds_unicast
@@ -3959,9 +3959,9 @@ print(swarmauri_transport_uds_unicast.__name__)
 - Import example:
 
 ```python
-import swarmauri_transport_wsjsonrpcmux
+import swarmauri_transport_wsjsonrpcmux as package_module
 
-print(swarmauri_transport_wsjsonrpcmux.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_transport_wsjsonrpcmux
@@ -3983,9 +3983,9 @@ print(swarmauri_transport_wsjsonrpcmux.__name__)
 - Import example:
 
 ```python
-import swarmauri_xmp_gif
+import swarmauri_xmp_gif as package_module
 
-print(swarmauri_xmp_gif.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_xmp_gif
@@ -4007,9 +4007,9 @@ print(swarmauri_xmp_gif.__name__)
 - Import example:
 
 ```python
-import swarmauri_xmp_jpeg
+import swarmauri_xmp_jpeg as package_module
 
-print(swarmauri_xmp_jpeg.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_xmp_jpeg
@@ -4031,9 +4031,9 @@ print(swarmauri_xmp_jpeg.__name__)
 - Import example:
 
 ```python
-import swarmauri_xmp_mp4
+import swarmauri_xmp_mp4 as package_module
 
-print(swarmauri_xmp_mp4.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_xmp_mp4
@@ -4055,9 +4055,9 @@ print(swarmauri_xmp_mp4.__name__)
 - Import example:
 
 ```python
-import swarmauri_xmp_pdf
+import swarmauri_xmp_pdf as package_module
 
-print(swarmauri_xmp_pdf.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_xmp_pdf
@@ -4079,9 +4079,9 @@ print(swarmauri_xmp_pdf.__name__)
 - Import example:
 
 ```python
-import swarmauri_xmp_png
+import swarmauri_xmp_png as package_module
 
-print(swarmauri_xmp_png.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_xmp_png
@@ -4103,9 +4103,9 @@ print(swarmauri_xmp_png.__name__)
 - Import example:
 
 ```python
-import swarmauri_xmp_svg
+import swarmauri_xmp_svg as package_module
 
-print(swarmauri_xmp_svg.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_xmp_svg
@@ -4127,9 +4127,9 @@ print(swarmauri_xmp_svg.__name__)
 - Import example:
 
 ```python
-import swarmauri_xmp_tiff
+import swarmauri_xmp_tiff as package_module
 
-print(swarmauri_xmp_tiff.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_xmp_tiff
@@ -4151,9 +4151,9 @@ print(swarmauri_xmp_tiff.__name__)
 - Import example:
 
 ```python
-import swarmauri_xmp_webp
+import swarmauri_xmp_webp as package_module
 
-print(swarmauri_xmp_webp.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_xmp_webp
@@ -4175,9 +4175,9 @@ print(swarmauri_xmp_webp.__name__)
 - Import example:
 
 ```python
-import swarmauri_certs_composite
+import swarmauri_certs_composite as package_module
 
-print(swarmauri_certs_composite.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_certs_composite
@@ -4199,9 +4199,9 @@ print(swarmauri_certs_composite.__name__)
 - Import example:
 
 ```python
-import swarmauri_certs_x509
+import swarmauri_certs_x509 as package_module
 
-print(swarmauri_certs_x509.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_certs_x509
@@ -4223,9 +4223,9 @@ print(swarmauri_certs_x509.__name__)
 - Import example:
 
 ```python
-import swarmauri_crypto_composite
+import swarmauri_crypto_composite as package_module
 
-print(swarmauri_crypto_composite.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_crypto_composite
@@ -4247,9 +4247,9 @@ print(swarmauri_crypto_composite.__name__)
 - Import example:
 
 ```python
-import swarmauri_gitfilter_file
+import swarmauri_gitfilter_file as package_module
 
-print(swarmauri_gitfilter_file.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_gitfilter_file
@@ -4271,9 +4271,9 @@ print(swarmauri_gitfilter_file.__name__)
 - Import example:
 
 ```python
-import swarmauri_keyprovider_hierarchical
+import swarmauri_keyprovider_hierarchical as package_module
 
-print(swarmauri_keyprovider_hierarchical.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_keyprovider_hierarchical
@@ -4295,9 +4295,9 @@ print(swarmauri_keyprovider_hierarchical.__name__)
 - Import example:
 
 ```python
-import swarmauri_keyprovider_remote_jwks
+import swarmauri_keyprovider_remote_jwks as package_module
 
-print(swarmauri_keyprovider_remote_jwks.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_keyprovider_remote_jwks
@@ -4319,9 +4319,9 @@ print(swarmauri_keyprovider_remote_jwks.__name__)
 - Import example:
 
 ```python
-import swarmauri_keyproviders_mirrored
+import swarmauri_keyproviders_mirrored as package_module
 
-print(swarmauri_keyproviders_mirrored.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_keyproviders_mirrored
@@ -4343,9 +4343,9 @@ print(swarmauri_keyproviders_mirrored.__name__)
 - Import example:
 
 ```python
-import swarmauri_signing_jws
+import swarmauri_signing_jws as package_module
 
-print(swarmauri_signing_jws.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_signing_jws
@@ -4367,9 +4367,9 @@ print(swarmauri_signing_jws.__name__)
 - Import example:
 
 ```python
-import swarmauri_signing_pdf
+import swarmauri_signing_pdf as package_module
 
-print(swarmauri_signing_pdf.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_signing_pdf
@@ -4391,9 +4391,9 @@ print(swarmauri_signing_pdf.__name__)
 - Import example:
 
 ```python
-import swarmauri_tokens_composite
+import swarmauri_tokens_composite as package_module
 
-print(swarmauri_tokens_composite.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_tokens_composite
@@ -4415,9 +4415,9 @@ print(swarmauri_tokens_composite.__name__)
 - Import example:
 
 ```python
-import swarmauri_vectorstore_doc2vec
+import swarmauri_vectorstore_doc2vec as package_module
 
-print(swarmauri_vectorstore_doc2vec.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_vectorstore_doc2vec
@@ -4439,9 +4439,9 @@ print(swarmauri_vectorstore_doc2vec.__name__)
 - Import example:
 
 ```python
-import swarmauri_middleware_auth
+import swarmauri_middleware_auth as package_module
 
-print(swarmauri_middleware_auth.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_middleware_auth
@@ -4463,9 +4463,9 @@ print(swarmauri_middleware_auth.__name__)
 - Import example:
 
 ```python
-import swarmauri_signing_dpop
+import swarmauri_signing_dpop as package_module
 
-print(swarmauri_signing_dpop.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_signing_dpop
@@ -4487,9 +4487,9 @@ print(swarmauri_signing_dpop.__name__)
 - Import example:
 
 ```python
-import swarmauri_tokens_jwt
+import swarmauri_tokens_jwt as package_module
 
-print(swarmauri_tokens_jwt.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_tokens_jwt
@@ -4511,9 +4511,9 @@ print(swarmauri_tokens_jwt.__name__)
 - Import example:
 
 ```python
-import swarmauri_toolkit_containertoolkit
+import swarmauri_toolkit_containertoolkit as package_module
 
-print(swarmauri_toolkit_containertoolkit.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_toolkit_containertoolkit
@@ -4535,9 +4535,9 @@ print(swarmauri_toolkit_containertoolkit.__name__)
 - Import example:
 
 ```python
-import swarmauri_toolkit_runtime
+import swarmauri_toolkit_runtime as package_module
 
-print(swarmauri_toolkit_runtime.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_toolkit_runtime
@@ -4559,9 +4559,9 @@ print(swarmauri_toolkit_runtime.__name__)
 - Import example:
 
 ```python
-import swarmauri_transport_https_unicast
+import swarmauri_transport_https_unicast as package_module
 
-print(swarmauri_transport_https_unicast.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/standards/swarmauri_transport_https_unicast
@@ -4583,9 +4583,9 @@ print(swarmauri_transport_https_unicast.__name__)
 - Import example:
 
 ```python
-import swarmauri_billing_adyen
+import swarmauri_billing_adyen as package_module
 
-print(swarmauri_billing_adyen.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_billing_adyen
@@ -4607,9 +4607,9 @@ print(swarmauri_billing_adyen.__name__)
 - Import example:
 
 ```python
-import swarmauri_billing_authorize_net
+import swarmauri_billing_authorize_net as package_module
 
-print(swarmauri_billing_authorize_net.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_billing_authorize_net
@@ -4631,9 +4631,9 @@ print(swarmauri_billing_authorize_net.__name__)
 - Import example:
 
 ```python
-import swarmauri_billing_braintree
+import swarmauri_billing_braintree as package_module
 
-print(swarmauri_billing_braintree.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_billing_braintree
@@ -4655,9 +4655,9 @@ print(swarmauri_billing_braintree.__name__)
 - Import example:
 
 ```python
-import swarmauri_billing_paypal
+import swarmauri_billing_paypal as package_module
 
-print(swarmauri_billing_paypal.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_billing_paypal
@@ -4679,9 +4679,9 @@ print(swarmauri_billing_paypal.__name__)
 - Import example:
 
 ```python
-import swarmauri_billing_paystack
+import swarmauri_billing_paystack as package_module
 
-print(swarmauri_billing_paystack.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_billing_paystack
@@ -4703,9 +4703,9 @@ print(swarmauri_billing_paystack.__name__)
 - Import example:
 
 ```python
-import swarmauri_billing_razorpay
+import swarmauri_billing_razorpay as package_module
 
-print(swarmauri_billing_razorpay.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_billing_razorpay
@@ -4727,9 +4727,9 @@ print(swarmauri_billing_razorpay.__name__)
 - Import example:
 
 ```python
-import swarmauri_billing_square
+import swarmauri_billing_square as package_module
 
-print(swarmauri_billing_square.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_billing_square
@@ -4751,9 +4751,9 @@ print(swarmauri_billing_square.__name__)
 - Import example:
 
 ```python
-import swarmauri_certs_acme
+import swarmauri_certs_acme as package_module
 
-print(swarmauri_certs_acme.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_certs_acme
@@ -4775,9 +4775,9 @@ print(swarmauri_certs_acme.__name__)
 - Import example:
 
 ```python
-import swarmauri_certs_azure
+import swarmauri_certs_azure as package_module
 
-print(swarmauri_certs_azure.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_certs_azure
@@ -4799,9 +4799,9 @@ print(swarmauri_certs_azure.__name__)
 - Import example:
 
 ```python
-import swarmauri_certs_cfssl
+import swarmauri_certs_cfssl as package_module
 
-print(swarmauri_certs_cfssl.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_certs_cfssl
@@ -4823,9 +4823,9 @@ print(swarmauri_certs_cfssl.__name__)
 - Import example:
 
 ```python
-import swarmauri_certs_crlverifyservice
+import swarmauri_certs_crlverifyservice as package_module
 
-print(swarmauri_certs_crlverifyservice.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_certs_crlverifyservice
@@ -4847,9 +4847,9 @@ print(swarmauri_certs_crlverifyservice.__name__)
 - Import example:
 
 ```python
-import swarmauri_certs_csronly
+import swarmauri_certs_csronly as package_module
 
-print(swarmauri_certs_csronly.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_certs_csronly
@@ -4871,9 +4871,9 @@ print(swarmauri_certs_csronly.__name__)
 - Import example:
 
 ```python
-import swarmauri_certs_ocspverify
+import swarmauri_certs_ocspverify as package_module
 
-print(swarmauri_certs_ocspverify.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_certs_ocspverify
@@ -4895,9 +4895,9 @@ print(swarmauri_certs_ocspverify.__name__)
 - Import example:
 
 ```python
-import swarmauri_certservice_aws_kms
+import swarmauri_certservice_aws_kms as package_module
 
-print(swarmauri_certservice_aws_kms.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_certservice_aws_kms
@@ -4919,9 +4919,9 @@ print(swarmauri_certservice_aws_kms.__name__)
 - Import example:
 
 ```python
-import swarmauri_certservice_gcpkms
+import swarmauri_certservice_gcpkms as package_module
 
-print(swarmauri_certservice_gcpkms.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_certservice_gcpkms
@@ -4943,9 +4943,9 @@ print(swarmauri_certservice_gcpkms.__name__)
 - Import example:
 
 ```python
-import swarmauri_certservice_ms_adcs
+import swarmauri_certservice_ms_adcs as package_module
 
-print(swarmauri_certservice_ms_adcs.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_certservice_ms_adcs
@@ -4967,9 +4967,9 @@ print(swarmauri_certservice_ms_adcs.__name__)
 - Import example:
 
 ```python
-import swarmauri_certservice_scep
+import swarmauri_certservice_scep as package_module
 
-print(swarmauri_certservice_scep.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_certservice_scep
@@ -4991,9 +4991,9 @@ print(swarmauri_certservice_scep.__name__)
 - Import example:
 
 ```python
-import swarmauri_certservice_stepca
+import swarmauri_certservice_stepca as package_module
 
-print(swarmauri_certservice_stepca.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_certservice_stepca
@@ -5015,9 +5015,9 @@ print(swarmauri_certservice_stepca.__name__)
 - Import example:
 
 ```python
-import swarmauri_embedding_mlm
+import swarmauri_embedding_mlm as package_module
 
-print(swarmauri_embedding_mlm.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_embedding_mlm
@@ -5039,9 +5039,9 @@ print(swarmauri_embedding_mlm.__name__)
 - Import example:
 
 ```python
-import swm_example_community_package
+import swm_example_community_package as package_module
 
-print(swm_example_community_package.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swm_example_community_package
@@ -5063,9 +5063,9 @@ print(swm_example_community_package.__name__)
 - Import example:
 
 ```python
-import swarmauri_keyprovider_aws_kms
+import swarmauri_keyprovider_aws_kms as package_module
 
-print(swarmauri_keyprovider_aws_kms.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_keyprovider_aws_kms
@@ -5087,9 +5087,9 @@ print(swarmauri_keyprovider_aws_kms.__name__)
 - Import example:
 
 ```python
-import swarmauri_keyprovider_gcpkms
+import swarmauri_keyprovider_gcpkms as package_module
 
-print(swarmauri_keyprovider_gcpkms.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_keyprovider_gcpkms
@@ -5111,9 +5111,9 @@ print(swarmauri_keyprovider_gcpkms.__name__)
 - Import example:
 
 ```python
-import swarmauri_keyprovider_vaulttransit
+import swarmauri_keyprovider_vaulttransit as package_module
 
-print(swarmauri_keyprovider_vaulttransit.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_keyprovider_vaulttransit
@@ -5135,9 +5135,9 @@ print(swarmauri_keyprovider_vaulttransit.__name__)
 - Import example:
 
 ```python
-import swarmauri_llm_ai21
+import swarmauri_llm_ai21 as package_module
 
-print(swarmauri_llm_ai21.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_llm_ai21
@@ -5159,9 +5159,9 @@ print(swarmauri_llm_ai21.__name__)
 - Import example:
 
 ```python
-import swarmauri_llm_anthropic
+import swarmauri_llm_anthropic as package_module
 
-print(swarmauri_llm_anthropic.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_llm_anthropic
@@ -5183,9 +5183,9 @@ print(swarmauri_llm_anthropic.__name__)
 - Import example:
 
 ```python
-import swarmauri_llm_cerebras
+import swarmauri_llm_cerebras as package_module
 
-print(swarmauri_llm_cerebras.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_llm_cerebras
@@ -5207,9 +5207,9 @@ print(swarmauri_llm_cerebras.__name__)
 - Import example:
 
 ```python
-import swarmauri_llm_cohere
+import swarmauri_llm_cohere as package_module
 
-print(swarmauri_llm_cohere.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_llm_cohere
@@ -5231,9 +5231,9 @@ print(swarmauri_llm_cohere.__name__)
 - Import example:
 
 ```python
-import swarmauri_llm_deepinfra
+import swarmauri_llm_deepinfra as package_module
 
-print(swarmauri_llm_deepinfra.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_llm_deepinfra
@@ -5255,9 +5255,9 @@ print(swarmauri_llm_deepinfra.__name__)
 - Import example:
 
 ```python
-import swarmauri_llm_deepseek
+import swarmauri_llm_deepseek as package_module
 
-print(swarmauri_llm_deepseek.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_llm_deepseek
@@ -5279,9 +5279,9 @@ print(swarmauri_llm_deepseek.__name__)
 - Import example:
 
 ```python
-import swarmauri_llm_falai
+import swarmauri_llm_falai as package_module
 
-print(swarmauri_llm_falai.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_llm_falai
@@ -5303,9 +5303,9 @@ print(swarmauri_llm_falai.__name__)
 - Import example:
 
 ```python
-import swarmauri_llm_gemini
+import swarmauri_llm_gemini as package_module
 
-print(swarmauri_llm_gemini.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_llm_gemini
@@ -5327,9 +5327,9 @@ print(swarmauri_llm_gemini.__name__)
 - Import example:
 
 ```python
-import swarmauri_llm_groq
+import swarmauri_llm_groq as package_module
 
-print(swarmauri_llm_groq.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_llm_groq
@@ -5351,9 +5351,9 @@ print(swarmauri_llm_groq.__name__)
 - Import example:
 
 ```python
-import swarmauri_llm_hyperbolic
+import swarmauri_llm_hyperbolic as package_module
 
-print(swarmauri_llm_hyperbolic.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_llm_hyperbolic
@@ -5375,9 +5375,9 @@ print(swarmauri_llm_hyperbolic.__name__)
 - Import example:
 
 ```python
-import swarmauri_llm_leptonai
+import swarmauri_llm_leptonai as package_module
 
-print(swarmauri_llm_leptonai.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_llm_leptonai
@@ -5399,9 +5399,9 @@ print(swarmauri_llm_leptonai.__name__)
 - Import example:
 
 ```python
-import swarmauri_llm_llamacpp
+import swarmauri_llm_llamacpp as package_module
 
-print(swarmauri_llm_llamacpp.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_llm_llamacpp
@@ -5423,9 +5423,9 @@ print(swarmauri_llm_llamacpp.__name__)
 - Import example:
 
 ```python
-import swarmauri_llm_mistral
+import swarmauri_llm_mistral as package_module
 
-print(swarmauri_llm_mistral.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_llm_mistral
@@ -5447,9 +5447,9 @@ print(swarmauri_llm_mistral.__name__)
 - Import example:
 
 ```python
-import swarmauri_llm_openai
+import swarmauri_llm_openai as package_module
 
-print(swarmauri_llm_openai.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_llm_openai
@@ -5471,9 +5471,9 @@ print(swarmauri_llm_openai.__name__)
 - Import example:
 
 ```python
-import swarmauri_llm_perplexity
+import swarmauri_llm_perplexity as package_module
 
-print(swarmauri_llm_perplexity.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_llm_perplexity
@@ -5495,9 +5495,9 @@ print(swarmauri_llm_perplexity.__name__)
 - Import example:
 
 ```python
-import swarmauri_llm_playht
+import swarmauri_llm_playht as package_module
 
-print(swarmauri_llm_playht.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_llm_playht
@@ -5519,9 +5519,9 @@ print(swarmauri_llm_playht.__name__)
 - Import example:
 
 ```python
-import swarmauri_llm_whisper
+import swarmauri_llm_whisper as package_module
 
-print(swarmauri_llm_whisper.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_llm_whisper
@@ -5543,9 +5543,9 @@ print(swarmauri_llm_whisper.__name__)
 - Import example:
 
 ```python
-import swarmauri_measurement_mutualinformation
+import swarmauri_measurement_mutualinformation as package_module
 
-print(swarmauri_measurement_mutualinformation.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_measurement_mutualinformation
@@ -5567,9 +5567,9 @@ print(swarmauri_measurement_mutualinformation.__name__)
 - Import example:
 
 ```python
-import swarmauri_measurement_tokencountestimator
+import swarmauri_measurement_tokencountestimator as package_module
 
-print(swarmauri_measurement_tokencountestimator.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_measurement_tokencountestimator
@@ -5591,9 +5591,9 @@ print(swarmauri_measurement_tokencountestimator.__name__)
 - Import example:
 
 ```python
-import swarmauri_metric_hamming
+import swarmauri_metric_hamming as package_module
 
-print(swarmauri_metric_hamming.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_metric_hamming
@@ -5615,9 +5615,9 @@ print(swarmauri_metric_hamming.__name__)
 - Import example:
 
 ```python
-import swarmauri_middleware_circuitbreaker
+import swarmauri_middleware_circuitbreaker as package_module
 
-print(swarmauri_middleware_circuitbreaker.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_middleware_circuitbreaker
@@ -5639,9 +5639,9 @@ print(swarmauri_middleware_circuitbreaker.__name__)
 - Import example:
 
 ```python
-import swarmauri_middleware_ratepolicy
+import swarmauri_middleware_ratepolicy as package_module
 
-print(swarmauri_middleware_ratepolicy.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_middleware_ratepolicy
@@ -5663,9 +5663,9 @@ print(swarmauri_middleware_ratepolicy.__name__)
 - Import example:
 
 ```python
-import swarmauri_ocr_pytesseract
+import swarmauri_ocr_pytesseract as package_module
 
-print(swarmauri_ocr_pytesseract.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_ocr_pytesseract
@@ -5687,9 +5687,9 @@ print(swarmauri_ocr_pytesseract.__name__)
 - Import example:
 
 ```python
-import swarmauri_parser_bertembedding
+import swarmauri_parser_bertembedding as package_module
 
-print(swarmauri_parser_bertembedding.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_parser_bertembedding
@@ -5711,9 +5711,9 @@ print(swarmauri_parser_bertembedding.__name__)
 - Import example:
 
 ```python
-import swarmauri_parser_entityrecognition
+import swarmauri_parser_entityrecognition as package_module
 
-print(swarmauri_parser_entityrecognition.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_parser_entityrecognition
@@ -5735,9 +5735,9 @@ print(swarmauri_parser_entityrecognition.__name__)
 - Import example:
 
 ```python
-import swarmauri_parser_fitzpdf
+import swarmauri_parser_fitzpdf as package_module
 
-print(swarmauri_parser_fitzpdf.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_parser_fitzpdf
@@ -5759,9 +5759,9 @@ print(swarmauri_parser_fitzpdf.__name__)
 - Import example:
 
 ```python
-import swarmauri_parser_pypdf2
+import swarmauri_parser_pypdf2 as package_module
 
-print(swarmauri_parser_pypdf2.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_parser_pypdf2
@@ -5783,9 +5783,9 @@ print(swarmauri_parser_pypdf2.__name__)
 - Import example:
 
 ```python
-import swarmauri_parser_pypdftk
+import swarmauri_parser_pypdftk as package_module
 
-print(swarmauri_parser_pypdftk.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_parser_pypdftk
@@ -5807,9 +5807,9 @@ print(swarmauri_parser_pypdftk.__name__)
 - Import example:
 
 ```python
-import swarmauri_parser_slate
+import swarmauri_parser_slate as package_module
 
-print(swarmauri_parser_slate.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_parser_slate
@@ -5831,9 +5831,9 @@ print(swarmauri_parser_slate.__name__)
 - Import example:
 
 ```python
-import swarmauri_parser_textblob
+import swarmauri_parser_textblob as package_module
 
-print(swarmauri_parser_textblob.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_parser_textblob
@@ -5855,9 +5855,9 @@ print(swarmauri_parser_textblob.__name__)
 - Import example:
 
 ```python
-import swarmauri_signing_dsse
+import swarmauri_signing_dsse as package_module
 
-print(swarmauri_signing_dsse.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_signing_dsse
@@ -5879,9 +5879,9 @@ print(swarmauri_signing_dsse.__name__)
 - Import example:
 
 ```python
-import swarmauri_state_clipboard
+import swarmauri_state_clipboard as package_module
 
-print(swarmauri_state_clipboard.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_state_clipboard
@@ -5903,9 +5903,9 @@ print(swarmauri_state_clipboard.__name__)
 - Import example:
 
 ```python
-import swarmauri_tests_griffe
+import swarmauri_tests_griffe as package_module
 
-print(swarmauri_tests_griffe.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tests_griffe
@@ -5927,9 +5927,9 @@ print(swarmauri_tests_griffe.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_captchagenerator
+import swarmauri_tool_captchagenerator as package_module
 
-print(swarmauri_tool_captchagenerator.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_captchagenerator
@@ -5951,9 +5951,9 @@ print(swarmauri_tool_captchagenerator.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_dalechallreadability
+import swarmauri_tool_dalechallreadability as package_module
 
-print(swarmauri_tool_dalechallreadability.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_dalechallreadability
@@ -5975,9 +5975,9 @@ print(swarmauri_tool_dalechallreadability.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_downloadpdf
+import swarmauri_tool_downloadpdf as package_module
 
-print(swarmauri_tool_downloadpdf.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_downloadpdf
@@ -5999,9 +5999,9 @@ print(swarmauri_tool_downloadpdf.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_entityrecognition
+import swarmauri_tool_entityrecognition as package_module
 
-print(swarmauri_tool_entityrecognition.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_entityrecognition
@@ -6023,9 +6023,9 @@ print(swarmauri_tool_entityrecognition.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_folium
+import swarmauri_tool_folium as package_module
 
-print(swarmauri_tool_folium.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_folium
@@ -6047,9 +6047,9 @@ print(swarmauri_tool_folium.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_gmail
+import swarmauri_tool_gmail as package_module
 
-print(swarmauri_tool_gmail.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_gmail
@@ -6071,9 +6071,9 @@ print(swarmauri_tool_gmail.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_jupyterclearoutput
+import swarmauri_tool_jupyterclearoutput as package_module
 
-print(swarmauri_tool_jupyterclearoutput.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_jupyterclearoutput
@@ -6095,9 +6095,9 @@ print(swarmauri_tool_jupyterclearoutput.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_jupyterdisplay
+import swarmauri_tool_jupyterdisplay as package_module
 
-print(swarmauri_tool_jupyterdisplay.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_jupyterdisplay
@@ -6119,9 +6119,9 @@ print(swarmauri_tool_jupyterdisplay.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_jupyterdisplayhtml
+import swarmauri_tool_jupyterdisplayhtml as package_module
 
-print(swarmauri_tool_jupyterdisplayhtml.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_jupyterdisplayhtml
@@ -6143,9 +6143,9 @@ print(swarmauri_tool_jupyterdisplayhtml.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_jupyterexecuteandconvert
+import swarmauri_tool_jupyterexecuteandconvert as package_module
 
-print(swarmauri_tool_jupyterexecuteandconvert.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_jupyterexecuteandconvert
@@ -6167,9 +6167,9 @@ print(swarmauri_tool_jupyterexecuteandconvert.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_jupyterexecutecell
+import swarmauri_tool_jupyterexecutecell as package_module
 
-print(swarmauri_tool_jupyterexecutecell.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_jupyterexecutecell
@@ -6191,9 +6191,9 @@ print(swarmauri_tool_jupyterexecutecell.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_jupyterexecutenotebook
+import swarmauri_tool_jupyterexecutenotebook as package_module
 
-print(swarmauri_tool_jupyterexecutenotebook.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_jupyterexecutenotebook
@@ -6215,9 +6215,9 @@ print(swarmauri_tool_jupyterexecutenotebook.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_jupyterexecutenotebookwithparameters
+import swarmauri_tool_jupyterexecutenotebookwithparameters as package_module
 
-print(swarmauri_tool_jupyterexecutenotebookwithparameters.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_jupyterexecutenotebookwithparameters
@@ -6239,9 +6239,9 @@ print(swarmauri_tool_jupyterexecutenotebookwithparameters.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_jupyterexporthtml
+import swarmauri_tool_jupyterexporthtml as package_module
 
-print(swarmauri_tool_jupyterexporthtml.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_jupyterexporthtml
@@ -6263,9 +6263,9 @@ print(swarmauri_tool_jupyterexporthtml.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_jupyterexportlatex
+import swarmauri_tool_jupyterexportlatex as package_module
 
-print(swarmauri_tool_jupyterexportlatex.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_jupyterexportlatex
@@ -6287,9 +6287,9 @@ print(swarmauri_tool_jupyterexportlatex.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_jupyterexportmarkdown
+import swarmauri_tool_jupyterexportmarkdown as package_module
 
-print(swarmauri_tool_jupyterexportmarkdown.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_jupyterexportmarkdown
@@ -6311,9 +6311,9 @@ print(swarmauri_tool_jupyterexportmarkdown.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_jupyterexportpython
+import swarmauri_tool_jupyterexportpython as package_module
 
-print(swarmauri_tool_jupyterexportpython.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_jupyterexportpython
@@ -6335,9 +6335,9 @@ print(swarmauri_tool_jupyterexportpython.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_jupyterfromdict
+import swarmauri_tool_jupyterfromdict as package_module
 
-print(swarmauri_tool_jupyterfromdict.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_jupyterfromdict
@@ -6359,9 +6359,9 @@ print(swarmauri_tool_jupyterfromdict.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_jupytergetiopubmessage
+import swarmauri_tool_jupytergetiopubmessage as package_module
 
-print(swarmauri_tool_jupytergetiopubmessage.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_jupytergetiopubmessage
@@ -6383,9 +6383,9 @@ print(swarmauri_tool_jupytergetiopubmessage.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_jupytergetshellmessage
+import swarmauri_tool_jupytergetshellmessage as package_module
 
-print(swarmauri_tool_jupytergetshellmessage.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_jupytergetshellmessage
@@ -6407,9 +6407,9 @@ print(swarmauri_tool_jupytergetshellmessage.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_jupyterreadnotebook
+import swarmauri_tool_jupyterreadnotebook as package_module
 
-print(swarmauri_tool_jupyterreadnotebook.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_jupyterreadnotebook
@@ -6431,9 +6431,9 @@ print(swarmauri_tool_jupyterreadnotebook.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_jupyterruncell
+import swarmauri_tool_jupyterruncell as package_module
 
-print(swarmauri_tool_jupyterruncell.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_jupyterruncell
@@ -6455,9 +6455,9 @@ print(swarmauri_tool_jupyterruncell.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_jupytershutdownkernel
+import swarmauri_tool_jupytershutdownkernel as package_module
 
-print(swarmauri_tool_jupytershutdownkernel.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_jupytershutdownkernel
@@ -6479,9 +6479,9 @@ print(swarmauri_tool_jupytershutdownkernel.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_jupyterstartkernel
+import swarmauri_tool_jupyterstartkernel as package_module
 
-print(swarmauri_tool_jupyterstartkernel.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_jupyterstartkernel
@@ -6503,9 +6503,9 @@ print(swarmauri_tool_jupyterstartkernel.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_jupytervalidatenotebook
+import swarmauri_tool_jupytervalidatenotebook as package_module
 
-print(swarmauri_tool_jupytervalidatenotebook.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_jupytervalidatenotebook
@@ -6527,9 +6527,9 @@ print(swarmauri_tool_jupytervalidatenotebook.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_jupyterwritenotebook
+import swarmauri_tool_jupyterwritenotebook as package_module
 
-print(swarmauri_tool_jupyterwritenotebook.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_jupyterwritenotebook
@@ -6551,9 +6551,9 @@ print(swarmauri_tool_jupyterwritenotebook.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_lexicaldensity
+import swarmauri_tool_lexicaldensity as package_module
 
-print(swarmauri_tool_lexicaldensity.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_lexicaldensity
@@ -6575,9 +6575,9 @@ print(swarmauri_tool_lexicaldensity.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_psutil
+import swarmauri_tool_psutil as package_module
 
-print(swarmauri_tool_psutil.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_psutil
@@ -6599,9 +6599,9 @@ print(swarmauri_tool_psutil.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_qrcodegenerator
+import swarmauri_tool_qrcodegenerator as package_module
 
-print(swarmauri_tool_qrcodegenerator.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_qrcodegenerator
@@ -6623,9 +6623,9 @@ print(swarmauri_tool_qrcodegenerator.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_searchword
+import swarmauri_tool_searchword as package_module
 
-print(swarmauri_tool_searchword.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_searchword
@@ -6647,9 +6647,9 @@ print(swarmauri_tool_searchword.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_sentencecomplexity
+import swarmauri_tool_sentencecomplexity as package_module
 
-print(swarmauri_tool_sentencecomplexity.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_sentencecomplexity
@@ -6671,9 +6671,9 @@ print(swarmauri_tool_sentencecomplexity.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_sentimentanalysis
+import swarmauri_tool_sentimentanalysis as package_module
 
-print(swarmauri_tool_sentimentanalysis.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_sentimentanalysis
@@ -6695,9 +6695,9 @@ print(swarmauri_tool_sentimentanalysis.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_smogindex
+import swarmauri_tool_smogindex as package_module
 
-print(swarmauri_tool_smogindex.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_smogindex
@@ -6719,9 +6719,9 @@ print(swarmauri_tool_smogindex.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_textlength
+import swarmauri_tool_textlength as package_module
 
-print(swarmauri_tool_textlength.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_textlength
@@ -6743,9 +6743,9 @@ print(swarmauri_tool_textlength.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_webscraping
+import swarmauri_tool_webscraping as package_module
 
-print(swarmauri_tool_webscraping.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_webscraping
@@ -6767,9 +6767,9 @@ print(swarmauri_tool_webscraping.__name__)
 - Import example:
 
 ```python
-import swarmauri_tool_zapierhook
+import swarmauri_tool_zapierhook as package_module
 
-print(swarmauri_tool_zapierhook.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_tool_zapierhook
@@ -6791,9 +6791,9 @@ print(swarmauri_tool_zapierhook.__name__)
 - Import example:
 
 ```python
-import swarmauri_vectorstore_annoy
+import swarmauri_vectorstore_annoy as package_module
 
-print(swarmauri_vectorstore_annoy.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_vectorstore_annoy
@@ -6815,9 +6815,9 @@ print(swarmauri_vectorstore_annoy.__name__)
 - Import example:
 
 ```python
-import swarmauri_vectorstore_cloudweaviate
+import swarmauri_vectorstore_cloudweaviate as package_module
 
-print(swarmauri_vectorstore_cloudweaviate.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_vectorstore_cloudweaviate
@@ -6839,9 +6839,9 @@ print(swarmauri_vectorstore_cloudweaviate.__name__)
 - Import example:
 
 ```python
-import swarmauri_vectorstore_duckdb
+import swarmauri_vectorstore_duckdb as package_module
 
-print(swarmauri_vectorstore_duckdb.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_vectorstore_duckdb
@@ -6863,9 +6863,9 @@ print(swarmauri_vectorstore_duckdb.__name__)
 - Import example:
 
 ```python
-import swarmauri_vectorstore_fs
+import swarmauri_vectorstore_fs as package_module
 
-print(swarmauri_vectorstore_fs.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_vectorstore_fs
@@ -6887,9 +6887,9 @@ print(swarmauri_vectorstore_fs.__name__)
 - Import example:
 
 ```python
-import swarmauri_vectorstore_git
+import swarmauri_vectorstore_git as package_module
 
-print(swarmauri_vectorstore_git.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_vectorstore_git
@@ -6911,9 +6911,9 @@ print(swarmauri_vectorstore_git.__name__)
 - Import example:
 
 ```python
-import swarmauri_vectorstore_neo4j
+import swarmauri_vectorstore_neo4j as package_module
 
-print(swarmauri_vectorstore_neo4j.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_vectorstore_neo4j
@@ -6935,9 +6935,9 @@ print(swarmauri_vectorstore_neo4j.__name__)
 - Import example:
 
 ```python
-import swarmauri_vectorstore_persistentchromadb
+import swarmauri_vectorstore_persistentchromadb as package_module
 
-print(swarmauri_vectorstore_persistentchromadb.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_vectorstore_persistentchromadb
@@ -6959,9 +6959,9 @@ print(swarmauri_vectorstore_persistentchromadb.__name__)
 - Import example:
 
 ```python
-import swarmauri_vectorstore_pinecone
+import swarmauri_vectorstore_pinecone as package_module
 
-print(swarmauri_vectorstore_pinecone.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_vectorstore_pinecone
@@ -6983,9 +6983,9 @@ print(swarmauri_vectorstore_pinecone.__name__)
 - Import example:
 
 ```python
-import swarmauri_vectorstore_qdrant
+import swarmauri_vectorstore_qdrant as package_module
 
-print(swarmauri_vectorstore_qdrant.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_vectorstore_qdrant
@@ -7007,9 +7007,9 @@ print(swarmauri_vectorstore_qdrant.__name__)
 - Import example:
 
 ```python
-import swarmauri_vectorstore_redis
+import swarmauri_vectorstore_redis as package_module
 
-print(swarmauri_vectorstore_redis.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_vectorstore_redis
@@ -7031,9 +7031,9 @@ print(swarmauri_vectorstore_redis.__name__)
 - Import example:
 
 ```python
-import swarmauri_matrix_hamming74
+import swarmauri_matrix_hamming74 as package_module
 
-print(swarmauri_matrix_hamming74.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_matrix_hamming74
@@ -7055,9 +7055,9 @@ print(swarmauri_matrix_hamming74.__name__)
 - Import example:
 
 ```python
-import swarmauri_vectorstore_mlm
+import swarmauri_vectorstore_mlm as package_module
 
-print(swarmauri_vectorstore_mlm.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_vectorstore_mlm
@@ -7079,9 +7079,9 @@ print(swarmauri_vectorstore_mlm.__name__)
 - Import example:
 
 ```python
-import swarmauri_toolkit_github
+import swarmauri_toolkit_github as package_module
 
-print(swarmauri_toolkit_github.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_toolkit_github
@@ -7103,9 +7103,9 @@ print(swarmauri_toolkit_github.__name__)
 - Import example:
 
 ```python
-import swarmauri_toolkit_jupytertoolkit
+import swarmauri_toolkit_jupytertoolkit as package_module
 
-print(swarmauri_toolkit_jupytertoolkit.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/community/swarmauri_toolkit_jupytertoolkit
@@ -7127,9 +7127,9 @@ print(swarmauri_toolkit_jupytertoolkit.__name__)
 - Import example:
 
 ```python
-import EmbedXMP
+import EmbedXMP as package_module
 
-print(EmbedXMP.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/plugins/EmbedXMP
@@ -7151,9 +7151,9 @@ print(EmbedXMP.__name__)
 - Import example:
 
 ```python
-import swm_example_plugin
+import swm_example_plugin as package_module
 
-print(swm_example_plugin.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/plugins/example_plugin
@@ -7175,9 +7175,9 @@ print(swm_example_plugin.__name__)
 - Import example:
 
 ```python
-import zdx
+import zdx as package_module
 
-print(zdx.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/plugins/zdx
@@ -7199,9 +7199,9 @@ print(zdx.__name__)
 - Import example:
 
 ```python
-import MediaSigner
+import MediaSigner as package_module
 
-print(MediaSigner.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/plugins/media_signer
@@ -7223,9 +7223,9 @@ print(MediaSigner.__name__)
 - Import example:
 
 ```python
-import EmbeddedSigner
+import EmbeddedSigner as package_module
 
-print(EmbeddedSigner.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/plugins/embedded_signer
@@ -7247,9 +7247,8 @@ print(EmbeddedSigner.__name__)
 - Import example:
 
 ```python
-import 6w
-
-print(6w.__name__)
+# Indexed package record for 6w
+# See source path for current import roots.
 ```
 
 - Source path: pkgs/experimental/6w
@@ -7271,9 +7270,8 @@ print(6w.__name__)
 - Import example:
 
 ```python
-import 6x
-
-print(6x.__name__)
+# Indexed package record for 6x
+# See source path for current import roots.
 ```
 
 - Source path: pkgs/experimental/6x
@@ -7295,9 +7293,8 @@ print(6x.__name__)
 - Import example:
 
 ```python
-import 6y
-
-print(6y.__name__)
+# Indexed package record for 6y
+# See source path for current import roots.
 ```
 
 - Source path: pkgs/experimental/6y
@@ -7319,9 +7316,8 @@ print(6y.__name__)
 - Import example:
 
 ```python
-import 6z
-
-print(6z.__name__)
+# Indexed package record for 6z
+# See source path for current import roots.
 ```
 
 - Source path: pkgs/experimental/6z
@@ -7343,9 +7339,8 @@ print(6z.__name__)
 - Import example:
 
 ```python
-import 77
-
-print(77.__name__)
+# Indexed package record for 77
+# See source path for current import roots.
 ```
 
 - Source path: pkgs/experimental/77
@@ -7367,9 +7362,8 @@ print(77.__name__)
 - Import example:
 
 ```python
-import 9x
-
-print(9x.__name__)
+# Indexed package record for 9x
+# See source path for current import roots.
 ```
 
 - Source path: pkgs/experimental/9x
@@ -7391,9 +7385,9 @@ print(9x.__name__)
 - Import example:
 
 ```python
-import swarmauri_canon_http
+import swarmauri_canon_http as package_module
 
-print(swarmauri_canon_http.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/experimental/swarmauri_canon_http
@@ -7415,9 +7409,9 @@ print(swarmauri_canon_http.__name__)
 - Import example:
 
 ```python
-import catoml
+import catoml as package_module
 
-print(catoml.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/experimental/catoml
@@ -7439,9 +7433,9 @@ print(catoml.__name__)
 - Import example:
 
 ```python
-import cayaml
+import cayaml as package_module
 
-print(cayaml.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/experimental/cayaml
@@ -7463,9 +7457,9 @@ print(cayaml.__name__)
 - Import example:
 
 ```python
-import swarmauri_certs_pkcs11
+import swarmauri_certs_pkcs11 as package_module
 
-print(swarmauri_certs_pkcs11.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/experimental/swarmauri_certs_pkcs11
@@ -7487,9 +7481,9 @@ print(swarmauri_certs_pkcs11.__name__)
 - Import example:
 
 ```python
-import swarmauri_crypto_sodium
+import swarmauri_crypto_sodium as package_module
 
-print(swarmauri_crypto_sodium.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/experimental/swarmauri_crypto_sodium
@@ -7511,9 +7505,9 @@ print(swarmauri_crypto_sodium.__name__)
 - Import example:
 
 ```python
-import DistanceMetrics
+import DistanceMetrics as package_module
 
-print(DistanceMetrics.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/experimental/RapidSimilarity/DistanceMetrics
@@ -7535,9 +7529,9 @@ print(DistanceMetrics.__name__)
 - Import example:
 
 ```python
-import FastTokenizer
+import FastTokenizer as package_module
 
-print(FastTokenizer.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/experimental/FastTokenizer
@@ -7559,9 +7553,9 @@ print(FastTokenizer.__name__)
 - Import example:
 
 ```python
-import g9
+import g9 as package_module
 
-print(g9.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/experimental/g9
@@ -7583,9 +7577,9 @@ print(g9.__name__)
 - Import example:
 
 ```python
-import IndexBuilder
+import IndexBuilder as package_module
 
-print(IndexBuilder.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/experimental/RapidSimilarity/IndexBuilder
@@ -7607,9 +7601,9 @@ print(IndexBuilder.__name__)
 - Import example:
 
 ```python
-import jaml
+import jaml as package_module
 
-print(jaml.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/experimental/jaml
@@ -7631,9 +7625,9 @@ print(jaml.__name__)
 - Import example:
 
 ```python
-import jz
+import jz as package_module
 
-print(jz.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/experimental/jz
@@ -7655,9 +7649,9 @@ print(jz.__name__)
 - Import example:
 
 ```python
-import swarmauri_keyprovider_pkcs11
+import swarmauri_keyprovider_pkcs11 as package_module
 
-print(swarmauri_keyprovider_pkcs11.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/experimental/swarmauri_keyprovider_pkcs11
@@ -7679,9 +7673,9 @@ print(swarmauri_keyprovider_pkcs11.__name__)
 - Import example:
 
 ```python
-import layout_engine
+import layout_engine as package_module
 
-print(layout_engine.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/experimental/layout_engine
@@ -7703,9 +7697,9 @@ print(layout_engine.__name__)
 - Import example:
 
 ```python
-import monotone_ops
+import monotone_ops as package_module
 
-print(monotone_ops.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/experimental/monotone_ops
@@ -7727,9 +7721,9 @@ print(monotone_ops.__name__)
 - Import example:
 
 ```python
-import mto
+import mto as package_module
 
-print(mto.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/experimental/mto
@@ -7751,9 +7745,9 @@ print(mto.__name__)
 - Import example:
 
 ```python
-import swarmauri_parser_asn1
+import swarmauri_parser_asn1 as package_module
 
-print(swarmauri_parser_asn1.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/experimental/swarmauri_parser_asn1
@@ -7798,9 +7792,9 @@ print(swarmauri_parser_asn1.__name__)
 - Import example:
 
 ```python
-import QueryEngine
+import QueryEngine as package_module
 
-print(QueryEngine.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/experimental/RapidSimilarity/QueryEngine
@@ -7845,9 +7839,9 @@ print(QueryEngine.__name__)
 - Import example:
 
 ```python
-import sfw
+import sfw as package_module
 
-print(sfw.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/experimental/sfw
@@ -7869,9 +7863,9 @@ print(sfw.__name__)
 - Import example:
 
 ```python
-import snt
+import snt as package_module
 
-print(snt.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/experimental/snt
@@ -7893,9 +7887,9 @@ print(snt.__name__)
 - Import example:
 
 ```python
-import swarmauri_tests_loc_tersity
+import swarmauri_tests_loc_tersity as package_module
 
-print(swarmauri_tests_loc_tersity.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/experimental/swarmauri_tests_loc_tersity
@@ -7917,9 +7911,9 @@ print(swarmauri_tests_loc_tersity.__name__)
 - Import example:
 
 ```python
-import swarmauri_tests_pylicense
+import swarmauri_tests_pylicense as package_module
 
-print(swarmauri_tests_pylicense.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/experimental/swarmauri_tests_pylicense
@@ -7941,9 +7935,9 @@ print(swarmauri_tests_pylicense.__name__)
 - Import example:
 
 ```python
-import swarmauri_tests_readme_examples
+import swarmauri_tests_readme_examples as package_module
 
-print(swarmauri_tests_readme_examples.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/experimental/swarmauri_tests_readme_examples
@@ -7965,9 +7959,9 @@ print(swarmauri_tests_readme_examples.__name__)
 - Import example:
 
 ```python
-import tigr
+import tigr as package_module
 
-print(tigr.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/experimental/tigr
@@ -7989,9 +7983,9 @@ print(tigr.__name__)
 - Import example:
 
 ```python
-import ye
+import ye as package_module
 
-print(ye.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/experimental/ye
@@ -8013,9 +8007,9 @@ print(ye.__name__)
 - Import example:
 
 ```python
-import ymls
+import ymls as package_module
 
-print(ymls.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/experimental/ymls
@@ -8037,9 +8031,9 @@ print(ymls.__name__)
 - Import example:
 
 ```python
-import zr0
+import zr0 as package_module
 
-print(zr0.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/experimental/zr0
@@ -8061,9 +8055,9 @@ print(zr0.__name__)
 - Import example:
 
 ```python
-import layout_engine_atoms
+import layout_engine_atoms as package_module
 
-print(layout_engine_atoms.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/experimental/layout_engine_atoms
@@ -8085,9 +8079,9 @@ print(layout_engine_atoms.__name__)
 - Import example:
 
 ```python
-import swarmauri_workflow_statedriven
+import swarmauri_workflow_statedriven as package_module
 
-print(swarmauri_workflow_statedriven.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/experimental/swarmauri_workflow_statedriven
@@ -8109,9 +8103,9 @@ print(swarmauri_workflow_statedriven.__name__)
 - Import example:
 
 ```python
-import swarmauri
+import swarmauri as package_module
 
-print(swarmauri.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/swarmauri
@@ -8133,9 +8127,9 @@ print(swarmauri.__name__)
 - Import example:
 
 ```python
-import swarmauri_documentstore_redis
+import swarmauri_documentstore_redis as package_module
 
-print(swarmauri_documentstore_redis.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/deprecated/swarmauri_documentstore_redis
@@ -8157,9 +8151,9 @@ print(swarmauri_documentstore_redis.__name__)
 - Import example:
 
 ```python
-import swarmauri_embedding_tfidf
+import swarmauri_embedding_tfidf as package_module
 
-print(swarmauri_embedding_tfidf.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/deprecated/swarmauri_embedding_tfidf
@@ -8181,9 +8175,9 @@ print(swarmauri_embedding_tfidf.__name__)
 - Import example:
 
 ```python
-import swarmauri_experimental
+import swarmauri_experimental as package_module
 
-print(swarmauri_experimental.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/deprecated/swarmauri_experimental
@@ -8205,9 +8199,9 @@ print(swarmauri_experimental.__name__)
 - Import example:
 
 ```python
-import swarmauri_vectorstore_tfidf
+import swarmauri_vectorstore_tfidf as package_module
 
-print(swarmauri_vectorstore_tfidf.__name__)
+print(package_module.__name__)
 ```
 
 - Source path: pkgs/deprecated/swarmauri_vectorstore_tfidf
@@ -8225,7 +8219,9 @@ print(swarmauri_vectorstore_tfidf.__name__)
 
 ```python
 from swarmauri.standard import LocalModel
-from swarmauri_standard.tools.CalculatorTool import CalculatorTool
+from swarmauri_standard.tools.CalculatorTool import (
+    CalculatorTool,
+)
 
 # Initialize a standard local component
 model = LocalModel(name="offline-first")
@@ -8265,7 +8261,9 @@ class CustomSecureTool(ITool):
 - Explanation: This abstraction is robust and avoids binding your software workflows to specific underlying SaaS vendors.
 
 ```python
-from swarmauri_llm_openai.models.OpenAIModel import OpenAIModel
+from swarmauri_llm_openai.models.OpenAIModel import (
+    OpenAIModel,
+)
 from swarmauri_llm_groq.models.GroqModel import GroqModel
 
 # Swapping from OpenAI to Groq
@@ -8306,8 +8304,12 @@ print(serialized_json)
 - Explanation: Swarmauri separates cryptosystems from general workflows. Teams requiring FIPS or custom air-gapped security can audit individual packages independently.
 
 ```python
-from swarmauri_signing_ed25519.signing.Ed25519Signer import Ed25519Signer
-from swarmauri_cipher_suite_aes.ciphers.AesGcmCipher import AesGcmCipher
+from swarmauri_signing_ed25519.signing.Ed25519Signer import (
+    Ed25519Signer,
+)
+from swarmauri_cipher_suite_aes.ciphers.AesGcmCipher import (
+    AesGcmCipher,
+)
 
 signer = Ed25519Signer()
 cipher = AesGcmCipher(secret_key=b"32_byte_cryptographic_key_here")
@@ -8323,13 +8325,43 @@ print(f"Decrypted payload is authentic: {is_valid}")
 
 ## Updates
 
-### Swarmauri SDK 0.6.2.dev3 Release: Granular Workspace Refactoring
+### Swarmauri SDK 0.9.1.dev5 Update: Granular Package Portfolio
 
 - URL: https://swarmauri.com/updates/up-01
 - Date: 2026-06-22
 - Category: Release Notes
-- Summary: Today we completed the transition of our monorepo to 310 active workspace members, separating core interfaces from community adapters.
-- Body: Our team has successfully finished splitting standard components into highly focused packages. Under the new layout, developers using tools like Pincone, AWS S3, or OpenAI no longer need to pull massive, unrelated binary assets into their lightweight environments. Simply install the aggregate `swarmauri` facade, or construct custom environments starting with `swarmauri_core`.
+- Summary: Swarmauri 0.9.1.dev5 now presents the namespace package as the primary release signal, with 310 active workspace members and 337 indexed package records organized by layer, role, and maturity.
+- Body: The Swarmauri package portfolio has been reorganized around a source-generated package index so developers can choose between the aggregate `swarmauri` facade and focused split packages without guessing where capabilities live.
+
+The current public release signal is the `swarmauri` namespace package at `0.9.1.dev5`. The repository-level workspace still has its own internal monorepo version, but the website header, update copy, and package portfolio should treat the namespace package as the user-facing SDK version.
+
+## What changed
+
+- The catalog now tracks 310 active workspace members and 337 indexed package records.
+- Foundation packages such as `swarmauri_typing`, `swarmauri_core`, `swarmauri_base`, and `swarmauri_standard` are separated from provider, plugin, experimental, facade, and deprecated compatibility packages.
+- Provider and integration packages, including Pinecone, AWS S3, OpenAI, GitHub, Redis, RabbitMQ, transport, signing, token, certificate, billing, parser, and storage packages, can be installed directly when a service needs a narrow dependency footprint.
+- The aggregate `swarmauri` facade remains available for developers who want namespace imports and registry-backed discovery.
+
+## Why it matters
+
+Swarmauri is not a single monolithic Python dependency. It is a layered package ecosystem. Contract-only environments can start with `swarmauri_core`; component authors can build on `swarmauri_base`; application teams can install concrete standard, community, and provider packages only when those capabilities are needed.
+
+That structure reduces cold-start weight, narrows audit scope, and makes package ownership clearer for documentation, release notes, and support. It also helps teams explain the SDK accurately: the package catalog is generated from `swarmauri-sdk/pkgs/package-index.toml`, while installation and usage examples are rendered from the generated website data.
+
+## Recommended install paths
+
+```bash
+# Broad namespace facade
+uv add swarmauri
+
+# Contract-first environment
+uv add swarmauri_core swarmauri_typing
+
+# Focused provider or capability package
+uv add swarmauri_storage_s3 swarmauri_vectorstore_pinecone swarmauri_llm_openai
+```
+
+For most application developers, start with `swarmauri` or `swarmauri_standard`. For production services with strict dependency boundaries, install only the split packages required by that service.
 
 ### Why Composable Architecture is Critical for Agent Safety
 

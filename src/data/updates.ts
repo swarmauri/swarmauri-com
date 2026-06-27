@@ -1,14 +1,45 @@
 import { UpdatePost } from "../types";
 import { LEGACY_UPDATE_POSTS } from "./legacyContent";
+import { SDK_METADATA } from "./packages";
 
 const CURRENT_UPDATE_POSTS: UpdatePost[] = [
   {
     id: "up-01",
-    title: "Swarmauri SDK 0.6.2.dev3 Release: Granular Workspace Refactoring",
+    title: `Swarmauri SDK ${SDK_METADATA.version} Update: Granular Package Portfolio`,
     date: "2026-06-22",
     category: "Release Notes",
-    summary: "Today we completed the transition of our monorepo to 310 active workspace members, separating core interfaces from community adapters.",
-    content: "Our team has successfully finished splitting standard components into highly focused packages. Under the new layout, developers using tools like Pincone, AWS S3, or OpenAI no longer need to pull massive, unrelated binary assets into their lightweight environments. Simply install the aggregate `swarmauri` facade, or construct custom environments starting with `swarmauri_core`."
+    summary: `Swarmauri ${SDK_METADATA.version} now presents the namespace package as the primary release signal, with ${SDK_METADATA.totalWorkspaceMembers} active workspace members and ${SDK_METADATA.totalIndexedRecords} indexed package records organized by layer, role, and maturity.`,
+    content: `The Swarmauri package portfolio has been reorganized around a source-generated package index so developers can choose between the aggregate \`swarmauri\` facade and focused split packages without guessing where capabilities live.
+
+The current public release signal is the \`swarmauri\` namespace package at \`${SDK_METADATA.version}\`. The repository-level workspace still has its own internal monorepo version, but the website header, update copy, and package portfolio should treat the namespace package as the user-facing SDK version.
+
+## What changed
+
+- The catalog now tracks ${SDK_METADATA.totalWorkspaceMembers} active workspace members and ${SDK_METADATA.totalIndexedRecords} indexed package records.
+- Foundation packages such as \`swarmauri_typing\`, \`swarmauri_core\`, \`swarmauri_base\`, and \`swarmauri_standard\` are separated from provider, plugin, experimental, facade, and deprecated compatibility packages.
+- Provider and integration packages, including Pinecone, AWS S3, OpenAI, GitHub, Redis, RabbitMQ, transport, signing, token, certificate, billing, parser, and storage packages, can be installed directly when a service needs a narrow dependency footprint.
+- The aggregate \`swarmauri\` facade remains available for developers who want namespace imports and registry-backed discovery.
+
+## Why it matters
+
+Swarmauri is not a single monolithic Python dependency. It is a layered package ecosystem. Contract-only environments can start with \`swarmauri_core\`; component authors can build on \`swarmauri_base\`; application teams can install concrete standard, community, and provider packages only when those capabilities are needed.
+
+That structure reduces cold-start weight, narrows audit scope, and makes package ownership clearer for documentation, release notes, and support. It also helps teams explain the SDK accurately: the package catalog is generated from \`${SDK_METADATA.source}\`, while installation and usage examples are rendered from the generated website data.
+
+## Recommended install paths
+
+\`\`\`bash
+# Broad namespace facade
+uv add swarmauri
+
+# Contract-first environment
+uv add swarmauri_core swarmauri_typing
+
+# Focused provider or capability package
+uv add swarmauri_storage_s3 swarmauri_vectorstore_pinecone swarmauri_llm_openai
+\`\`\`
+
+For most application developers, start with \`swarmauri\` or \`swarmauri_standard\`. For production services with strict dependency boundaries, install only the split packages required by that service.`
   },
   {
     id: "up-02",

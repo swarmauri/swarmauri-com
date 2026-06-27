@@ -25,7 +25,11 @@ export default function ComposerPage() {
     // Add model imports
     if (selectedModel === "OpenAIModel") {
       pkgs.push("swarmauri_llm_openai");
-      imports.push("from swarmauri_llm_openai.models.OpenAIModel import OpenAIModel");
+      imports.push(
+        "from swarmauri_llm_openai.models.OpenAIModel import (\n" +
+          "    OpenAIModel,\n" +
+          ")",
+      );
     } else if (selectedModel === "GroqModel") {
       pkgs.push("swarmauri_llm_groq");
       imports.push("from swarmauri_llm_groq.models.GroqModel import GroqModel");
@@ -36,22 +40,42 @@ export default function ComposerPage() {
 
     // Add tool imports
     if (selectedTool === "CalculatorTool") {
-      imports.push("from swarmauri_standard.tools.CalculatorTool import CalculatorTool");
+      imports.push(
+        "from swarmauri_standard.tools.CalculatorTool import (\n" +
+          "    CalculatorTool,\n" +
+          ")",
+      );
     } else if (selectedTool === "WebSearchTool") {
       pkgs.push("swarmauri_tool_websearch");
-      imports.push("from swarmauri_tool_websearch.tools.WebSearchTool import WebSearchTool");
+      imports.push(
+        "from swarmauri_tool_websearch.tools.WebSearchTool import (\n" +
+          "    WebSearchTool,\n" +
+          ")",
+      );
     }
 
     // Add memory
-    imports.push("from swarmauri_standard.memories.MaxTokenMemory import MaxTokenMemory");
+    imports.push(
+      "from swarmauri_standard.memories.MaxTokenMemory import (\n" +
+        "    MaxTokenMemory,\n" +
+        ")",
+    );
 
     // Add security
     if (selectedSecurity === "Ed25519") {
       pkgs.push("swarmauri_signing_ed25519");
-      imports.push("from swarmauri_signing_ed25519.signing.Ed25519Signer import Ed25519Signer");
+      imports.push(
+        "from swarmauri_signing_ed25519.signing.Ed25519Signer import (\n" +
+          "    Ed25519Signer,\n" +
+          ")",
+      );
     } else if (selectedSecurity === "AesGcm") {
       pkgs.push("swarmauri_cipher_suite_aes");
-      imports.push("from swarmauri_cipher_suite_aes.ciphers.AesGcmCipher import AesGcmCipher");
+      imports.push(
+        "from swarmauri_cipher_suite_aes.ciphers.AesGcmCipher import (\n" +
+          "    AesGcmCipher,\n" +
+          ")",
+      );
     }
 
     return {
@@ -96,7 +120,10 @@ export default function ComposerPage() {
     if (selectedSecurity === "Ed25519") {
       setupLines += `signer = Ed25519Signer()\nprint("Secure signature active.")\n`;
     } else if (selectedSecurity === "AesGcm") {
-      setupLines += `cipher = AesGcmCipher(secret_key=b"32_byte_symmetric_secret_key...")\nprint("Symmetric state cipher initialized.")\n`;
+      setupLines += `cipher = AesGcmCipher(
+    secret_key=b"32_byte_symmetric_secret_key..."
+)
+print("Symmetric state cipher initialized.")\n`;
     }
 
     setupLines += `

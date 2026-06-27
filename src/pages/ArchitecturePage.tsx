@@ -38,7 +38,9 @@ const LAYER_DETAILS: Record<
       "Base classes can depend on core contracts and shared component models, but should not own provider-specific behavior.",
     executionPattern:
       "Custom components usually inherit from a specific base class, then implement the required runtime method.",
-    code: "# Base classes implement reusable behavior over core contracts.\nfrom swarmauri_base.tools.ToolBase import ToolBase\nfrom swarmauri_base.ComponentBase import ComponentBase",
+    code: `# Base classes implement reusable behavior over core contracts.
+from swarmauri_base.tools.ToolBase import ToolBase
+from swarmauri_base.ComponentBase import ComponentBase`,
   },
   "30-standard-kernel": {
     summary:
@@ -47,7 +49,9 @@ const LAYER_DETAILS: Record<
       "The kernel groups broadly useful standard components; newer first-party capability packages may also be split out in the standards layer.",
     executionPattern:
       "Kernel components are imported from swarmauri_standard module paths unless accessed through a registered swarmauri facade path.",
-    code: "# Bundled standard-kernel components live in swarmauri_standard.\nfrom swarmauri_standard.documents.Document import Document\nfrom swarmauri_standard.messages.HumanMessage import HumanMessage",
+    code: `# Bundled standard-kernel components live in swarmauri_standard.
+from swarmauri_standard.documents.Document import Document
+from swarmauri_standard.messages.HumanMessage import HumanMessage`,
   },
   "40-standards": {
     summary:
@@ -56,7 +60,8 @@ const LAYER_DETAILS: Record<
       "Install only the focused standard package you need when you want a smaller dependency footprint.",
     executionPattern:
       "Split packages expose their own import roots and may also be registered behind swarmauri.* facade paths.",
-    code: "# Split first-party packages are installed and imported directly.\nfrom swarmauri_signing_ed25519 import Ed25519EnvelopeSigner",
+    code: `# Split first-party packages are installed and imported directly.
+from swarmauri_signing_ed25519 import Ed25519EnvelopeSigner`,
   },
   "50-community": {
     summary:
@@ -65,7 +70,8 @@ const LAYER_DETAILS: Record<
       "Provider dependencies stay in the provider package instead of being pulled into the foundation packages.",
     executionPattern:
       "Import provider or community packages directly for explicit dependency control.",
-    code: "# Community/provider packages are also direct import roots.\nfrom swarmauri_tool_jupyterexporthtml import JupyterExportHtmlTool",
+    code: `# Community/provider packages are also direct import roots.
+from swarmauri_tool_jupyterexporthtml import JupyterExportHtmlTool`,
   },
   "60-plugins": {
     summary:
@@ -92,7 +98,11 @@ const LAYER_DETAILS: Record<
       "Facade imports route through registry mappings and entry-point discovery; concrete code still lives in split packages such as swarmauri_standard or swarmauri_signing_ed25519.",
     executionPattern:
       "A swarmauri.* import checks registered namespaces and maps the facade path to the concrete package path.",
-    code: "# Facade import: registry maps swarmauri.* to concrete modules.\nfrom swarmauri.documents.Document import Document\nfrom swarmauri.signings.Ed25519EnvelopeSigner import Ed25519EnvelopeSigner",
+    code: `# Facade import: registry maps swarmauri.* to concrete modules.
+from swarmauri.documents.Document import Document
+from swarmauri.signings.Ed25519EnvelopeSigner import (
+    Ed25519EnvelopeSigner,
+)`,
   },
   "90-deprecated": {
     summary:
@@ -101,7 +111,9 @@ const LAYER_DETAILS: Record<
       "Prefer current standard or community package replacements; keep deprecated packages isolated when legacy compatibility is required.",
     executionPattern:
       "Deprecated packages still expose direct import roots while they remain available.",
-    code: "# Deprecated compatibility imports should be migrated when practical.\nfrom swarmauri_embedding_tfidf import TfidfEmbedding\nfrom swarmauri_vectorstore_tfidf import TfidfVectorStore",
+    code: `# Deprecated compatibility imports should be migrated when practical.
+from swarmauri_embedding_tfidf import TfidfEmbedding
+from swarmauri_vectorstore_tfidf import TfidfVectorStore`,
   },
 };
 

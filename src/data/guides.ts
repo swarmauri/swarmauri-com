@@ -6,7 +6,9 @@ export const GUIDE_TOPICS: GuideTopic[] = [
     title: "1. The Unified Quickstart",
     description: "Learn how to import and initialize standard components using the main namespace package.",
     codeBlock: `from swarmauri.standard import LocalModel
-from swarmauri_standard.tools.CalculatorTool import CalculatorTool
+from swarmauri_standard.tools.CalculatorTool import (
+    CalculatorTool,
+)
 
 # Initialize a standard local component
 model = LocalModel(name="offline-first")
@@ -40,7 +42,9 @@ class CustomSecureTool(ITool):
     id: "llm-swap",
     title: "3. Hot-Swapping Model Providers",
     description: "Because every LLM wrapper conforms to the IModel contract, swapping providers requires exactly one line of change.",
-    codeBlock: `from swarmauri_llm_openai.models.OpenAIModel import OpenAIModel
+    codeBlock: `from swarmauri_llm_openai.models.OpenAIModel import (
+    OpenAIModel,
+)
 from swarmauri_llm_groq.models.GroqModel import GroqModel
 
 # Swapping from OpenAI to Groq
@@ -75,8 +79,12 @@ print(serialized_json)`,
     id: "payload-integrity",
     title: "5. Signing payloads with Ed25519",
     description: "Protect messages in transit with elliptic curve signers and symmetric encryptions.",
-    codeBlock: `from swarmauri_signing_ed25519.signing.Ed25519Signer import Ed25519Signer
-from swarmauri_cipher_suite_aes.ciphers.AesGcmCipher import AesGcmCipher
+    codeBlock: `from swarmauri_signing_ed25519.signing.Ed25519Signer import (
+    Ed25519Signer,
+)
+from swarmauri_cipher_suite_aes.ciphers.AesGcmCipher import (
+    AesGcmCipher,
+)
 
 signer = Ed25519Signer()
 cipher = AesGcmCipher(secret_key=b"32_byte_cryptographic_key_here")

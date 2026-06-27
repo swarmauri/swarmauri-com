@@ -276,8 +276,12 @@ function docsLink(project, sourcePath) {
 function importExample(name, packageDir) {
   const importRoot = name.replace(/-/g, "_");
   const sourceRoot = path.join(packageDir, importRoot);
-  if (fs.existsSync(sourceRoot) || fs.existsSync(path.join(packageDir, "src", importRoot))) {
-    return `import ${importRoot}\n\nprint(${importRoot}.__name__)`;
+  const hasPythonRoot =
+    fs.existsSync(sourceRoot) ||
+    fs.existsSync(path.join(packageDir, "src", importRoot));
+  const isPythonIdentifier = /^[A-Za-z_][A-Za-z0-9_]*$/.test(importRoot);
+  if (hasPythonRoot && isPythonIdentifier) {
+    return `import ${importRoot} as package_module\n\nprint(package_module.__name__)`;
   }
   return `# Indexed package record for ${name}\n# See source path for current import roots.`;
 }
