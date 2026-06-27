@@ -11,7 +11,7 @@ interface CareerRoleCardProps {
 export default function CareerRoleCard({ role }: CareerRoleCardProps) {
   return (
     <Link
-      to={`/careers/${role.id}`}
+      to={`/careers/${role.slug}`}
       className="bg-white border border-zinc-200 rounded-xl p-6 hover:shadow-md hover:border-zinc-300 transition-all duration-150 flex flex-col justify-between cursor-pointer group"
       id={`role-card-${role.id}`}
     >
@@ -42,7 +42,7 @@ export default function CareerRoleCard({ role }: CareerRoleCardProps) {
       </div>
 
       <div className="pt-4 border-t border-zinc-100 mt-4 flex justify-between items-center text-xs">
-        <span className="text-zinc-400 font-mono text-[10px]">ID: {role.id}</span>
+        <span className="text-zinc-400 font-mono text-[10px]">Slug: {role.slug}</span>
         <span className="text-indigo-600 font-bold group-hover:translate-x-1 transition-transform inline-flex items-center space-x-1">
           <span>Apply Now</span>
           <span>&rarr;</span>

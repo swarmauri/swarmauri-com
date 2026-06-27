@@ -46,7 +46,7 @@ export default function App() {
           
           {/* Careers with deep-linking support */}
           <Route path="careers" element={<CareersPage />} />
-          <Route path="careers/:roleId" element={<CareersPage />} />
+          <Route path="careers/:slug" element={<CareersPage />} />
           
           <Route path="community" element={<CommunityPage />} />
           <Route path="privacy-terms" element={<PrivacyTermsPage />} />

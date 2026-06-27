@@ -73,6 +73,7 @@ export interface ClaimRecord {
 
 export interface CareerRole {
   id: string;
+  slug: string;
   title: string;
   department: string;
   location: string;

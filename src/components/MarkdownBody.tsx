@@ -12,8 +12,18 @@ export default function MarkdownBody({ markdown, className = "", compact = false
   const hostRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!hostRef.current) return;
-    highlightMarkdownCodeBlocks(hostRef.current);
+    const host = hostRef.current;
+    if (!host) return;
+
+    enhanceMarkdownCodeBlocks(host);
+    const handleClick = (event: MouseEvent) => {
+      void handleCodeCopyClick(event);
+    };
+    host.addEventListener("click", handleClick);
+
+    return () => {
+      host.removeEventListener("click", handleClick);
+    };
   }, [markdown]);
 
   return (
@@ -88,12 +98,13 @@ const LANGUAGE_ALIASES: Record<string, string> = {
   toml: "toml",
 };
 
-function highlightMarkdownCodeBlocks(root: HTMLElement) {
+function enhanceMarkdownCodeBlocks(root: HTMLElement) {
   const codeBlocks = root.querySelectorAll<HTMLElement>(
     ".swarmauri-markdown-body .md-code-content, .swarmauri-markdown-body pre > code",
   );
 
   codeBlocks.forEach((codeElement) => {
+    addCodeBlockClipboardButton(codeElement);
     if (codeElement.dataset.swarmauriHighlighted === "true") return;
 
     const language = getCodeBlockLanguage(codeElement);
@@ -106,6 +117,65 @@ function highlightMarkdownCodeBlocks(root: HTMLElement) {
     codeElement.dataset.swarmauriHighlighted = "true";
     codeElement.dataset.swarmauriSyntaxLanguage = language;
   });
+}
+
+function addCodeBlockClipboardButton(codeElement: HTMLElement) {
+  const figure = codeElement.closest<HTMLElement>(".md-code-block");
+  const pre = codeElement.closest<HTMLElement>("pre");
+  const container = figure || pre;
+  if (!container || container.querySelector(".md-code-copy-button")) return;
+
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "md-code-copy-button";
+  button.setAttribute("aria-label", "Copy code");
+  button.setAttribute("title", "Copy code");
+  button.dataset.codeTarget = "true";
+  button.textContent = "Copy";
+
+  const header = figure?.querySelector<HTMLElement>(".md-code-header");
+  if (header) {
+    header.append(button);
+    return;
+  }
+
+  container.prepend(button);
+}
+
+async function handleCodeCopyClick(event: MouseEvent) {
+  const target = event.target;
+  if (!(target instanceof Element)) return;
+
+  const button = target.closest<HTMLButtonElement>(".md-code-copy-button");
+  if (!button) return;
+
+  const container = button.closest<HTMLElement>(".md-code-block, pre");
+  const codeElement = container?.querySelector<HTMLElement>(
+    ".md-code-content, code",
+  );
+  const code = codeElement?.textContent ?? "";
+  if (!code) return;
+
+  try {
+    await navigator.clipboard.writeText(code);
+    button.dataset.copyState = "copied";
+    button.setAttribute("aria-label", "Copied code");
+    button.textContent = "Copied";
+    window.setTimeout(() => {
+      button.dataset.copyState = "";
+      button.setAttribute("aria-label", "Copy code");
+      button.textContent = "Copy";
+    }, 1600);
+  } catch {
+    button.dataset.copyState = "failed";
+    button.setAttribute("aria-label", "Copy failed");
+    button.textContent = "Failed";
+    window.setTimeout(() => {
+      button.dataset.copyState = "";
+      button.setAttribute("aria-label", "Copy code");
+      button.textContent = "Copy";
+    }, 1600);
+  }
 }
 
 function getCodeBlockLanguage(codeElement: HTMLElement) {

@@ -3,6 +3,7 @@ import { CareerRole } from "../types";
 export const CAREER_ROLES: CareerRole[] = [
   {
     id: "car-01",
+    slug: "lead-sdk-infrastructure-engineer-python",
     title: "Lead SDK Infrastructure Engineer (Python)",
     department: "Engineering",
     location: "Remote (Global)",
@@ -16,6 +17,7 @@ export const CAREER_ROLES: CareerRole[] = [
   },
   {
     id: "car-02",
+    slug: "developer-relations-technical-writer",
     title: "Developer Relations & Technical Writer",
     department: "Developer Relations",
     location: "Remote",
@@ -29,6 +31,7 @@ export const CAREER_ROLES: CareerRole[] = [
   },
   {
     id: "car-03",
+    slug: "open-source-core-contributor-talent-network",
     title: "Open Source Core Contributor (Talent Network)",
     department: "Community",
     location: "Async",

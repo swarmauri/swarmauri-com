@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from "react";
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import { Briefcase, UserCheck } from "lucide-react";
 import { CAREER_ROLES } from "../data/careers";
 import { jobPostingNode, breadcrumbListSchema } from "@mdwrk/structured-data";
@@ -10,21 +10,25 @@ import CareerApplicationForm from "../components/CareerApplicationForm";
 import SEO from "../components/SEO";
 
 export default function CareersPage() {
-  const { roleId } = useParams<{ roleId?: string }>();
+  const { slug } = useParams<{ slug?: string }>();
   const [formData, setFormData] = useState({ name: "", email: "", github: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
 
-  const selectedRole = roleId || null;
+  const selectedRole = slug || null;
 
   // Identify active role
   const activeRoleData = useMemo(() => {
     if (!selectedRole) return null;
-    return CAREER_ROLES.find((r) => r.id === selectedRole) || null;
+    return (
+      CAREER_ROLES.find((r) => r.slug === selectedRole) ||
+      CAREER_ROLES.find((r) => r.id === selectedRole) ||
+      null
+    );
   }, [selectedRole]);
 
   const makeJobNode = (role: typeof CAREER_ROLES[0]) => {
     return jobPostingNode({
-      id: `https://swarmauri.com/careers/${role.id}#job`,
+      id: `https://swarmauri.com/careers/${role.slug}#job`,
       name: role.title,
       title: role.title,
       description: role.description,
@@ -53,11 +57,11 @@ export default function CareersPage() {
       if (activeRoleData) {
         const jobNode = makeJobNode(activeRoleData);
         const breadcrumbs = breadcrumbListSchema({
-          id: `https://swarmauri.com/careers/${activeRoleData.id}#breadcrumb`,
+          id: `https://swarmauri.com/careers/${activeRoleData.slug}#breadcrumb`,
           items: [
             { label: "Home", href: "https://swarmauri.com" },
             { label: "Careers", href: "https://swarmauri.com/careers" },
-            { label: activeRoleData.title, href: `https://swarmauri.com/careers/${activeRoleData.id}` }
+            { label: activeRoleData.title, href: `https://swarmauri.com/careers/${activeRoleData.slug}` }
           ]
         });
         return [jobNode, breadcrumbs];
@@ -86,6 +90,10 @@ export default function CareersPage() {
       setFormData({ name: "", email: "", github: "", message: "" });
     }, 6000);
   };
+
+  if (activeRoleData && selectedRole && selectedRole !== activeRoleData.slug) {
+    return <Navigate to={`/careers/${activeRoleData.slug}`} replace />;
+  }
 
   return (
     <div className="space-y-12 py-6" id="careers-container">

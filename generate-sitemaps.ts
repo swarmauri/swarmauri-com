@@ -177,7 +177,7 @@ function buildCareersEntries(): SitemapEntry[] {
   return [
     { loc: absoluteUrl("careers"), lastmod: GENERATED_AT_ISO, changefreq: "weekly", priority: "0.8" },
     ...CAREER_ROLES.map((role) => ({
-      loc: absoluteUrl(`careers/${routeSegment(role.id)}`),
+      loc: absoluteUrl(`careers/${routeSegment(role.slug)}`),
       lastmod: GENERATED_AT_ISO,
       changefreq: "weekly" as const,
       priority: "0.7",
@@ -425,7 +425,7 @@ ${guide.codeBlock}
   const careerSection = CAREER_ROLES.map(
     (role) => `### ${role.title}
 
-- URL: ${absoluteUrl(`careers/${routeSegment(role.id)}`)}
+- URL: ${absoluteUrl(`careers/${routeSegment(role.slug)}`)}
 - Department: ${role.department}
 - Location: ${role.location}
 - Type: ${role.type}

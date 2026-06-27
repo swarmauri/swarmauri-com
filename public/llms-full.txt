@@ -1,6 +1,6 @@
 # Swarmauri Full LLM Index
 
-Generated: 2026-06-27T02:22:35.080Z
+Generated: 2026-06-27T04:10:08.057Z
 
 This file is the complete assistant-facing index for swarmauri.com. It is generated from the same source data as the nested XML sitemaps.
 
@@ -8822,7 +8822,7 @@ The current Swarmauri website now separates the company site, package portfolio,
 
 ### Lead SDK Infrastructure Engineer (Python)
 
-- URL: https://swarmauri.com/careers/car-01
+- URL: https://swarmauri.com/careers/lead-sdk-infrastructure-engineer-python
 - Department: Engineering
 - Location: Remote (Global)
 - Type: Full-Time
@@ -8831,7 +8831,7 @@ The current Swarmauri website now separates the company site, package portfolio,
 
 ### Developer Relations & Technical Writer
 
-- URL: https://swarmauri.com/careers/car-02
+- URL: https://swarmauri.com/careers/developer-relations-technical-writer
 - Department: Developer Relations
 - Location: Remote
 - Type: Full-Time
@@ -8840,7 +8840,7 @@ The current Swarmauri website now separates the company site, package portfolio,
 
 ### Open Source Core Contributor (Talent Network)
 
-- URL: https://swarmauri.com/careers/car-03
+- URL: https://swarmauri.com/careers/open-source-core-contributor-talent-network
 - Department: Community
 - Location: Async
 - Type: Contract-to-Hire
