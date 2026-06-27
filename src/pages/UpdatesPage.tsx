@@ -98,6 +98,8 @@ export default function UpdatesPage() {
   }, [selectedCategory]);
 
   const activeSlug = activePost ? getUpdateSlug(activePost) : "";
+  const shouldShowDetailExcerpt =
+    activePost ? !activePost.content.trimStart().startsWith(">") : false;
 
   if (activePost && slugs && slugs !== activeSlug) {
     return <Navigate to={`/updates/${activeSlug}`} replace />;
@@ -155,9 +157,11 @@ export default function UpdatesPage() {
           </div>
 
           <div className="prose prose-zinc max-w-none text-sm text-zinc-600 leading-relaxed space-y-4">
-            <p className="font-medium text-zinc-800 text-base leading-relaxed bg-zinc-50 p-4 rounded-lg border border-zinc-200/50">
-              {activePost.summary}
-            </p>
+            {shouldShowDetailExcerpt && (
+              <p className="font-medium text-zinc-800 text-base leading-relaxed bg-zinc-50 p-4 rounded-lg border border-zinc-200/50">
+                {activePost.summary}
+              </p>
+            )}
             <MarkdownBody markdown={activePost.content} className="pt-2" />
           </div>
         </div>
