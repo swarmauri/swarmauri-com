@@ -8,7 +8,7 @@
     "dev": "vite --host 0.0.0.0",
     "generate:packages": "node scripts/generate-package-catalog.mjs",
     "prebuild": "tsx generate-sitemaps.ts",
-    "build": "npm run check && vite build",
+    "build": "npm run check && vite build && tsx scripts/generate-route-metadata.ts",
     "check": "tsc --noEmit && node scripts/validate-python-example-lines.mjs",
     "preview": "vite preview --host 0.0.0.0",
     "clean": "rm -rf dist server.js",
