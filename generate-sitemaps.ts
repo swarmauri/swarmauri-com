@@ -12,6 +12,7 @@ import {
   SDK_METADATA,
 } from "./src/data/packages";
 import { UPDATE_POSTS } from "./src/data/updates";
+import { getUpdateSlug } from "./src/utils/updateSlugs";
 
 const SITE_URL = "https://swarmauri.com";
 const PUBLIC_DIR = path.join(process.cwd(), "public");
@@ -164,7 +165,7 @@ function buildUpdatesEntries(): SitemapEntry[] {
   return [
     { loc: absoluteUrl("updates"), lastmod: GENERATED_AT_ISO, changefreq: "daily", priority: "0.8" },
     ...UPDATE_POSTS.map((post) => ({
-      loc: absoluteUrl(`updates/${routeSegment(post.id)}`),
+      loc: absoluteUrl(`updates/${routeSegment(getUpdateSlug(post))}`),
       lastmod: dateToIso(post.date),
       changefreq: "monthly" as const,
       priority: "0.7",
@@ -403,7 +404,7 @@ ${guide.codeBlock}
   const updateSection = UPDATE_POSTS.map(
     (post) => `### ${post.title}
 
-- URL: ${absoluteUrl(`updates/${routeSegment(post.id)}`)}
+- URL: ${absoluteUrl(`updates/${routeSegment(getUpdateSlug(post))}`)}
 - Date: ${post.date}
 - Category: ${post.category}
 - Summary: ${post.summary}

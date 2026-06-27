@@ -1,18 +1,18 @@
 import React, { useState, useMemo } from "react";
-import { useParams, useNavigate, Link } from "react-router-dom";
+import { useParams, Link, Navigate } from "react-router-dom";
 import { UPDATE_POSTS } from "../data/updates";
 import { FolderOpen, ArrowLeft } from "lucide-react";
 import { UpdatePost } from "../types";
 import { blogPostingNode, breadcrumbListSchema } from "@mdwrk/structured-data";
 import { generateTechArticleSchema } from "../utils/schema";
+import { getUpdateSlug } from "../utils/updateSlugs";
 import StructuredData from "../components/StructuredData";
 import UpdatePostCard from "../components/UpdatePostCard";
 import SEO from "../components/SEO";
 import MarkdownBody from "../components/MarkdownBody";
 
 export default function UpdatesPage() {
-  const { postId } = useParams<{ postId?: string }>();
-  const navigate = useNavigate();
+  const { slugs } = useParams<{ slugs?: string }>();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
   const categories = useMemo(
@@ -22,19 +22,24 @@ export default function UpdatesPage() {
 
   // Identify active post
   const activePost = useMemo(() => {
-    if (!postId) return null;
-    return UPDATE_POSTS.find((p) => p.id === postId) || null;
-  }, [postId]);
+    if (!slugs) return null;
+    return (
+      UPDATE_POSTS.find((post) => getUpdateSlug(post) === slugs) ||
+      UPDATE_POSTS.find((post) => post.id === slugs) ||
+      null
+    );
+  }, [slugs]);
 
   // Dynamically assign appropriate structured node type
   const makeArticleNode = (post: UpdatePost) => {
     const isTech = post.category === "Architecture Notes" || post.category === "Package Highlights";
+    const slug = getUpdateSlug(post);
     const commonProps = {
-      id: `https://swarmauri.com/updates/${post.id}#article`,
+      id: `https://swarmauri.com/updates/${slug}#article`,
       name: post.title,
       headline: post.title,
       description: post.summary,
-      url: `https://swarmauri.com/updates/${post.id}`,
+      url: `https://swarmauri.com/updates/${slug}`,
       datePublished: post.date,
       author: { id: "https://swarmauri.com#organization", name: "Swarmauri Core Team" },
       publisher: { id: "https://swarmauri.com#organization", name: "Swarmauri" }
@@ -59,12 +64,13 @@ export default function UpdatesPage() {
     try {
       if (activePost) {
         const articleNode = makeArticleNode(activePost);
+        const activeSlug = getUpdateSlug(activePost);
         const breadcrumbs = breadcrumbListSchema({
-          id: `https://swarmauri.com/updates/${activePost.id}#breadcrumb`,
+          id: `https://swarmauri.com/updates/${activeSlug}#breadcrumb`,
           items: [
             { label: "Home", href: "https://swarmauri.com" },
             { label: "Updates", href: "https://swarmauri.com/updates" },
-            { label: activePost.title, href: `https://swarmauri.com/updates/${activePost.id}` }
+            { label: activePost.title, href: `https://swarmauri.com/updates/${activeSlug}` }
           ]
         });
         return [articleNode, breadcrumbs];
@@ -90,6 +96,12 @@ export default function UpdatesPage() {
     if (selectedCategory === "all") return UPDATE_POSTS;
     return UPDATE_POSTS.filter((p) => p.category === selectedCategory);
   }, [selectedCategory]);
+
+  const activeSlug = activePost ? getUpdateSlug(activePost) : "";
+
+  if (activePost && slugs && slugs !== activeSlug) {
+    return <Navigate to={`/updates/${activeSlug}`} replace />;
+  }
 
   return (
     <div className="space-y-12 py-6" id="updates-container">

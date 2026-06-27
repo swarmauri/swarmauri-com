@@ -1,6 +1,6 @@
 # Swarmauri Full LLM Index
 
-Generated: 2026-06-27T01:41:13.362Z
+Generated: 2026-06-27T02:17:04.955Z
 
 This file is the complete assistant-facing index for swarmauri.com. It is generated from the same source data as the nested XML sitemaps.
 
@@ -8327,7 +8327,7 @@ print(f"Decrypted payload is authentic: {is_valid}")
 
 ### Swarmauri SDK 0.9.1.dev5 Update: Granular Package Portfolio
 
-- URL: https://swarmauri.com/updates/up-01
+- URL: https://swarmauri.com/updates/swarmauri-sdk-granular-package-portfolio
 - Date: 2026-06-22
 - Category: Release Notes
 - Summary: Swarmauri 0.9.1.dev5 now presents the namespace package as the primary release signal, with 310 active workspace members and 337 indexed package records organized by layer, role, and maturity.
@@ -8365,7 +8365,7 @@ For most application developers, start with `swarmauri` or `swarmauri_standard`.
 
 ### Why Composable Architecture is Critical for Agent Safety
 
-- URL: https://swarmauri.com/updates/up-02
+- URL: https://swarmauri.com/updates/composable-architecture-agent-safety
 - Date: 2026-06-15
 - Category: Architecture Notes
 - Summary: Reflecting on how monolithic AI frameworks introduce significant security threats and why Swarmauri chooses strict contract decoupling.
@@ -8373,7 +8373,7 @@ For most application developers, start with `swarmauri` or `swarmauri_standard`.
 
 ### Deep Dive: Elliptic Curve Cryptography in Distributed Agent Networks
 
-- URL: https://swarmauri.com/updates/up-03
+- URL: https://swarmauri.com/updates/elliptic-curve-cryptography-agent-networks
 - Date: 2026-06-10
 - Category: Package Highlights
 - Summary: Highlighting our swarmauri_signing_ed25519 standard package and its role in zero-trust execution pathways.
@@ -8381,7 +8381,7 @@ For most application developers, start with `swarmauri` or `swarmauri_standard`.
 
 ### How to Build a Custom Adapter in 10 Minutes
 
-- URL: https://swarmauri.com/updates/up-04
+- URL: https://swarmauri.com/updates/build-a-custom-adapter
 - Date: 2026-06-05
 - Category: Tutorials
 - Summary: Step-by-step developer guide on subclassing ModelBase or ToolBase to wrap proprietary business logic.
@@ -8389,7 +8389,7 @@ For most application developers, start with `swarmauri` or `swarmauri_standard`.
 
 ### sdk release v0.7.0
 
-- URL: https://swarmauri.com/updates/archive-sdk-release-v0-7-0
+- URL: https://swarmauri.com/updates/sdk-release-v0-7-0
 - Date: 2025-03-31
 - Category: Release Notes
 - Summary: The Swarmauri SDK v0.7.0 is here! 🤔 ✔ Introduction of observability components (global and module-level logging) ! ✔ Blazing fast Implementation of UV! ✔ JupyterToolkit alpha (10+ ai tools to automate jupyter notebook workflows) pip install swarmauri==0.7....
@@ -8407,7 +8407,7 @@ https://github.com/swarmauri/swarmauri-sdk/tree/v0.7.0
 
 ### sdk release v0.6.1
 
-- URL: https://swarmauri.com/updates/archive-sdk-release-v0-6-1
+- URL: https://swarmauri.com/updates/sdk-release-v0-6-1
 - Date: 2025-03-04
 - Category: Release Notes
 - Summary: What’s new? Give it a try: pip install swarmauri==0.6.1
@@ -8425,7 +8425,7 @@ pip install swarmauri==0.6.1
 
 ### crouton pre-release v0.0.4
 
-- URL: https://swarmauri.com/updates/archive-crouton-v0-0-4-dev
+- URL: https://swarmauri.com/updates/crouton-v0-0-4-dev
 - Date: 2024-12-07
 - Category: Release Notes
 - Summary: Try the Latest Development Release of Crouton! We’ve just released the latest development version of Crouton, our python-powered CRUD route generator. It’s packed with improvements, and we’d love for you to give it a try and share your feedback! 🙌 Why Crou...
@@ -8469,7 +8469,7 @@ Once installed, check out our GitHub repository for:
 
 ### sdk release v0.5.2
 
-- URL: https://swarmauri.com/updates/archive-sdk-release-v0-5-2
+- URL: https://swarmauri.com/updates/sdk-release-v0-5-2
 - Date: 2024-11-21
 - Category: Release Notes
 - Summary: Swarmauri v0.5.2 is here! And guess what? The installation process is now way faster and super seamless. This update tackles some of the issues a few of you ran into earlier, so give it a shot and let us know how it goes. This update is all about speed 🏎️...
@@ -8497,7 +8497,7 @@ Happy building, and don’t forget to let us know what you think!
 
 ### sdk release v0.5.0
 
-- URL: https://swarmauri.com/updates/archive-swarmauri-sdk-release-0_5_0
+- URL: https://swarmauri.com/updates/swarmauri-sdk-release-0_5_0
 - Date: 2024-10-02
 - Category: Release Notes
 - Summary: This release introduces significant changes to the Swarmauri codebase, improving toolkit imports and LLM tool accessibility. Changes and Enhancements: Upgrade Instructions: Install the updated SDK using pip: Add the new environment to Jupyter kernels: Impor...
@@ -8533,7 +8533,7 @@ Refer to the Swarmauri’s official documentation for updated examples and guide
 
 ### sdk release v0.4.1
 
-- URL: https://swarmauri.com/updates/archive-release-v0-4-1-sdk
+- URL: https://swarmauri.com/updates/release-v0-4-1-sdk
 - Date: 2024-09-01
 - Category: Release Notes
 - Summary: A Supercharged Swarmauri Engineer
@@ -8575,7 +8575,7 @@ Get Ready to Upgrade! Swarmauri v0.4.1 is now available for install!
 
 ### serialization and swarmauri
 
-- URL: https://swarmauri.com/updates/archive-serialization-and-swarmauri
+- URL: https://swarmauri.com/updates/serialization-and-swarmauri
 - Date: 2024-07-08
 - Category: Tutorials
 - Summary: In contemporary AI applications, especially those involving Large Language Models (LLMs), efficient data handling and model management are paramount. The Swarmauri SDK provides robust support for various LLM integrations using Pydantic, which powers seamles...
@@ -8675,7 +8675,7 @@ Happy Coding! 🚀
 
 ### the swarmauri sdk
 
-- URL: https://swarmauri.com/updates/archive-swarmauri-sdk
+- URL: https://swarmauri.com/updates/swarmauri-sdk
 - Date: 2024-04-08
 - Category: Release Notes
 - Summary: Swarmauri’s SDK is a powerful open-source platform that allows developers to build, test, and deploy AI agents efficiently. It provides a robust set of tools aimed at simplifying the creation of production-grade AI systems. Key features include a modular ar...

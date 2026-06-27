@@ -42,7 +42,7 @@ export default function App() {
           
           {/* Updates with deep-linking support */}
           <Route path="updates" element={<UpdatesPage />} />
-          <Route path="updates/:postId" element={<UpdatesPage />} />
+          <Route path="updates/:slugs" element={<UpdatesPage />} />
           
           {/* Careers with deep-linking support */}
           <Route path="careers" element={<CareersPage />} />

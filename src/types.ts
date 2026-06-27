@@ -48,6 +48,7 @@ export interface GuideTopic {
 
 export interface UpdatePost {
   id: string;
+  slug?: string;
   title: string;
   date: string;
   category: "Release Notes" | "Package Highlights" | "Architecture Notes" | "Tutorials" | "Community";

@@ -5,6 +5,7 @@ import { SDK_METADATA } from "./packages";
 const CURRENT_UPDATE_POSTS: UpdatePost[] = [
   {
     id: "up-01",
+    slug: "swarmauri-sdk-granular-package-portfolio",
     title: `Swarmauri SDK ${SDK_METADATA.version} Update: Granular Package Portfolio`,
     date: "2026-06-22",
     category: "Release Notes",
@@ -43,6 +44,7 @@ For most application developers, start with \`swarmauri\` or \`swarmauri_standar
   },
   {
     id: "up-02",
+    slug: "composable-architecture-agent-safety",
     title: "Why Composable Architecture is Critical for Agent Safety",
     date: "2026-06-15",
     category: "Architecture Notes",
@@ -51,6 +53,7 @@ For most application developers, start with \`swarmauri\` or \`swarmauri_standar
   },
   {
     id: "up-03",
+    slug: "elliptic-curve-cryptography-agent-networks",
     title: "Deep Dive: Elliptic Curve Cryptography in Distributed Agent Networks",
     date: "2026-06-10",
     category: "Package Highlights",
@@ -59,6 +62,7 @@ For most application developers, start with \`swarmauri\` or \`swarmauri_standar
   },
   {
     id: "up-04",
+    slug: "build-a-custom-adapter",
     title: "How to Build a Custom Adapter in 10 Minutes",
     date: "2026-06-05",
     category: "Tutorials",

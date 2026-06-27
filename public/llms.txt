@@ -22,7 +22,7 @@ Swarmauri is a composable Python SDK and company portfolio for contract-first AI
 - Workspace members: 310
 - Indexed package records: 337
 - Source: swarmauri-sdk/pkgs/package-index.toml
-- Site metadata generated: 2026-06-27T01:41:13.362Z
+- Site metadata generated: 2026-06-27T02:17:04.955Z
 
 ## Layer Summary
 
