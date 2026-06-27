@@ -11,7 +11,10 @@ import ClaimsPage from "./pages/ClaimsPage";
 import UpdatesPage from "./pages/UpdatesPage";
 import CareersPage from "./pages/CareersPage";
 import CommunityPage from "./pages/CommunityPage";
-import PrivacyTermsPage from "./pages/PrivacyTermsPage";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
+import TermsOfServicePage from "./pages/TermsOfServicePage";
+import ServicesPage from "./pages/ServicesPage";
+import SolutionsPage from "./pages/SolutionsPage";
 import LegacyPage from "./pages/LegacyPage";
 import LegacyUpdateRedirect from "./pages/LegacyUpdateRedirect";
 import FaqPage from "./pages/FaqPage";
@@ -49,16 +52,18 @@ export default function App() {
           <Route path="careers/:slug" element={<CareersPage />} />
           
           <Route path="community" element={<CommunityPage />} />
-          <Route path="privacy-terms" element={<PrivacyTermsPage />} />
-          <Route path="privacy-policy" element={<PrivacyTermsPage />} />
-          <Route path="terms-of-service" element={<PrivacyTermsPage />} />
+          <Route path="services" element={<ServicesPage />} />
+          <Route path="solutions" element={<SolutionsPage />} />
+          <Route path="privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route path="terms-of-service" element={<TermsOfServicePage />} />
+          <Route path="privacy-terms" element={<Navigate to="/privacy-policy" replace />} />
 
           {/* Migrated legacy website pages */}
           <Route path="about" element={<LegacyPage />} />
           <Route path="contact" element={<LegacyPage />} />
           <Route path="docs" element={<LegacyPage />} />
           <Route path="faq" element={<FaqPage />} />
-          <Route path="services-and-solutions" element={<LegacyPage />} />
+          <Route path="services-and-solutions" element={<Navigate to="/services" replace />} />
 
           {/* Previous WordPress post URL shape */}
           <Route path=":year/:month/:day/:legacySlug" element={<LegacyUpdateRedirect />} />

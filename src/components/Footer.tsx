@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Github } from "lucide-react";
 import { SDK_METADATA } from "../data/packages";
 
 export default function Footer() {
@@ -11,7 +10,7 @@ export default function Footer() {
   return (
     <footer className="bg-zinc-900 text-zinc-400 py-12 border-t border-zinc-800 relative z-10" id="main-footer">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
           {/* Brand block */}
           <div className="col-span-2 space-y-4">
             <div className="flex items-center space-x-2">
@@ -114,8 +113,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/services-and-solutions" onClick={handleScrollTop} className="hover:text-white transition-colors">
-                  Services & Solutions
+                <Link to="/services" onClick={handleScrollTop} className="hover:text-white transition-colors">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/solutions" onClick={handleScrollTop} className="hover:text-white transition-colors">
+                  Solutions
                 </Link>
               </li>
               <li>
@@ -123,9 +127,21 @@ export default function Footer() {
                   Contact
                 </Link>
               </li>
+            </ul>
+          </div>
+
+          {/* Column 4: Legal */}
+          <div>
+            <h3 className="text-white text-xs font-semibold uppercase tracking-wider mb-3">Legal</h3>
+            <ul className="space-y-2 text-xs">
               <li>
-                <Link to="/privacy-terms" onClick={handleScrollTop} className="hover:text-white transition-colors">
-                  Privacy & Terms
+                <Link to="/privacy-policy" onClick={handleScrollTop} className="hover:text-white transition-colors">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/terms-of-service" onClick={handleScrollTop} className="hover:text-white transition-colors">
+                  Terms of Service
                 </Link>
               </li>
             </ul>
@@ -142,7 +158,8 @@ export default function Footer() {
               <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
               <span className="text-[10px] uppercase font-mono tracking-wider font-bold">SWARMAURI PACKAGE - {SDK_METADATA.version}</span>
             </span>
-            <Link to="/privacy-terms" onClick={handleScrollTop} className="hover:text-zinc-300">Privacy & Terms</Link>
+            <Link to="/privacy-policy" onClick={handleScrollTop} className="hover:text-zinc-300">Privacy</Link>
+            <Link to="/terms-of-service" onClick={handleScrollTop} className="hover:text-zinc-300">Terms</Link>
           </div>
         </div>
       </div>

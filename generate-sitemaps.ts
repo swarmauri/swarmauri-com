@@ -100,6 +100,7 @@ function buildMainEntries(): SitemapEntry[] {
     "careers",
     "faq",
     "privacy-policy",
+    "services-and-solutions",
     "terms-of-service",
   ]);
   const legacyEntries = LEGACY_PAGES.filter(
@@ -122,8 +123,9 @@ function buildMainEntries(): SitemapEntry[] {
     { loc: absoluteUrl("updates"), lastmod: GENERATED_AT_ISO, changefreq: "daily", priority: "0.8" },
     { loc: absoluteUrl("careers"), lastmod: GENERATED_AT_ISO, changefreq: "weekly", priority: "0.8" },
     { loc: absoluteUrl("community"), lastmod: GENERATED_AT_ISO, changefreq: "weekly", priority: "0.7" },
+    { loc: absoluteUrl("services"), lastmod: GENERATED_AT_ISO, changefreq: "monthly", priority: "0.6" },
+    { loc: absoluteUrl("solutions"), lastmod: GENERATED_AT_ISO, changefreq: "monthly", priority: "0.6" },
     { loc: absoluteUrl("faq"), lastmod: GENERATED_AT_ISO, changefreq: "weekly", priority: "0.7" },
-    { loc: absoluteUrl("privacy-terms"), lastmod: GENERATED_AT_ISO, changefreq: "yearly", priority: "0.3" },
     { loc: absoluteUrl("privacy-policy"), lastmod: GENERATED_AT_ISO, changefreq: "yearly", priority: "0.3" },
     { loc: absoluteUrl("terms-of-service"), lastmod: GENERATED_AT_ISO, changefreq: "yearly", priority: "0.3" },
     { loc: absoluteUrl("llms.txt"), lastmod: GENERATED_AT_ISO, changefreq: "daily", priority: "0.6" },
@@ -334,7 +336,11 @@ Swarmauri is a composable Python SDK and company portfolio for contract-first AI
 - [Guides](${absoluteUrl("guides")})
 - [Updates](${absoluteUrl("updates")})
 - [Careers](${absoluteUrl("careers")})
+- [Services](${absoluteUrl("services")})
+- [Solutions](${absoluteUrl("solutions")})
 - [FAQ](${absoluteUrl("faq")})
+- [Privacy Policy](${absoluteUrl("privacy-policy")})
+- [Terms of Service](${absoluteUrl("terms-of-service")})
 
 ## Current SDK Metadata
 
