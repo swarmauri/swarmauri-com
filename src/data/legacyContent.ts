@@ -17,7 +17,7 @@ export interface LegacyPageRecord {
   tags: string[];
 }
 
-export const LEGACY_UPDATE_POSTS: LegacyUpdatePost[] = [
+const RAW_LEGACY_UPDATE_POSTS: LegacyUpdatePost[] = [
   {
     "id": "archive-sdk-release-v0-7-0",
     "title": "sdk release v0.7.0",
@@ -182,6 +182,381 @@ export const LEGACY_UPDATE_POSTS: LegacyUpdatePost[] = [
     ]
   }
 ];
+
+type LegacyUpdateEnhancement = {
+  title: string;
+  summary: string;
+  content: string;
+};
+
+const LEGACY_UPDATE_ENHANCEMENTS: Record<string, LegacyUpdateEnhancement> = {
+  "archive-sdk-release-v0-7-0": {
+    title: "SDK Release v0.7.0",
+    summary:
+      "Archived release note for Swarmauri SDK v0.7.0, covering observability components, faster uv-based installation workflows, and an alpha JupyterToolkit package family.",
+    content: `> Archived update from March 31, 2025. Version-specific commands and package names are preserved for historical context.
+
+## Release Focus
+
+Swarmauri SDK v0.7.0 highlighted three major improvements for developers working with the SDK at that point in the project:
+
+- Observability components for global and module-level logging.
+- Faster installation workflows using uv.
+- An alpha JupyterToolkit release with more than ten AI-assisted notebook tools.
+
+## Installation
+
+\`\`\`bash
+pip install swarmauri==0.7.0
+\`\`\`
+
+## Documentation And README References
+
+- Historical source tag: https://github.com/swarmauri/swarmauri-sdk/tree/v0.7.0
+- Current package catalog: https://swarmauri.com/packages
+- Current docs hub: https://docs.swarmauri.com
+
+## Current Context
+
+This release predates the current generated package catalog and split-package presentation. For current installs, prefer the active package pages and current namespace package version shown in the site header.`
+  },
+  "archive-sdk-release-v0-6-1": {
+    title: "SDK Release v0.6.1",
+    summary:
+      "Archived release note for Swarmauri SDK v0.6.1, covering plugin architecture, standalone plugin packages, and YAML validation.",
+    content: `> Archived update from March 4, 2025. This page keeps the historical release command visible while pointing readers to the current package catalog.
+
+## What Changed
+
+Swarmauri SDK v0.6.1 focused on the plugin and serialization surface:
+
+- Introduced the plugin architecture used by the SDK at the time.
+- Released 40+ standalone plugin packages.
+- Added YAML validation support.
+
+## Installation
+
+\`\`\`bash
+pip install swarmauri==0.6.1
+\`\`\`
+
+## Documentation And README References
+
+- Current package catalog: https://swarmauri.com/packages
+- Current docs hub: https://docs.swarmauri.com
+- Current update archive: https://swarmauri.com/updates
+
+## Current Context
+
+The modern website now presents package metadata from the generated SDK package index. Treat this release note as historical context, not as the current install recommendation.`
+  },
+  "archive-crouton-v0-0-4-dev": {
+    title: "Crouton Pre-release v0.0.4",
+    summary:
+      "Archived pre-release note for Crouton v0.0.4, a Python-powered CRUD route generator that preceded the current Swarmauri portfolio messaging.",
+    content: `> Archived update from December 7, 2024. This post describes a development pre-release and should be read as historical product context.
+
+## Pre-release Focus
+
+Crouton v0.0.4 was presented as a Python-powered CRUD route generator designed to help teams move faster when building API surfaces.
+
+The update emphasized:
+
+- Automated CRUD route generation.
+- Quick customization options.
+- A workflow that lets developers focus on core application logic.
+
+## Installation
+
+\`\`\`bash
+pip install -U crouton --pre
+\`\`\`
+
+The \`--pre\` flag selects the pre-release package version.
+
+## Documentation And README References
+
+- Current Swarmauri package catalog: https://swarmauri.com/packages
+- Current docs hub: https://docs.swarmauri.com
+- Current community page: https://swarmauri.com/community
+
+## Current Context
+
+This page is retained because it was part of the previous Swarmauri website export. It is not a current Swarmauri SDK installation guide.`
+  },
+  "archive-sdk-release-v0-5-2": {
+    title: "SDK Release v0.5.2",
+    summary:
+      "Archived release note for Swarmauri SDK v0.5.2, focused on faster installation, reliability improvements, and multimodal development support.",
+    content: `> Archived update from November 21, 2024. The installation command below is version-specific historical guidance.
+
+## Release Focus
+
+Swarmauri SDK v0.5.2 emphasized speed and reliability for developers installing and testing the SDK.
+
+The release messaging highlighted:
+
+- Faster and smoother installation.
+- Reliability improvements for earlier installation issues.
+- Additional robustness and multimodal features.
+
+## Installation
+
+\`\`\`bash
+pip install swarmauri
+\`\`\`
+
+## Documentation And README References
+
+- Current package catalog: https://swarmauri.com/packages
+- Current docs hub: https://docs.swarmauri.com
+- Current release updates: https://swarmauri.com/updates
+
+## Current Context
+
+The current site now exposes generated package records, direct package install commands, and package-specific README/source links. Use those generated pages for current project setup.`
+  },
+  "archive-swarmauri-sdk-release-0_5_0": {
+    title: "SDK Release v0.5.0",
+    summary:
+      "Archived release note for Swarmauri SDK v0.5.0, covering import-path changes, LLM tool accessibility, and Jupyter kernel setup.",
+    content: `> Archived update from October 2, 2024. The import paths and package names reflect the SDK structure at that release.
+
+## Release Focus
+
+Swarmauri SDK v0.5.0 introduced significant package and import-path changes:
+
+- Renamed \`swarmauri.standard\` to \`swarmauri\` for toolkit imports.
+- Renamed \`swarmauri.community\` to \`swarmauri_community\` for LLM tool imports.
+- Improved toolkit imports and LLM tool accessibility.
+
+## Upgrade Command
+
+\`\`\`bash
+pip install swarmauri==0.5.0 swarmauri_community==0.5.0 jupyter ipykernel
+\`\`\`
+
+## Jupyter Kernel Setup
+
+\`\`\`bash
+python -m ipykernel install --user --name=swarmauri-0.5.0 \\
+  --display-name "swarmauri(0.5.0)"
+\`\`\`
+
+## Migration Notes
+
+- Update old toolkit imports to the release-specific naming convention.
+- Replace \`swarmauri.standard\` imports with \`swarmauri\` imports where this release expected that shape.
+- Replace \`swarmauri.community\` imports with \`swarmauri_community\` imports for the release-specific LLM tool package.
+
+## Documentation And README References
+
+- Current package catalog: https://swarmauri.com/packages
+- Current architecture guide: https://swarmauri.com/architecture
+- Current docs hub: https://docs.swarmauri.com
+
+## Current Context
+
+Modern Swarmauri package pages show the current generated install command and import example for each package. Prefer those pages over this archived migration note for new projects.`
+  },
+  "archive-release-v0-4-1-sdk": {
+    title: "SDK Release v0.4.1",
+    summary:
+      "Archived beta release note for Swarmauri SDK v0.4.1, covering distance formulas, model integrations, parser work, issue templates, and contributor credits.",
+    content: `> Archived update from September 1, 2024. This beta-era release note is preserved for project history.
+
+## Release Focus
+
+Swarmauri SDK v0.4.1 was presented as a beta release with new components, quality improvements, and project workflow updates.
+
+## Highlights
+
+- Added seven distance calculation formulas.
+- Introduced an AI Studio model integration.
+- Introduced a DeepSeek model integration.
+- Previewed an experimental ShuttleAI model with improved tests and parameterization.
+- Added a Markdown-to-HTML parser.
+- Added issue templates for contributor workflows.
+
+## Contributors Credited In The Original Post
+
+- @faizan2700
+- @John Kagunda
+- @Techie-John
+- @abdulsamodazeez
+
+## Documentation And README References
+
+- Current package catalog: https://swarmauri.com/packages
+- Current architecture guide: https://swarmauri.com/architecture
+- Current community page: https://swarmauri.com/community
+
+## Current Context
+
+Some package names and provider integrations have changed since this beta-era post. Use the generated package catalog for current package names, install commands, and source/README links.`
+  },
+  "archive-serialization-and-swarmauri": {
+    title: "Serialization And Swarmauri",
+    summary:
+      "Archived tutorial showing beta-era Pydantic serialization and deserialization examples for Groq, OpenAI, and Perplexity model wrappers.",
+    content: `> Archived tutorial from July 8, 2024. The examples below preserve the beta-era import paths and should be treated as historical examples.
+
+## Tutorial Focus
+
+This article showed how Swarmauri used Pydantic serialization and deserialization to preserve model and agent state across provider-backed LLM workflows.
+
+The original walkthrough covered:
+
+- \`GroqModel\` with \`SimpleConversationAgent\`.
+- \`OpenAIModel\` with \`SimpleConversationAgent\`.
+- \`PerplexityModel\` with \`SimpleConversationAgent\`.
+- JSON serialization and revalidation using Pydantic model APIs.
+
+## Historical Install Command
+
+\`\`\`bash
+pip install swarmauri[full]==0.4.1
+\`\`\`
+
+## Groq Example
+
+\`\`\`python
+import os
+
+from swarmauri.standard.agents.concrete.SimpleConversationAgent import (
+    SimpleConversationAgent,
+)
+from swarmauri.standard.llms.concrete.GroqModel import GroqModel
+
+api_key = os.getenv("GROQ_API_KEY")
+llm = GroqModel(api_key=api_key)
+agent = SimpleConversationAgent(llm=llm)
+
+result = agent.exec(input_str="hello")
+print(result)
+
+round_trip = SimpleConversationAgent.model_validate_json(
+    agent.model_dump_json()
+)
+assert agent.id == round_trip.id
+\`\`\`
+
+## OpenAI Example
+
+\`\`\`python
+import os
+
+from swarmauri.standard.agents.concrete.SimpleConversationAgent import (
+    SimpleConversationAgent,
+)
+from swarmauri.standard.llms.concrete.OpenAIModel import OpenAIModel
+
+api_key = os.getenv("OPENAI_API_KEY")
+llm = OpenAIModel(api_key=api_key)
+agent = SimpleConversationAgent(llm=llm)
+
+result = agent.exec(input_str="hello")
+print(result)
+
+round_trip = SimpleConversationAgent.model_validate_json(
+    agent.model_dump_json()
+)
+assert agent.id == round_trip.id
+\`\`\`
+
+## Perplexity Example
+
+\`\`\`python
+import os
+
+from swarmauri.standard.agents.concrete.SimpleConversationAgent import (
+    SimpleConversationAgent,
+)
+from swarmauri.standard.llms.concrete.PerplexityModel import PerplexityModel
+
+api_key = os.getenv("PERPLEXITY_API_KEY")
+llm = PerplexityModel(api_key=api_key)
+agent = SimpleConversationAgent(llm=llm)
+
+result = agent.exec(input_str="hello")
+print(result)
+
+round_trip = SimpleConversationAgent.model_validate_json(
+    agent.model_dump_json()
+)
+assert agent.id == round_trip.id
+\`\`\`
+
+## Documentation And README References
+
+- Current package catalog: https://swarmauri.com/packages
+- Current platform serialization section: https://swarmauri.com/platform
+- Current docs hub: https://docs.swarmauri.com
+
+## Current Context
+
+The current platform page describes JSON, YAML, and TOML round-trip serialization. Use current package pages for current import paths and package-specific README/source links.`
+  },
+  "archive-swarmauri-sdk": {
+    title: "The Swarmauri SDK",
+    summary:
+      "Archived overview of the Swarmauri SDK as an open-source platform for modular AI agents, plugins, experiments, and reusable workflows.",
+    content: `> Archived overview from April 8, 2024. This page reflects early SDK positioning before the current generated package catalog.
+
+## Overview
+
+The original post introduced Swarmauri as an open-source SDK for building, testing, and deploying AI agents efficiently.
+
+It emphasized:
+
+- A modular architecture for composing AI workflows.
+- Community plugins for extending SDK behavior.
+- Examples and notebooks for experimentation.
+- Reusable agent, conversation, document, embedding, and tool components.
+
+## Core Themes
+
+### Modular Architecture
+
+The SDK was described as a component-based system for tailoring AI solutions to specific domains and tasks.
+
+### Plugin Ecosystem
+
+Community-driven plugins were presented as the extension mechanism for adding capabilities such as text processing, document stores, and experimentation tools.
+
+### Agent Factories And Tools
+
+The post highlighted built-in APIs for defining, registering, and deploying agents while reusing standard embedding, document, and workflow components.
+
+### Continuous Updates
+
+The original page noted ongoing work around modularity, serialization methods, component libraries, tracing, and embedding functionality.
+
+## Historical Install Command
+
+\`\`\`bash
+pip install swarmauri[full]
+\`\`\`
+
+## Documentation And README References
+
+- Current package catalog: https://swarmauri.com/packages
+- Current architecture guide: https://swarmauri.com/architecture
+- Current docs hub: https://docs.swarmauri.com
+- Current community page: https://swarmauri.com/community
+
+## Current Context
+
+The current Swarmauri website now separates the company site, package portfolio, docs, updates, and careers surfaces. Use generated package pages for current install commands, import examples, package maturity, and source/README links.`
+  },
+};
+
+export const LEGACY_UPDATE_POSTS: LegacyUpdatePost[] = RAW_LEGACY_UPDATE_POSTS.map(
+  (post) => ({
+    ...post,
+    ...(LEGACY_UPDATE_ENHANCEMENTS[post.id] ?? {}),
+  }),
+);
 
 export const LEGACY_PAGES: LegacyPageRecord[] = [
   {
