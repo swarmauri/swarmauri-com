@@ -13,28 +13,34 @@ Allow: /sitemap-guides.xml
 Allow: /sitemap-updates.xml
 Allow: /sitemap-careers.xml
 Allow: /llms.txt
+Allow: /llms-full.txt
 Disallow: /api/
 
 # Specialized Guidelines for modern AI Engine scrapers and AI Agents
 User-agent: GPTBot
 Allow: /
 Allow: /llms.txt
+Allow: /llms-full.txt
 
 User-agent: ClaudeBot
 Allow: /
 Allow: /llms.txt
+Allow: /llms-full.txt
 
 User-agent: PerplexityBot
 Allow: /
 Allow: /llms.txt
+Allow: /llms-full.txt
 
 User-agent: Applebot-Extended
 Allow: /
 Allow: /llms.txt
+Allow: /llms-full.txt
 
 User-agent: Google-Extended
 Allow: /
 Allow: /llms.txt
+Allow: /llms-full.txt
 
 # Specify XML Sitemap Locations
 Sitemap: https://swarmauri.com/sitemap.xml

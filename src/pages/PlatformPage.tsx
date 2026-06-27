@@ -88,10 +88,10 @@ export default function PlatformPage() {
         <div className="bg-white border border-zinc-200 rounded-xl p-6 space-y-3">
           <div className="flex items-center space-x-2 text-indigo-600">
             <Server className="w-5 h-5" />
-            <h3 className="font-bold text-md text-zinc-900">Pydantic v2 Base Serialization</h3>
+            <h3 className="font-bold text-md text-zinc-900">Round Trip Serialization</h3>
           </div>
           <p className="text-xs text-zinc-600 leading-relaxed">
-            All Swarmauri components subclass <code className="text-[11px] bg-zinc-100 px-1 font-mono">ModelBase</code>, <code className="text-[11px] bg-zinc-100 px-1 font-mono">ToolBase</code>, or <code className="text-[11px] bg-zinc-100 px-1 font-mono">VectorStoreBase</code>. Powered by Pydantic v2, they offer free JSON/dictionary state export, dynamic property type checking, and schema compliance on instantiation.
+            Components built on <code className="text-[11px] bg-zinc-100 px-1 font-mono">ComponentBase</code> carry Pydantic state plus Swarmauri YAML and TOML mixins. JSON round trips use <code className="text-[11px] bg-zinc-100 px-1 font-mono">model_dump_json()</code> and <code className="text-[11px] bg-zinc-100 px-1 font-mono">model_validate_json()</code>. YAML round trips use <code className="text-[11px] bg-zinc-100 px-1 font-mono">model_dump_yaml()</code> and <code className="text-[11px] bg-zinc-100 px-1 font-mono">model_validate_yaml()</code>. TOML round trips use <code className="text-[11px] bg-zinc-100 px-1 font-mono">model_dump_toml()</code> and <code className="text-[11px] bg-zinc-100 px-1 font-mono">model_validate_toml()</code>. Each path preserves registered <code className="text-[11px] bg-zinc-100 px-1 font-mono">type</code> metadata for component hydration from serialized payloads.
           </p>
         </div>
 

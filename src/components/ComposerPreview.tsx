@@ -15,6 +15,8 @@ export default function ComposerPreview({
   copiedText,
   copyToClipboard,
 }: ComposerPreviewProps) {
+  const installCommand = `uv add ${composedMeta.pkgs.join(" ")}`;
+
   return (
     <div className="bg-zinc-950 rounded-xl border border-zinc-800 p-5 md:p-6 shadow-2xl relative flex flex-col justify-between" id="composer-preview">
       <div className="space-y-4">
@@ -73,14 +75,11 @@ export default function ComposerPreview({
             Automated Install
           </span>
           <div className="bg-zinc-900 p-2.5 rounded border border-zinc-800 flex items-center justify-between text-[11px]">
-            <span className="font-mono text-zinc-400 truncate">
-              <span className="text-zinc-600 mr-1.5 select-none">$</span>
-              uv add {composedMeta.pkgs.join(" ")}
-            </span>
+            <pre className="font-mono text-zinc-400 truncate overflow-hidden whitespace-pre">
+              <PythonCodeHighlight code={`$ ${installCommand}`} language="bash" />
+            </pre>
             <button
-              onClick={() =>
-                copyToClipboard(`uv add ${composedMeta.pkgs.join(" ")}`, "install-cmd")
-              }
+              onClick={() => copyToClipboard(installCommand, "install-cmd")}
               className="text-[10px] font-mono text-zinc-500 hover:text-zinc-300 font-bold shrink-0 pl-2 cursor-pointer"
             >
               {copiedText === "install-cmd" ? "COPIED" : "COPY"}
