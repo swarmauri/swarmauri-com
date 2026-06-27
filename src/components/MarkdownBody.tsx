@@ -51,8 +51,8 @@ export default function MarkdownBody({ markdown, className = "", compact = false
           codeHeaderForeground: "#52525b",
           codeLanguageBackground: "transparent",
           codeLanguageForeground: "#52525b",
-          fontUi: "Inter, ui-sans-serif, system-ui, sans-serif",
-          fontMono: "JetBrains Mono, ui-monospace, SFMono-Regular, monospace",
+          fontUi: "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+          fontMono: "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, monospace",
           lineHeight: "1.65",
           headingLineHeight: "1.25",
         }}

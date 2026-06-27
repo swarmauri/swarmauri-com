@@ -4,7 +4,7 @@ import { webApplicationNode } from "@mdwrk/structured-data";
 import StructuredData from "../components/StructuredData";
 import SEO from "../components/SEO";
 import ComponentFamilyOverview from "../components/ComponentFamilyOverview";
-import { SDK_METADATA } from "../data/packages";
+import { SDK_METADATA } from "../data/packageSummary";
 import {
   CANONICAL_TAXONOMY_DESCRIPTION,
   CANONICAL_TAXONOMY_KEYWORDS,

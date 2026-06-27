@@ -1,7 +1,7 @@
 import React from "react";
 import { Boxes, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { FAMILIES, SDK_METADATA } from "../data/packages";
+import { FAMILIES, SDK_METADATA } from "../data/packageSummary";
 import { CANONICAL_TAXONOMY_SUMMARY } from "../data/taxonomy";
 
 type ComponentFamilyOverviewProps = {

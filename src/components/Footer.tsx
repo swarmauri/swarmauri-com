@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { SDK_METADATA } from "../data/packages";
+import { SDK_METADATA } from "../data/packageSummary";
 
 export default function Footer() {
   const handleScrollTop = () => {

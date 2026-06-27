@@ -1,6 +1,6 @@
 # Swarmauri Full LLM Index
 
-Generated: 2026-06-27T10:19:07.943Z
+Generated: 2026-06-27T11:36:51.811Z
 
 This file is the complete assistant-facing index for swarmauri.com. It is generated from the same source data as the nested XML sitemaps.
 
@@ -23,7 +23,7 @@ This file is the complete assistant-facing index for swarmauri.com. It is genera
 - Workspace-backed indexed records: 310
 - Duplicate workspace members: none
 - SDK metadata source: swarmauri-sdk/pkgs/package-index.toml
-- SDK metadata generated: 2026-06-27T01:38:57.400Z
+- SDK metadata generated: 2026-06-27T11:33:16.265Z
 
 ## Layers
 

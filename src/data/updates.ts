@@ -1,6 +1,6 @@
 import { UpdatePost } from "../types";
 import { LEGACY_UPDATE_POSTS } from "./legacyContent";
-import { SDK_METADATA } from "./packages";
+import { SDK_METADATA } from "./packageSummary";
 
 const CURRENT_UPDATE_POSTS: UpdatePost[] = [
   {

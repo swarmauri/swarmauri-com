@@ -4,13 +4,13 @@ import { CAREER_ROLES } from "./src/data/careers";
 import { CLAIM_RECORDS } from "./src/data/claims";
 import { GUIDE_TOPICS } from "./src/data/guides";
 import { LEGACY_PAGES } from "./src/data/legacyContent";
+import { PACKAGES } from "./src/data/packages";
 import {
   FAMILIES,
   LAYERS,
   MATURITIES,
-  PACKAGES,
   SDK_METADATA,
-} from "./src/data/packages";
+} from "./src/data/packageSummary";
 import { CANONICAL_TAXONOMY_DESCRIPTION } from "./src/data/taxonomy";
 import { UPDATE_POSTS } from "./src/data/updates";
 import { getUpdateSlug } from "./src/utils/updateSlugs";

@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
 import { HelpCircle, AlertTriangle } from "lucide-react";
-import { SDK_METADATA } from "../data/packages";
+import { SDK_METADATA } from "../data/packageSummary";
 import { GUIDE_TOPICS } from "../data/guides";
 import { faqPageSchema, breadcrumbListSchema, howToNode } from "@mdwrk/structured-data";
 import StructuredData from "../components/StructuredData";

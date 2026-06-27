@@ -1,48 +1,43 @@
-import React, { useMemo } from "react";
+import React from "react";
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import StructuredData from "./StructuredData";
-import { organizationNode, webSiteSchema } from "@mdwrk/structured-data";
 import { CANONICAL_TAXONOMY_DESCRIPTION } from "../data/taxonomy";
 
 export default function Layout() {
-  const globalStructuredData = useMemo(() => {
-    try {
-      const org = organizationNode({
-        id: "https://swarmauri.com/#organization",
-        name: "Swarmauri",
-        description: CANONICAL_TAXONOMY_DESCRIPTION,
-        url: "https://swarmauri.com",
-        logo: "https://swarmauri.com/logo.png",
-        sameAs: [
-          "https://github.com/swarmauri",
-          "https://github.com/swarmauri/swarmauri-sdk"
-        ]
-      });
-
-      const website = webSiteSchema({
-        id: "https://swarmauri.com/#website",
-        name: "Swarmauri Ecosystem",
-        description: CANONICAL_TAXONOMY_DESCRIPTION,
-        url: "https://swarmauri.com",
-        publisher: { "@id": "https://swarmauri.com/#organization" },
-        potentialAction: {
-          "@type": "SearchAction",
-          "target": {
-            "@type": "EntryPoint",
-            "urlTemplate": "https://swarmauri.com/packages?q={search_term_string}"
-          },
-          "query-input": "required name=search_term_string"
-        } as any
-      });
-
-      return [org, website];
-    } catch (e) {
-      console.error("Failed to generate global structured data", e);
-      return [];
-    }
-  }, []);
+  const globalStructuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://swarmauri.com/#organization",
+      name: "Swarmauri",
+      description: CANONICAL_TAXONOMY_DESCRIPTION,
+      url: "https://swarmauri.com",
+      logo: "https://swarmauri.com/logo.png",
+      sameAs: [
+        "https://github.com/swarmauri",
+        "https://github.com/swarmauri/swarmauri-sdk",
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://swarmauri.com/#website",
+      name: "Swarmauri Ecosystem",
+      description: CANONICAL_TAXONOMY_DESCRIPTION,
+      url: "https://swarmauri.com",
+      publisher: { "@id": "https://swarmauri.com/#organization" },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: "https://swarmauri.com/packages?q={search_term_string}",
+        },
+        "query-input": "required name=search_term_string",
+      },
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-slate-50/50 flex flex-col justify-between" id="app-shell">

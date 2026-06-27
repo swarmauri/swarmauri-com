@@ -2,7 +2,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { CAREER_ROLES } from "../src/data/careers";
 import { GUIDE_TOPICS } from "../src/data/guides";
-import { FAMILIES, PACKAGES } from "../src/data/packages";
+import { PACKAGES } from "../src/data/packages";
+import { FAMILIES } from "../src/data/packageSummary";
 import {
   CANONICAL_TAXONOMY_DESCRIPTION,
   CANONICAL_TAXONOMY_KEYWORDS,
@@ -93,11 +94,22 @@ function replaceMetadata(shellHtml: string, meta: RouteMeta): string {
 
   const title = fullTitle(meta.title);
   const afterMetaEnd = end + META_END.length;
-  return `${shellHtml.slice(0, start)}${metaBlock(meta)}${shellHtml.slice(
+  const withMetadata = `${shellHtml.slice(0, start)}${metaBlock(meta)}${shellHtml.slice(
     afterMetaEnd,
   )}`.replace(
     /<title>.*?<\/title>/,
     `<title>${escapeHtml(title)}</title>`,
+  );
+
+  return deferStylesheets(withMetadata);
+}
+
+function deferStylesheets(html: string): string {
+  return html.replace(
+    /<link rel="stylesheet" crossorigin href="([^"]+\.css)">/g,
+    (_match, href: string) =>
+      `<link rel="preload" crossorigin href="${href}" as="style" onload="this.onload=null;this.rel='stylesheet'">` +
+      `<noscript><link rel="stylesheet" crossorigin href="${href}"></noscript>`,
   );
 }
 

@@ -1,7 +1,8 @@
 import React, { useState, useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
 import { RefreshCw, Info } from "lucide-react";
-import { PACKAGES, LAYERS, FAMILIES, MATURITIES, SDK_METADATA } from "../data/packages";
+import { PACKAGES } from "../data/packages";
+import { LAYERS, FAMILIES, MATURITIES, SDK_METADATA } from "../data/packageSummary";
 import { softwareApplicationNode, breadcrumbListSchema } from "@mdwrk/structured-data";
 import { generateSoftwareSourceCodeSchema, generateProductCollectionSchema } from "../utils/schema";
 import StructuredData from "../components/StructuredData";

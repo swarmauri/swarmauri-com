@@ -24,9 +24,277 @@
     <link rel="canonical" href="https://swarmauri.com" />
     <!-- swarmauri-meta:end -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script>
+      document.documentElement.classList.toggle(
+        "static-home-enabled",
+        location.pathname === "/" || location.pathname === "/home",
+      );
+    </script>
+    <style>
+      #static-home {
+        display: none;
+      }
+
+      .static-home-enabled #static-home {
+        display: block;
+      }
+
+      .static-shell {
+        min-height: 100vh;
+        background: rgba(248, 250, 252, 0.5);
+        color: #18181b;
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      .static-shell::before {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        content: "";
+        background-image: radial-gradient(#000 1px, transparent 1px);
+        background-size: 20px 20px;
+        opacity: 0.015;
+      }
+
+      .static-header,
+      .static-main {
+        position: relative;
+        z-index: 1;
+      }
+
+      .static-header {
+        border-bottom: 1px solid rgba(228, 228, 231, 0.8);
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 1px 2px rgba(24, 24, 27, 0.04);
+      }
+
+      .static-header-inner,
+      .static-main {
+        max-width: 80rem;
+        margin: 0 auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      .static-header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 4rem;
+      }
+
+      .static-brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .static-mark {
+        display: grid;
+        width: 2.25rem;
+        height: 2.25rem;
+        place-items: center;
+        border-radius: 0.5rem;
+        background: #18181b;
+        color: #fff;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+        font-size: 1.125rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .static-brand-name {
+        font-size: 1.125rem;
+        font-weight: 700;
+      }
+
+      .static-version {
+        margin-left: 0.5rem;
+        border: 1px solid #e4e4e7;
+        border-radius: 0.25rem;
+        background: #f4f4f5;
+        color: #52525b;
+        padding: 0.125rem 0.375rem;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+        font-size: 0.625rem;
+      }
+
+      .static-cta {
+        display: inline-flex;
+        align-items: center;
+        border-radius: 0.375rem;
+        background: #4f46e5;
+        color: #fff;
+        padding: 0.45rem 0.875rem;
+        font-size: 0.75rem;
+        font-weight: 650;
+        text-decoration: none;
+      }
+
+      .static-main {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+
+      .static-hero {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid rgba(228, 228, 231, 0.8);
+        border-radius: 1rem;
+        background: #fff;
+        padding: 3rem 1.5rem;
+        text-align: center;
+        box-shadow: 0 1px 2px rgba(24, 24, 27, 0.04);
+      }
+
+      .static-hero::before {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        content: "";
+        background-image: radial-gradient(#000 1px, transparent 1px);
+        background-size: 16px 16px;
+        opacity: 0.03;
+      }
+
+      .static-hero-inner {
+        position: relative;
+        z-index: 1;
+        max-width: 56rem;
+        margin: 0 auto;
+      }
+
+      .static-kicker {
+        display: inline-block;
+        margin-bottom: 1.5rem;
+        border: 1px solid #e0e7ff;
+        border-radius: 999px;
+        background: #eef2ff;
+        color: #4338ca;
+        padding: 0.25rem 0.75rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .static-title {
+        margin: 0;
+        color: #18181b;
+        font-size: clamp(2.25rem, 8vw, 3.75rem);
+        line-height: 1.08;
+        font-weight: 800;
+      }
+
+      .static-copy {
+        max-width: 42rem;
+        margin: 1.5rem auto 0;
+        color: #52525b;
+        font-size: 1.125rem;
+        line-height: 1.65;
+      }
+
+      .static-actions {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.75rem;
+        margin-top: 2rem;
+      }
+
+      .static-action {
+        border: 1px solid #d4d4d8;
+        border-radius: 0.5rem;
+        padding: 0.75rem 1rem;
+        color: #3f3f46;
+        font-size: 0.875rem;
+        font-weight: 650;
+        text-decoration: none;
+      }
+
+      .static-action-primary {
+        border-color: #18181b;
+        background: #18181b;
+        color: #fff;
+      }
+
+      .static-install {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 2rem;
+        border: 1px solid #27272a;
+        border-radius: 0.5rem;
+        background: #18181b;
+        color: #f4f4f5;
+        padding: 0.75rem 1rem;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+        font-size: 0.75rem;
+      }
+
+      @media (min-width: 640px) {
+        .static-header-inner,
+        .static-main {
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+        }
+
+        .static-hero {
+          padding: 4rem 3rem;
+        }
+
+        .static-actions {
+          flex-direction: row;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .static-header-inner,
+        .static-main {
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
+      }
+    </style>
     <title>Swarmauri Ecosystem</title>
   </head>
   <body>
+    <div id="static-home" class="static-shell">
+      <header class="static-header">
+        <div class="static-header-inner">
+          <a class="static-brand" href="/">
+            <span class="static-mark">S</span>
+            <span>
+              <span class="static-brand-name">swarmauri</span>
+              <span class="static-version">v0.9.1.dev5</span>
+            </span>
+          </a>
+          <a class="static-cta" href="/guides">Install SDK</a>
+        </div>
+      </header>
+      <main class="static-main">
+        <section class="static-hero">
+          <div class="static-hero-inner">
+            <span class="static-kicker">Composable Intelligence Infrastructure</span>
+            <h1 class="static-title">Typed Python Components for AI-Native Software</h1>
+            <p class="static-copy">
+              Build AI, agent, security, runtime, data, and integration workflows
+              from independently installable Python packages with stable contracts,
+              Pydantic-backed models, and provider-specific components.
+            </p>
+            <nav class="static-actions" aria-label="Primary">
+              <a class="static-action static-action-primary" href="/packages">Explore Package Portfolio</a>
+              <a class="static-action" href="/guides">Read the Docs</a>
+              <a class="static-action" href="/architecture">Layer Architecture</a>
+            </nav>
+            <div class="static-install">$ uv add swarmauri</div>
+          </div>
+        </section>
+      </main>
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

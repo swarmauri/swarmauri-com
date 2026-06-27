@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, Github, Layers, Package, Cpu, BookOpen, FileText, Users } from "lucide-react";
-import { SDK_METADATA } from "../data/packages";
+import { SDK_METADATA } from "../data/packageSummary";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

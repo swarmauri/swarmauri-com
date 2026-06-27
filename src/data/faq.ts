@@ -1,4 +1,5 @@
-import { PACKAGES, SDK_METADATA } from "./packages";
+import { PACKAGES } from "./packages";
+import { SDK_METADATA } from "./packageSummary";
 
 export interface FaqItem {
   id: string;

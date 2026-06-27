@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { LAYERS } from "../data/packages";
+import { LAYERS } from "../data/packageSummary";
 import { Code } from "lucide-react";
 import SEO from "../components/SEO";
 import PythonCodeHighlight from "../components/PythonCodeHighlight";

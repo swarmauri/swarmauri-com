@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight, Terminal, Layers, ShieldCheck, Briefcase, Sparkles, BookOpen, Cpu, Code } from "lucide-react";
-import { FAMILIES, SDK_METADATA } from "../data/packages";
+import { FAMILIES, SDK_METADATA } from "../data/packageSummary";
 import {
   CANONICAL_TAXONOMY_DESCRIPTION,
   CANONICAL_TAXONOMY_KEYWORDS,
@@ -103,7 +103,7 @@ export default function HomePage() {
                 {copiedText === "uv" ? "Copied!" : "Copy"}
               </button>
             </div>
-            <p className="text-[11px] text-zinc-400 font-mono mt-2">
+            <p className="text-[11px] text-zinc-600 font-mono mt-2">
               Requires Python {SDK_METADATA.pythonSupport} | Workspace Members: {SDK_METADATA.totalWorkspaceMembers}
             </p>
           </div>
@@ -112,6 +112,7 @@ export default function HomePage() {
 
       {/* 2. Core Value: What is Swarmauri */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-8" id="about-pillars">
+        <h2 className="sr-only">Swarmauri architecture pillars</h2>
         <div className="bg-white border border-zinc-200 p-6 rounded-xl hover:shadow-md transition-shadow">
           <div className="w-10 h-10 rounded-lg bg-zinc-900 flex items-center justify-center text-white mb-4">
             <Layers className="w-5 h-5" />
