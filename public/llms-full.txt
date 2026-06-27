@@ -1,6 +1,6 @@
 # Swarmauri Full LLM Index
 
-Generated: 2026-06-27T11:36:51.811Z
+Generated: 2026-06-27T11:56:26.159Z
 
 This file is the complete assistant-facing index for swarmauri.com. It is generated from the same source data as the nested XML sitemaps.
 

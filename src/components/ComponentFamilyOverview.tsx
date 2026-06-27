@@ -85,7 +85,7 @@ export default function ComponentFamilyOverview({
                   <h3 className="text-xs font-bold text-zinc-900">
                     {familyLabel(family.name)}
                   </h3>
-                  <p className="text-[11px] text-zinc-500 leading-normal">
+                  <p className="text-[11px] text-zinc-600 leading-normal">
                     {family.description}
                   </p>
                 </div>
@@ -101,7 +101,7 @@ export default function ComponentFamilyOverview({
               className="inline-flex items-center gap-1.5 rounded-md border border-zinc-200 bg-zinc-50 px-2.5 py-1.5 text-[11px] font-mono text-zinc-700 transition-colors hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-700"
             >
               <span>{familyLabel(family.name)}</span>
-              <span className="text-zinc-400">{family.count}</span>
+              <span className="text-zinc-600">{family.count}</span>
             </Link>
           ),
         )}

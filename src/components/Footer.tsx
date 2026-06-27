@@ -22,7 +22,7 @@ export default function Footer() {
             <p className="text-xs leading-relaxed text-zinc-400 max-w-sm">
               Swarmauri is composable intelligence infrastructure for typed, pluggable Python systems. Build highly secure, decoupled AI agents and computational architectures from small independently installable package modules.
             </p>
-            <div className="text-[11px] text-zinc-500 font-mono space-y-1">
+            <div className="text-[11px] text-zinc-300 font-mono space-y-1">
               <div>Monorepo active workspace: {SDK_METADATA.totalWorkspaceMembers} members</div>
               <div>Indexed package catalog: {SDK_METADATA.totalIndexedRecords} records</div>
               <div>SDK Environment Target: Python {SDK_METADATA.pythonSupport}</div>
@@ -149,7 +149,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center text-xs text-zinc-500">
+        <div className="mt-12 pt-8 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center text-xs text-zinc-300">
           <div>
             &copy; 2026 Swarmauri Open-Source Project. All rights reserved. Composable Python SDK architecture.
           </div>
@@ -158,8 +158,8 @@ export default function Footer() {
               <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
               <span className="text-[10px] uppercase font-mono tracking-wider font-bold">SWARMAURI PACKAGE - {SDK_METADATA.version}</span>
             </span>
-            <Link to="/privacy-policy" onClick={handleScrollTop} className="hover:text-zinc-300">Privacy</Link>
-            <Link to="/terms-of-service" onClick={handleScrollTop} className="hover:text-zinc-300">Terms</Link>
+            <Link to="/privacy-policy" onClick={handleScrollTop} className="hover:text-white">Privacy</Link>
+            <Link to="/terms-of-service" onClick={handleScrollTop} className="hover:text-white">Terms</Link>
           </div>
         </div>
       </div>
