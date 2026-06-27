@@ -1,6 +1,6 @@
 # Swarmauri Full LLM Index
 
-Generated: 2026-06-27T04:24:30.853Z
+Generated: 2026-06-27T05:03:21.714Z
 
 This file is the complete assistant-facing index for swarmauri.com. It is generated from the same source data as the nested XML sitemaps.
 
@@ -8325,7 +8325,7 @@ print(f"Decrypted payload is authentic: {is_valid}")
 
 ## Updates
 
-### Swarmauri SDK 0.9.1.dev5 Update: Granular Package Portfolio
+### A Clearer Package Portfolio for Swarmauri
 
 - URL: https://swarmauri.com/updates/swarmauri-sdk-granular-package-portfolio
 - Date: 2026-06-22

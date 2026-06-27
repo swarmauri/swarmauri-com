@@ -6,7 +6,7 @@ const CURRENT_UPDATE_POSTS: UpdatePost[] = [
   {
     id: "up-01",
     slug: "swarmauri-sdk-granular-package-portfolio",
-    title: `Swarmauri SDK ${SDK_METADATA.version} Update: Granular Package Portfolio`,
+    title: "A Clearer Package Portfolio for Swarmauri",
     date: "2026-06-22",
     category: "Release Notes",
     summary: `Swarmauri ${SDK_METADATA.version} now presents the namespace package as the primary release signal, with ${SDK_METADATA.totalWorkspaceMembers} active workspace members and ${SDK_METADATA.totalIndexedRecords} indexed package records organized by layer, role, and maturity.`,
