@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, Github, Layers, Package, Cpu, BookOpen, FileText, Users } from "lucide-react";
-import { SDK_METADATA } from "../data/packageSummary";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -31,17 +30,16 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-zinc-200/80 shadow-sm" id="main-header">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo & Platform Positioning */}
-          <Link to="/" className="flex items-center space-x-3 cursor-pointer" id="logo-link">
-            <div className="w-9 h-9 rounded-lg bg-zinc-900 flex items-center justify-center text-white font-mono font-bold text-lg tracking-wider" id="logo-badge">
-              S
-            </div>
-            <div>
-              <span className="font-sans font-bold text-lg tracking-tight text-zinc-900">swarmauri</span>
-              <span className="ml-2 font-mono text-[10px] bg-zinc-100 text-zinc-600 px-1.5 py-0.5 rounded border border-zinc-200">
-                v{SDK_METADATA.version}
-              </span>
-            </div>
+          {/* Symbol-only brand mark */}
+          <Link to="/" className="flex items-center cursor-pointer" id="logo-link" aria-label="Swarmauri home">
+            <img
+              src="/swarmauri-mark-black.png"
+              alt=""
+              className="h-10 w-10"
+              id="logo-mark"
+              width="40"
+              height="40"
+            />
           </Link>
 
           {/* Desktop Navigation */}
