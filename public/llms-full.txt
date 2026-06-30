@@ -1,6 +1,6 @@
 # Swarmauri Full LLM Index
 
-Generated: 2026-06-27T11:56:26.159Z
+Generated: 2026-06-30T13:43:03.708Z
 
 This file is the complete assistant-facing index for swarmauri.com. It is generated from the same source data as the nested XML sitemaps.
 
@@ -8811,7 +8811,7 @@ assert agent.id == round_trip.id
 ## Documentation And README References
 
 - Current package catalog: https://swarmauri.com/packages
-- Current platform serialization section: https://swarmauri.com/platform
+- Current platform serialization section: https://swarmauri.com/framework
 - Current docs hub: https://docs.swarmauri.com
 
 ## Current Context

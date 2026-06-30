@@ -17,6 +17,16 @@ tool = CalculatorTool()
 print(f"Loaded: {model.name} with tool: {tool.name}")`,
     explanation:
       "The aggregate swarmauri package is a convenience facade. It is best for notebooks, tutorials, prototypes, and applications that benefit from clean imports across the standard library.",
+    faqs: [
+      {
+        question: "Why should I use the unified facade package?",
+        answer: "The aggregate `swarmauri` package is a convenience wrapper. It enables quick prototyping, interactive notebook sessions, and fast onboarding with clean imports across standard components."
+      },
+      {
+        question: "Is it recommended to use the unified package in high-performance production microservices?",
+        answer: "In production microservices, especially where cold-start latency is critical (such as serverless/cloud functions), it is recommended to install only the interface and provider-specific split packages (e.g., `swarmauri_core` and specific `swarmauri_llm_*` packages) to keep runtime boundaries lean."
+      }
+    ]
   },
   {
     id: "minimalist-contracts",
@@ -39,6 +49,16 @@ class SecureVaultTool(ITool):
 tool_types: SubclassUnion[ITool] = SecureVaultTool`,
     explanation:
       "The core and typing packages define boundaries without pulling in provider clients. Use this shape for runtime nodes that need strict import control and fast cold starts.",
+    faqs: [
+      {
+        question: "What are the benefits of a minimalist contract installation?",
+        answer: "Installing only `swarmauri_core` or `swarmauri_typing` prevents pulling in heavy runtime client dependencies (such as OpenAI, Pinecone, or PyTesseract clients). This reduces the build size, keeps security audit surfaces minimal, and speeds up startup times."
+      },
+      {
+        question: "Can I subclass interfaces directly from swarmauri_core?",
+        answer: "Yes. Any custom component or adapter can subclass core interfaces (like `ITool` or `ILlm`) directly. This ensures your custom modules conform strictly to the standard SDK contracts and can be used in orchestrators."
+      }
+    ]
   },
   {
     id: "tools-and-skills",
@@ -55,6 +75,16 @@ print(skill_tool.__name__)
 print(filesystem_skill.__name__)`,
     explanation:
       "Tools expose callable actions; skills package reusable capabilities that tools or orchestrators can invoke. They are a major family in the catalog, not a minor agent example.",
+    faqs: [
+      {
+        question: "What is the difference between a Tool and a Skill?",
+        answer: "A Tool represents an executable mechanism with a defined input/output schema. A Skill groups reusable capabilities (e.g., filesystem access, browser automation, or search functions) that a Tool or an agent workflow can invoke."
+      },
+      {
+        question: "Can a single agent compose multiple skills and tools simultaneously?",
+        answer: "Absolutely. Swarmauri agent components accept lists or dictionaries of tools. These tools can delegate execution details to standard or custom skill packages, allowing for modular agent behavior."
+      }
+    ]
   },
   {
     id: "parsers-and-ocr",
@@ -71,6 +101,16 @@ print(keyword_parser.__name__)
 print(ocr_adapter.__name__)`,
     explanation:
       "Parser and OCR packages let ingestion pipelines stay separate from model inference. This keeps document handling, extraction, and downstream reasoning independently replaceable.",
+    faqs: [
+      {
+        question: "Why are parsers separate from model inference packages?",
+        answer: "Decoupling document ingestion (parsers, OCR loaders) from LLM reasoning ensures that text-extraction logic can scale or be replaced independently of model invocation, preventing bloated dependencies."
+      },
+      {
+        question: "Does the OCR package require external binary dependencies?",
+        answer: "Yes, certain OCR adapters like `swarmauri_ocr_pytesseract` act as Python wrappers and require the underlying system binary (e.g., the `tesseract-ocr` system engine) to be installed in the host environment."
+      }
+    ]
   },
   {
     id: "middleware-patterns",
@@ -87,6 +127,16 @@ print(jwt_middleware.__name__)
 print(headers.__name__)`,
     explanation:
       "Middleware is a first-class package family. Use it to wrap execution boundaries and keep transport, policy, and security concerns outside application business logic.",
+    faqs: [
+      {
+        question: "Where does middleware fit in a Swarmauri-based application?",
+        answer: "Middleware packages wrap transport or execution boundaries. They handle cross-cutting concerns like JWT auth validation, security headers, rate limiting, and structured logging, keeping business logic clean."
+      },
+      {
+        question: "Can I chain multiple middleware components together?",
+        answer: "Yes, Swarmauri middleware components are designed to be chainable or wrapped sequentially to enforce multi-layered policies at API, RPC, or message boundaries."
+      }
+    ]
   },
   {
     id: "signing-certs-tokens",
@@ -106,6 +156,16 @@ print(certs.__name__)
 print(tokens.__name__)`,
     explanation:
       "Security-sensitive systems can install only the signers, certificate utilities, and token handlers they audit. This is separate from LLM provider selection.",
+    faqs: [
+      {
+        question: "Why are cryptographic signers packaged separately?",
+        answer: "Separating signing, token generation, and X.509 certificate management allows security-critical architectures to audit and pin only specific cryptographic libraries (such as Ed25519) without any LLM footprint."
+      },
+      {
+        question: "How do token packages differ from auth identity providers?",
+        answer: "Token packages handle cryptographic generation, parsing, and verifying of signatures (e.g., JWT, JWS), whereas auth identity providers integrate directly with external identity servers (e.g., Keycloak, GitHub) to obtain sessions."
+      }
+    ]
   },
   {
     id: "auth-identity",
@@ -122,6 +182,16 @@ print(github_idp.__name__)
 print(keycloak_idp.__name__)`,
     explanation:
       "Identity provider packages make GitHub, Keycloak, Okta, Google, AWS, Azure, and related auth surfaces visible as installable integration units.",
+    faqs: [
+      {
+        question: "What auth providers does Swarmauri support?",
+        answer: "The SDK supports multiple identity providers, with dedicated packages like `swarmauri_auth_idp_github` and `swarmauri_auth_idp_keycloak`. These make integrating OAuth and third-party identity providers uniform."
+      },
+      {
+        question: "Do I need to supply client credentials to initialize an identity provider?",
+        answer: "Yes. Identity providers require standard client-side configuration, including Client IDs, Secret keys, and Auth endpoints, usually sourced from your application's secure environment variables."
+      }
+    ]
   },
   {
     id: "storage-and-publishers",
@@ -138,6 +208,16 @@ print(s3_storage.__name__)
 print(redis_publisher.__name__)`,
     explanation:
       "Storage and publisher packages keep persistence and event delivery replaceable. They sit beside AI components rather than underneath them.",
+    faqs: [
+      {
+        question: "How do storage adapters abstract file-based operations?",
+        answer: "Storage adapters like `swarmauri_storage_s3` provide unified contracts to read, write, and list blobs, ensuring your application code remains unchanged whether storing files on S3, Azure, GCP, or locally."
+      },
+      {
+        question: "When should I use a Publisher package instead of direct API calls?",
+        answer: "Publisher packages (like `swarmauri_publisher_redis`) are ideal for real-time messaging, task queues, or webhook dispatching, abstracting the broker protocol and ensuring loose coupling."
+      }
+    ]
   },
   {
     id: "evaluators-measurement",
@@ -154,6 +234,16 @@ print(imports_eval.__name__)
 print(subprocess_eval.__name__)`,
     explanation:
       "Evaluation is part of the SDK portfolio. These packages help teams measure implementation quality, policy compliance, and runtime behavior.",
+    faqs: [
+      {
+        question: "What can I evaluate with Swarmauri evaluator packages?",
+        answer: "Evaluators measure runtime metrics such as subprocess calls, external package imports, validation rates, and schema compliance. They are critical for monitoring agents and guarding security policy."
+      },
+      {
+        question: "Are evaluators executed synchronously during agent runs?",
+        answer: "They can be configured to run synchronously to gate action execution, or asynchronously as post-execution audit pipelines to collect telemetry and quality metrics."
+      }
+    ]
   },
   {
     id: "models-vectorstores-embeddings",
@@ -173,6 +263,16 @@ print(embeddings.__name__)
 print(pinecone.__name__)`,
     explanation:
       "Agents, language models, embeddings, and vector stores remain important, but they are examples of a wider component taxonomy rather than the full definition of Swarmauri.",
+    faqs: [
+      {
+        question: "Are model providers completely interchangeable in Swarmauri?",
+        answer: "Yes. By adhering to uniform LLM and Embedding interfaces, you can swap Groq, OpenAI, Cohere, or local models without modifying any downstream workflow or agent logic."
+      },
+      {
+        question: "How do vector stores integrate with document embeddings?",
+        answer: "Embeddings packages (like Doc2Vec) convert parsed text chunks into numeric vectors, which are then passed to vector store adapters (like Pinecone) to perform fast nearest-neighbor semantic search."
+      }
+    ]
   },
   {
     id: "workflow-and-toolkits",
@@ -189,6 +289,16 @@ print(workflow.__name__)
 print(jupyter_tools.__name__)`,
     explanation:
       "Toolkits group related tools, while workflow packages express execution structure. Both are catalog families that sit above the lower-level component packages.",
+    faqs: [
+      {
+        question: "When should I use a Workflow package?",
+        answer: "Workflow packages (e.g., `swarmauri_workflow_statedriven`) are designed for orchestrating complex multi-step reasoning processes, state machines, and agent feedback loops where linear execution is insufficient."
+      },
+      {
+        question: "What does a Toolkit contain?",
+        answer: "A Toolkit is a specialized packaging unit that aggregates multiple related tools (such as Jupyter notebook execution tools or database inspectors) into a single, cohesive bundle for agent consumption."
+      }
+    ]
   },
   {
     id: "package-authoring",
@@ -210,5 +320,15 @@ tool = ProjectTool(project_id="docs-site")
 print(tool.model_dump_json())`,
     explanation:
       "New Swarmauri packages should land in the right layer, expose direct package imports, and use base classes only when they remove real duplication or enforce shared contracts.",
-  },
+    faqs: [
+      {
+        question: "How do I ensure my custom package is fully compatible with Swarmauri?",
+        answer: "Your custom package should inherit from core interface classes (such as `ToolBase` or `LlmBase` using Pydantic fields) and use the `swarmauri_base` package to leverage standard serialization and configuration."
+      },
+      {
+        question: "Why is Pydantic used for package parameters?",
+        answer: "Pydantic enforces type safety, handles robust runtime validation of input/output fields, and supports automated generation of JSON schemas, which are essential for agent tool-calling."
+      }
+    ]
+  }
 ];

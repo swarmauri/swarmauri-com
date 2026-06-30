@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, BookOpen, ExternalLink, AlertTriangle } from "lucide-react";
+import { ArrowLeft, BookOpen, ExternalLink, AlertTriangle, Github, Package as PackageIcon } from "lucide-react";
 import { Package } from "../types";
 import PythonCodeHighlight from "./PythonCodeHighlight";
 
@@ -42,18 +42,47 @@ export default function PackageDetails({
       </Link>
 
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-zinc-100 pb-5">
-        <div className="space-y-1">
-          <div className="flex items-center space-x-2 flex-wrap gap-2">
-            <h2 className="text-2xl font-bold font-mono text-zinc-900">{selectedPackage.name}</h2>
-            <span className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider ${maturityClass}`}>
-              {selectedPackage.maturity}
-            </span>
+        <div className="space-y-3">
+          <div className="space-y-1">
+            <div className="flex items-center space-x-2 flex-wrap gap-2">
+              <h2 className="text-2xl font-bold font-mono text-zinc-900">{selectedPackage.name}</h2>
+              <span className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider ${maturityClass}`}>
+                {selectedPackage.maturity}
+              </span>
+            </div>
+            <p className="text-zinc-600 text-sm max-w-3xl leading-relaxed">
+              {selectedPackage.description}
+            </p>
           </div>
-          <p className="text-zinc-600 text-sm max-w-3xl leading-relaxed">
-            {selectedPackage.description}
-          </p>
+
+          {/* Reorganized Primary Links: GitHub and PyPI Registry row */}
+          <div className="flex flex-wrap gap-2.5 pt-1" id="header-registry-links">
+            <a
+              href={selectedPackage.docsLink}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-white font-semibold text-xs transition-colors cursor-pointer border border-zinc-900 shadow-sm"
+              id="header-btn-github"
+            >
+              <Github className="w-3.5 h-3.5" />
+              <span>View Source on GitHub</span>
+              <ExternalLink className="w-3 h-3 text-zinc-400" />
+            </a>
+
+            <a
+              href={`https://pypi.org/project/${selectedPackage.name}/`}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-lg bg-white hover:bg-zinc-50 text-zinc-900 border border-zinc-200 font-semibold text-xs transition-colors cursor-pointer shadow-sm"
+              id="header-btn-pypi"
+            >
+              <PackageIcon className="w-3.5 h-3.5 text-zinc-600" />
+              <span>View on PyPI Registry</span>
+              <ExternalLink className="w-3 h-3 text-zinc-400" />
+            </a>
+          </div>
         </div>
-        <div className="text-right">
+        <div className="text-left shrink-0 md:border-l md:border-zinc-100 md:pl-5">
           <span className="text-[11px] font-mono text-zinc-400">Current version:</span>
           <div className="font-mono text-sm font-bold text-zinc-800">{selectedPackage.version}</div>
         </div>
@@ -110,17 +139,148 @@ export default function PackageDetails({
             </div>
           </div>
 
-          {/* Package dependencies */}
-          <div className="space-y-2">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-zinc-500">Package Dependencies</h3>
+          {/* Package dependencies with intelligent required vs optional groups */}
+          <div className="space-y-4 pt-2">
+            <div className="border-b border-zinc-100 pb-2">
+              <h3 className="text-xs font-bold uppercase tracking-wider text-zinc-500">Dependencies & Extra Groups</h3>
+              <p className="text-[11px] text-zinc-400 mt-0.5">Swarmauri divides dependencies into core framework links, core packages, and integration extras.</p>
+            </div>
+
             {selectedPackage.dependencies.length > 0 ? (
-              <div className="flex flex-wrap gap-2">
-                {selectedPackage.dependencies.map((dep, idx) => (
-                  <span key={idx} className="px-2.5 py-1 rounded bg-zinc-100 border border-zinc-200 font-mono text-xs text-zinc-700">
-                    {dep}
-                  </span>
-                ))}
-              </div>
+              (() => {
+                const firstPartyDeps = selectedPackage.dependencies.filter(dep => dep.startsWith("swarmauri_"));
+                const thirdPartyDeps = selectedPackage.dependencies.filter(dep => !dep.startsWith("swarmauri_"));
+
+                const CORE_THIRD_PARTY_SET = new Set([
+                  "pydantic", "numpy", "toml", "pyyaml", "httpx", "h11", "pandas", "pillow",
+                  "aiofiles", "rich", "joblib", "typing-extensions", "typing_extensions", 
+                  "requests", "jinja2", "regex", "lark", "scipy"
+                ]);
+
+                const requiredThirdParty = thirdPartyDeps.filter(dep => CORE_THIRD_PARTY_SET.has(dep.toLowerCase()));
+                const optionalThirdParty = thirdPartyDeps.filter(dep => !CORE_THIRD_PARTY_SET.has(dep.toLowerCase()));
+
+                const EXTRA_GROUP_MAP: Record<string, string> = {
+                  openai: "openai",
+                  "google-genai": "google",
+                  anthropic: "anthropic",
+                  groq: "groq",
+                  cohere: "cohere",
+                  mistralai: "mistral",
+                  "pinecone-client": "pinecone",
+                  pinecone: "pinecone",
+                  chromadb: "chromadb",
+                  "weaviate-client": "weaviate",
+                  weaviate: "weaviate",
+                  "qdrant-client": "qdrant",
+                  qdrant: "qdrant",
+                  redis: "redis",
+                  redisearch: "redis",
+                  duckdb: "duckdb",
+                  neo4j: "neo4j",
+                  "scikit-learn": "scikit",
+                  transformers: "nlp",
+                  torch: "nlp",
+                  spacy: "nlp",
+                  pyppeteer: "webscraping",
+                  beautifulsoup4: "webscraping",
+                };
+
+                return (
+                  <div className="space-y-4">
+                    {/* 1. First-Party Framework Deps */}
+                    {firstPartyDeps.length > 0 && (
+                      <div className="space-y-1.5">
+                        <span className="text-[10px] font-bold uppercase text-indigo-600 tracking-wider">Framework Core Links (Required)</span>
+                        <div className="flex flex-wrap gap-2">
+                          {firstPartyDeps.map((dep, idx) => (
+                            <Link
+                              key={idx}
+                              to={`/packages/${dep}`}
+                              className="inline-flex items-center space-x-1 px-2.5 py-1 rounded-md bg-indigo-50 border border-indigo-100 font-mono text-xs font-semibold text-indigo-700 hover:bg-indigo-100 transition-colors shadow-sm"
+                            >
+                              <PackageIcon className="w-3 h-3 text-indigo-500" />
+                              <span>{dep}</span>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* 2. Core Third-Party Deps */}
+                    {requiredThirdParty.length > 0 && (
+                      <div className="space-y-1.5">
+                        <span className="text-[10px] font-bold uppercase text-zinc-500 tracking-wider">Core Python Utilities (Required)</span>
+                        <div className="flex flex-wrap gap-2">
+                          {requiredThirdParty.map((dep, idx) => (
+                            <a
+                              key={idx}
+                              href={`https://pypi.org/project/${dep}/`}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="inline-flex items-center space-x-1 px-2.5 py-1 rounded-md bg-zinc-50 border border-zinc-200 font-mono text-xs text-zinc-600 hover:bg-zinc-100 transition-colors"
+                            >
+                              <span>{dep}</span>
+                              <ExternalLink className="w-2.5 h-2.5 text-zinc-400" />
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* 3. Optional / Extras third party dependencies */}
+                    {optionalThirdParty.length > 0 && (
+                      <div className="space-y-2">
+                        <span className="text-[10px] font-bold uppercase text-emerald-600 tracking-wider">Integration Extras (Optional Groups)</span>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                          {optionalThirdParty.map((dep, idx) => {
+                            const groupName = EXTRA_GROUP_MAP[dep.toLowerCase()] || dep.toLowerCase();
+                            return (
+                              <div
+                                key={idx}
+                                className="flex items-center justify-between p-2.5 rounded-lg bg-emerald-50/40 border border-emerald-100 font-mono text-xs"
+                              >
+                                <span className="font-semibold text-emerald-950 flex items-center space-x-1.5">
+                                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                                  <span>{dep}</span>
+                                </span>
+                                <span className="px-1.5 py-0.5 rounded bg-emerald-100/70 text-[10px] font-bold text-emerald-800 uppercase tracking-wide">
+                                  Extra: [{groupName}]
+                                </span>
+                              </div>
+                            );
+                          })}
+                        </div>
+
+                        {/* Beautiful instructions box for extras installation */}
+                        <div className="p-3 bg-zinc-50 border border-zinc-200 rounded-lg text-xs text-zinc-600 space-y-2 mt-3">
+                          <p className="font-semibold text-zinc-800 flex items-center space-x-1">
+                            <span className="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
+                            <span>On-Demand Integration Tip</span>
+                          </p>
+                          <p className="text-[11px] leading-relaxed text-zinc-500">
+                            To install this package with optional integrations enabled, append the optional group flags to the package name using bracket notation:
+                          </p>
+                          <div className="bg-zinc-950 p-2.5 rounded border border-zinc-800 font-mono text-[11px] text-zinc-300 flex items-center justify-between">
+                            <span>
+                              {installTool === "uv" ? "uv add" : "pip install"} "{selectedPackage.name}[{optionalThirdParty.map(dep => EXTRA_GROUP_MAP[dep.toLowerCase()] || dep.toLowerCase()).filter((v, i, a) => a.indexOf(v) === i).join(",")}]"
+                            </span>
+                            <button
+                              onClick={() => {
+                                const fullCommand = `${installTool === "uv" ? "uv add" : "pip install"} "${selectedPackage.name}[${optionalThirdParty.map(dep => EXTRA_GROUP_MAP[dep.toLowerCase()] || dep.toLowerCase()).filter((v, i, a) => a.indexOf(v) === i).join(",")}]"`;
+                                copyToClipboard(fullCommand, "detail-extra-install");
+                              }}
+                              className="px-2 py-0.5 text-[10px] uppercase font-mono rounded bg-zinc-800 hover:bg-zinc-700 text-zinc-400 transition-colors cursor-pointer border border-zinc-700"
+                            >
+                              {copiedText === "detail-extra-install" ? "Copied!" : "Copy"}
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              })()
             ) : (
               <p className="text-xs text-zinc-400 italic">No heavy third-party dependencies.</p>
             )}
@@ -187,26 +347,29 @@ export default function PackageDetails({
             </div>
           )}
 
-          {/* Link shortcuts */}
-          <div className="pt-3 border-t border-zinc-200 flex flex-col space-y-2">
-            <a
-              href={selectedPackage.docsLink}
-              target="_blank"
-              rel="noreferrer"
-              className="w-full text-center px-3 py-1.5 rounded bg-zinc-900 hover:bg-zinc-800 text-white font-semibold text-xs transition-colors flex items-center justify-center space-x-1"
-            >
-              <BookOpen className="w-3.5 h-3.5" />
-              <span>Open API Documentation</span>
-              <ExternalLink className="w-3 h-3" />
-            </a>
-          </div>
-
-          {/* Canonical SEO Link Display */}
-          <div className="pt-3 border-t border-zinc-200 space-y-1">
-            <span className="text-zinc-400 block text-[9px] uppercase font-bold tracking-wider">Canonical URL:</span>
-            <span className="font-mono text-[10px] text-indigo-600 font-semibold break-all bg-indigo-50/50 p-1 rounded border border-indigo-100 block">
-              https://swarmauri.com/packages/{selectedPackage.name.toLowerCase()}
-            </span>
+          {/* Resource Links inside attributes card footer */}
+          <div className="pt-4 border-t border-zinc-200 space-y-2">
+            <span className="text-zinc-400 block text-[10px] uppercase font-bold tracking-wider">Useful Resources</span>
+            <div className="grid grid-cols-2 gap-2 text-[11px] font-semibold text-zinc-600">
+              <a
+                href={selectedPackage.docsLink}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center space-x-1.5 hover:text-zinc-900 hover:bg-zinc-100 p-2 rounded-lg border border-zinc-200 bg-white transition-colors cursor-pointer justify-center shadow-sm"
+              >
+                <Github className="w-3.5 h-3.5 text-zinc-500" />
+                <span>GitHub</span>
+              </a>
+              <a
+                href={`https://pypi.org/project/${selectedPackage.name}/`}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center space-x-1.5 hover:text-zinc-900 hover:bg-zinc-100 p-2 rounded-lg border border-zinc-200 bg-white transition-colors cursor-pointer justify-center shadow-sm"
+              >
+                <PackageIcon className="w-3.5 h-3.5 text-zinc-500" />
+                <span>PyPI</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>

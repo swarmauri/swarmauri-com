@@ -49,7 +49,7 @@ Developer-relations-safe one-liner:
 - Site kind: `mdwrk-lander`
 - Deployment: self-hosted Docker service `swarmauri-com`
 - DNS/proxy orchestration: `npmctl` with Namecheap and Nginx Proxy Manager
-- Source pages in content pack: `/`, `/platform/`, `/proof/`
+- Source pages in content pack: `/`, `/framework/`, `/proof/`
 - Imported legacy content: 16 WordPress-derived records, split as 8 posts and 8 pages.
 - Legacy pages include About, Careers, Contact, FAQ, Privacy Policy, Services & Solutions, Terms of Service, and a Swarmauri page.
 - Public build artifacts include `robots.txt`, `llms.txt`, and `sitemap.xml`.
@@ -231,7 +231,7 @@ Recommended canonical information architecture:
 | Surface | URL | Purpose | Owner |
 |---|---|---|---|
 | Company/product home | `https://swarmauri.com/` | Positioning, primary audience routing, product portfolio overview, trust signals | Website + copy |
-| Product platform | `https://swarmauri.com/platform/` | Explain composable intelligence infrastructure, architecture, who it is for | Copy + DevRel |
+| Product framework | `https://swarmauri.com/framework/` | Explain composable intelligence infrastructure, architecture, who it is for | Copy + DevRel |
 | Package portfolio | `https://swarmauri.com/packages/` preferred, or `https://packages.swarmauri.com/` if separately deployed | Source-generated catalog from `pkgs/package-index.toml` and package metadata | DevRel + website dev |
 | Package detail | `https://swarmauri.com/packages/:package/` | Install commands, import paths, package role, examples, maturity, docs links | DevRel + technical writing |
 | Architecture | `https://swarmauri.com/architecture/` | Friendly explanation of layers: typing, interfaces, base, standard, standards, community, plugins, experimental | Technical writing + copy |

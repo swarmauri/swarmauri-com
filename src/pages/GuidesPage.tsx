@@ -9,8 +9,7 @@ import GuideListItem from "../components/GuideListItem";
 import GuideViewer from "../components/GuideViewer";
 import SEO from "../components/SEO";
 import FaqQuestionAnswerList from "../components/uix/FaqQuestionAnswerList";
-import { FAQ_ITEMS } from "../data/faq";
-import ComponentFamilyOverview from "../components/ComponentFamilyOverview";
+import { FAQ_ITEMS, FaqItem } from "../data/faq";
 import { CANONICAL_TAXONOMY_KEYWORDS } from "../data/taxonomy";
 
 export default function GuidesPage() {
@@ -29,6 +28,18 @@ export default function GuidesPage() {
     return GUIDE_TOPICS.find((g) => g.id === activeGuideId) || GUIDE_TOPICS[0];
   }, [activeGuideId]);
 
+  const formattedFaqs = useMemo<FaqItem[]>(() => {
+    if (activeGuide.faqs && activeGuide.faqs.length > 0) {
+      return activeGuide.faqs.map((faq, index) => ({
+        id: `${activeGuide.id}-faq-${index}`,
+        category: "Docs",
+        question: faq.question,
+        answer: faq.answer,
+      }));
+    }
+    return FAQ_ITEMS.slice(0, 3);
+  }, [activeGuide]);
+
   const structuredData = useMemo(() => {
     try {
       const breadcrumbs = breadcrumbListSchema({
@@ -41,8 +52,8 @@ export default function GuidesPage() {
       });
 
       const faqs = faqPageSchema({
-        id: "https://swarmauri.com/guides/#faq",
-        items: FAQ_ITEMS.slice(0, 3).map((item) => ({
+        id: `https://swarmauri.com/guides/${activeGuide.id}#faq`,
+        items: formattedFaqs.map((item) => ({
           question: item.question,
           answer: item.answer.replace(/`|\*\*|\[([^\]]+)\]\([^)]+\)/g, "$1")
         }))
@@ -77,7 +88,7 @@ export default function GuidesPage() {
       console.error("Failed to build FAQ/Guide structured data", e);
       return null;
     }
-  }, [activeGuide]);
+  }, [activeGuide, formattedFaqs]);
 
   return (
     <div className="space-y-12 py-6" id="guides-container">
@@ -104,12 +115,6 @@ export default function GuidesPage() {
           Learn how to compose, extend, and deploy Swarmauri packages under uniform contracts.
         </p>
       </div>
-
-      <ComponentFamilyOverview
-        variant="detailed"
-        title="Guide Coverage by Component Family"
-        description="Use the guides as examples across the full SDK portfolio: tools, skills, parsers, middleware, signing, certificates, auth, storage, tokens, evaluators, publishers, workflows, and package authoring."
-      />
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* Left Side: Interactive Quick Navigation */}
@@ -143,7 +148,7 @@ export default function GuidesPage() {
               <span>Frequently Asked Questions</span>
             </h3>
 
-            <FaqQuestionAnswerList items={FAQ_ITEMS.slice(0, 3)} />
+            <FaqQuestionAnswerList items={formattedFaqs} />
           </section>
         </div>
       </div>

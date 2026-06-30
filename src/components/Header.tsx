@@ -9,7 +9,7 @@ export default function Header() {
   const navigate = useNavigate();
 
   const navItems = [
-    { id: "platform", label: "Framework", icon: Cpu },
+    { id: "framework", label: "Framework", icon: Cpu },
     { id: "packages", label: "Packages", icon: Package },
     { id: "architecture", label: "Architecture", icon: Layers },
     { id: "composer", label: "Composer", icon: Cpu },

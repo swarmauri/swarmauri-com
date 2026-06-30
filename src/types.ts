@@ -44,6 +44,7 @@ export interface GuideTopic {
   description: string;
   codeBlock: string;
   explanation: string;
+  faqs?: { question: string; answer: string }[];
 }
 
 export interface UpdatePost {

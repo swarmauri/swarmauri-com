@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
-import { RefreshCw, Info } from "lucide-react";
+import { RefreshCw, Info, ChevronLeft, ChevronRight } from "lucide-react";
 import { PACKAGES } from "../data/packages";
 import { LAYERS, FAMILIES, MATURITIES, SDK_METADATA } from "../data/packageSummary";
 import { softwareApplicationNode, breadcrumbListSchema } from "@mdwrk/structured-data";
@@ -11,6 +11,8 @@ import PackageCard from "../components/PackageCard";
 import PackageDetails from "../components/PackageDetails";
 import SEO from "../components/SEO";
 
+const ITEMS_PER_PAGE = 12;
+
 export default function CatalogPage() {
   const { packageName } = useParams<{ packageName?: string }>();
   const [copiedText, setCopiedText] = useState("");
@@ -19,6 +21,7 @@ export default function CatalogPage() {
   const [selectedFamily, setSelectedFamily] = useState("all");
   const [selectedMaturity, setSelectedMaturity] = useState("all");
   const [installTool, setInstallTool] = useState<"uv" | "pip">("uv");
+  const [currentPage, setCurrentPage] = useState(1);
 
   // Determine active package
   const selectedPackage = useMemo(() => {
@@ -125,6 +128,39 @@ export default function CatalogPage() {
 
   const totalFilteredCount = filteredPackages.length;
 
+  // Reset page to 1 when filters change
+  React.useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery, selectedLayer, selectedFamily, selectedMaturity]);
+
+  const totalPages = useMemo(() => {
+    return Math.max(1, Math.ceil(totalFilteredCount / ITEMS_PER_PAGE));
+  }, [totalFilteredCount]);
+
+  const activePage = useMemo(() => {
+    return Math.max(1, Math.min(currentPage, totalPages));
+  }, [currentPage, totalPages]);
+
+  const paginatedPackages = useMemo(() => {
+    const start = (activePage - 1) * ITEMS_PER_PAGE;
+    return filteredPackages.slice(start, start + ITEMS_PER_PAGE);
+  }, [filteredPackages, activePage]);
+
+  const pageNumbers = useMemo(() => {
+    if (totalPages <= 5) {
+      return Array.from({ length: totalPages }, (_, i) => i + 1);
+    }
+    const pages: (number | string)[] = [];
+    if (activePage <= 3) {
+      pages.push(1, 2, 3, 4, "...", totalPages);
+    } else if (activePage >= totalPages - 2) {
+      pages.push(1, "...", totalPages - 3, totalPages - 2, totalPages - 1, totalPages);
+    } else {
+      pages.push(1, "...", activePage - 1, activePage, activePage + 1, "...", totalPages);
+    }
+    return pages;
+  }, [activePage, totalPages]);
+
   return (
     <div className="space-y-8 py-6" id="catalog-container">
       {selectedPackage ? (
@@ -193,19 +229,71 @@ export default function CatalogPage() {
           />
 
           {/* Right Panel: Packages Grid List */}
-          <div className="lg:col-span-3 space-y-4">
+          <div className="lg:col-span-3 space-y-6">
             <div className="flex justify-between items-center text-xs text-zinc-500">
               <div>
-                Showing <span className="font-bold text-zinc-800">{totalFilteredCount}</span> of{" "}
-                <span className="font-bold text-zinc-800">{PACKAGES.length}</span> documented catalog records
+                Showing <span className="font-bold text-zinc-800">{(activePage - 1) * ITEMS_PER_PAGE + 1}</span> -{" "}
+                <span className="font-bold text-zinc-800">{Math.min(activePage * ITEMS_PER_PAGE, totalFilteredCount)}</span> of{" "}
+                <span className="font-bold text-zinc-800">{totalFilteredCount}</span> documented catalog records (filtered from <span className="font-bold text-zinc-800">{PACKAGES.length}</span>)
               </div>
             </div>
 
             {totalFilteredCount > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {filteredPackages.map((pkg) => (
-                  <PackageCard key={pkg.name} pkg={pkg} />
-                ))}
+              <div className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {paginatedPackages.map((pkg) => (
+                    <PackageCard key={pkg.name} pkg={pkg} />
+                  ))}
+                </div>
+
+                {/* Paginator Controls */}
+                {totalPages > 1 && (
+                  <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-6 border-t border-zinc-200 text-xs font-medium" id="catalog-paginator">
+                    <div className="text-zinc-500">
+                      Page <span className="text-zinc-850 font-bold">{activePage}</span> of <span className="text-zinc-850 font-bold">{totalPages}</span>
+                    </div>
+                    <div className="flex items-center space-x-1">
+                      <button
+                        onClick={() => setCurrentPage((prev) => Math.max(1, prev - 1))}
+                        disabled={activePage === 1}
+                        className="p-1.5 rounded-lg border border-zinc-200 bg-white hover:bg-zinc-50 text-zinc-600 disabled:opacity-40 disabled:hover:bg-white transition-colors cursor-pointer flex items-center justify-center shadow-sm"
+                        aria-label="Previous Page"
+                      >
+                        <ChevronLeft className="w-4 h-4" />
+                      </button>
+                      {pageNumbers.map((page, idx) => {
+                        if (page === "...") {
+                          return (
+                            <span key={idx} className="px-2 py-1 text-zinc-400">
+                              ...
+                            </span>
+                          );
+                        }
+                        return (
+                          <button
+                            key={idx}
+                            onClick={() => setCurrentPage(Number(page))}
+                            className={`px-3 py-1.5 rounded-lg border transition-colors cursor-pointer font-mono ${
+                              activePage === page
+                                ? "bg-zinc-900 border-zinc-900 text-white font-bold"
+                                : "border-zinc-200 bg-white hover:bg-zinc-50 text-zinc-600 hover:text-zinc-900"
+                            }`}
+                          >
+                            {page}
+                          </button>
+                        );
+                      })}
+                      <button
+                        onClick={() => setCurrentPage((prev) => Math.min(totalPages, prev + 1))}
+                        disabled={activePage === totalPages}
+                        className="p-1.5 rounded-lg border border-zinc-200 bg-white hover:bg-zinc-50 text-zinc-600 disabled:opacity-40 disabled:hover:bg-white transition-colors cursor-pointer flex items-center justify-center shadow-sm"
+                        aria-label="Next Page"
+                      >
+                        <ChevronRight className="w-4 h-4" />
+                      </button>
+                    </div>
+                  </div>
+                )}
               </div>
             ) : (
               <div className="bg-zinc-50 border border-zinc-200 rounded-xl p-12 text-center space-y-3">

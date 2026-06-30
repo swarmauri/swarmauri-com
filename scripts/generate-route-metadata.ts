@@ -135,8 +135,8 @@ const routes: RouteMeta[] = [
     keywords: CANONICAL_TAXONOMY_KEYWORDS,
   },
   {
-    route: "platform",
-    title: "Composable Intelligence Platform",
+    route: "framework",
+    title: "Composable Intelligence Framework",
     description:
       `Explore ${FAMILIES.length} generated Swarmauri component families across tools, agents, models, parsers, middleware, crypto, storage, identity, evaluators, workflows, and integrations.`,
   },

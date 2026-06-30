@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import Layout from "./components/Layout";
 import HomePage from "./pages/HomePage";
 
-const PlatformPage = React.lazy(() => import("./pages/PlatformPage"));
+const FrameworkPage = React.lazy(() => import("./pages/FrameworkPage"));
 const CatalogPage = React.lazy(() => import("./pages/CatalogPage"));
 const ArchitecturePage = React.lazy(() => import("./pages/ArchitecturePage"));
 const ComposerPage = React.lazy(() => import("./pages/ComposerPage"));
@@ -30,7 +30,8 @@ export default function App() {
             <Route index element={<HomePage />} />
 
             {/* Main Pages */}
-            <Route path="platform" element={<PlatformPage />} />
+            <Route path="framework" element={<FrameworkPage />} />
+            <Route path="platform" element={<Navigate to="/framework" replace />} />
 
             {/* Packages Catalog with deep-linking support */}
             <Route path="packages" element={<CatalogPage />} />

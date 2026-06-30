@@ -43,6 +43,7 @@ export default function ClaimsPage() {
 
         return claimReviewNode({
           id: `https://swarmauri.com/claims/${c.id}#review`,
+          name: `Review of Claim: ${c.claim}`,
           claimReviewed: c.claim,
           itemReviewed: {
             "@type": "SoftwareSourceCode",

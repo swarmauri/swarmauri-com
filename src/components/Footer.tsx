@@ -34,8 +34,8 @@ export default function Footer() {
             <h3 className="text-white text-xs font-semibold uppercase tracking-wider mb-3">Product</h3>
             <ul className="space-y-2 text-xs">
               <li>
-                <Link to="/platform" onClick={handleScrollTop} className="hover:text-white transition-colors">
-                  Platform Info
+                <Link to="/framework" onClick={handleScrollTop} className="hover:text-white transition-colors">
+                  Framework Info
                 </Link>
               </li>
               <li>

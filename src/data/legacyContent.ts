@@ -490,7 +490,7 @@ assert agent.id == round_trip.id
 ## Documentation And README References
 
 - Current package catalog: https://swarmauri.com/packages
-- Current platform serialization section: https://swarmauri.com/platform
+- Current platform serialization section: https://swarmauri.com/framework
 - Current docs hub: https://docs.swarmauri.com
 
 ## Current Context

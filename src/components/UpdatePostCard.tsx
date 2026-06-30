@@ -40,7 +40,15 @@ export default function UpdatePostCard({ post }: UpdatePostCardProps) {
       </div>
 
       <div className="pt-4 border-t border-zinc-100 mt-4 flex justify-between items-center text-xs">
-        <span className="text-zinc-400 font-mono text-[10px]">Slug: {slug}</span>
+        {(() => {
+          const words = post.content.split(/\s+/).filter(Boolean).length;
+          const minRead = Math.max(1, Math.ceil(words / 200));
+          return (
+            <span className="text-zinc-400 font-mono text-[10px]">
+              {minRead} min read
+            </span>
+          );
+        })()}
         <span className="text-indigo-600 font-bold group-hover:translate-x-1 transition-transform inline-flex items-center space-x-1">
           <span>Read Full Update</span>
           <ArrowUpRight className="w-3.5 h-3.5" />

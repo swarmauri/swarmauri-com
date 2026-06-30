@@ -115,7 +115,7 @@ function buildMainEntries(): SitemapEntry[] {
 
   return [
     { loc: absoluteUrl(), lastmod: GENERATED_AT_ISO, changefreq: "daily", priority: "1.0" },
-    { loc: absoluteUrl("platform"), lastmod: GENERATED_AT_ISO, changefreq: "weekly", priority: "0.9" },
+    { loc: absoluteUrl("framework"), lastmod: GENERATED_AT_ISO, changefreq: "weekly", priority: "0.9" },
     { loc: absoluteUrl("packages"), lastmod: dateToIso(SDK_METADATA.lastGenerated), changefreq: "daily", priority: "0.9" },
     { loc: absoluteUrl("architecture"), lastmod: GENERATED_AT_ISO, changefreq: "weekly", priority: "0.8" },
     { loc: absoluteUrl("composer"), lastmod: GENERATED_AT_ISO, changefreq: "daily", priority: "0.8" },
@@ -330,7 +330,7 @@ ${CANONICAL_TAXONOMY_DESCRIPTION}
 ## Canonical Pages
 
 - [Home](${absoluteUrl()})
-- [Platform](${absoluteUrl("platform")})
+- [Framework](${absoluteUrl("framework")})
 - [Architecture](${absoluteUrl("architecture")})
 - [Package Catalog](${absoluteUrl("packages")})
 - [Workflow Composer](${absoluteUrl("composer")})
