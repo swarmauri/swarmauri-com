@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight, Terminal, Layers, ShieldCheck, Briefcase, Sparkles, BookOpen, Cpu, Code } from "lucide-react";
-import { FAMILIES, SDK_METADATA } from "../data/packageSummary";
+import { COMPONENT_FAMILIES, SDK_METADATA } from "../data/packageSummary";
 import {
   CANONICAL_TAXONOMY_DESCRIPTION,
   CANONICAL_TAXONOMY_KEYWORDS,
@@ -11,18 +11,29 @@ import ComponentFamilyOverview from "../components/ComponentFamilyOverview";
 
 function familyLabel(name: string) {
   const labels: Record<string, string> = {
+    auth_idp: "AuthIDP",
+    certservice: "CertService",
     llm: "LLM",
-    cipher_suite: "Cipher Suites",
-    vectorstore: "Vector Stores",
+    cipher_suite: "CipherSuite",
+    dataconnector: "DataConnector",
+    image_gen: "ImageGen",
+    keyprovider: "KeyProvider",
+    vectorstore: "VectorStore",
   };
 
-  return labels[name] ?? name.replace(/_/g, " ");
+  return (
+    labels[name] ??
+    name
+      .split(/[_-]+/)
+      .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+      .join("")
+  );
 }
 
 export default function HomePage() {
   const [copiedText, setCopiedText] = useState("");
   const navigate = useNavigate();
-  const featuredFamilies = FAMILIES.slice(0, 4);
+  const featuredFamilies = COMPONENT_FAMILIES.slice(0, 4);
 
   const copyToClipboard = (text: string, id: string) => {
     navigator.clipboard.writeText(text);
@@ -137,9 +148,9 @@ export default function HomePage() {
           <div className="w-10 h-10 rounded-lg bg-emerald-600 flex items-center justify-center text-white mb-4">
             <Cpu className="w-5 h-5" />
           </div>
-          <h3 className="font-sans font-bold text-lg text-zinc-950 mb-2">Zero-Dependency Core</h3>
+          <h3 className="font-sans font-bold text-lg text-zinc-950 mb-2">Composable Intelligence Surface</h3>
           <p className="text-sm text-zinc-600 leading-relaxed">
-            Choose exactly what you need. Avoid dragging massive SaaS client libraries into lightweight IoT nodes. Opt-in to specific provider adapters or run fully localized, offline-first code.
+            Compose only the intelligence capabilities your system needs. Start with stable contracts, then opt into models, tools, parsers, memory, transport, security, and provider adapters as explicit package choices.
           </p>
         </div>
       </section>
@@ -151,11 +162,10 @@ export default function HomePage() {
             A Pluggable Ecosystem of {SDK_METADATA.totalIndexedRecords} Indexed Records
           </h2>
           <p className="text-sm text-zinc-600 leading-relaxed">
-            The package ecosystem spans {FAMILIES.length} component families
-            across 10 structural layers, from interfaces and base classes to
-            standard kernels, community integrations, plugins, facades, and
-            experimental planners. Filter by maturity, family, or role to build
-            the exact runtime your application needs.
+            The package ecosystem spans {COMPONENT_FAMILIES.length} component
+            families across the standard library, community integrations, and
+            extension packages. Filter by maturity, family, or role to build the
+            exact runtime your application needs.
           </p>
           <div className="flex flex-wrap gap-2 text-xs">
             {featuredFamilies.map((family) => (
@@ -187,7 +197,7 @@ export default function HomePage() {
 
       <ComponentFamilyOverview
         title="All Component Families"
-        description="Agents, models, and vector stores are examples in a broader package ecosystem. The generated catalog also includes tools, skills, parsers, middleware, signing, certificates, identity, tokens, storage, publishers, evaluators, workflows, and many other families."
+        description="Agents, models, and vector stores are examples in a broader component ecosystem. The generated catalog also includes tools, parsers, middleware, signing, certificates, identity, tokens, storage, publishers, evaluators, workflows, and many other families."
       />
 
       {/* 4. Layer Architecture Preview */}

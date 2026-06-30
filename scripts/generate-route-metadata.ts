@@ -3,7 +3,7 @@ import path from "node:path";
 import { CAREER_ROLES } from "../src/data/careers";
 import { GUIDE_TOPICS } from "../src/data/guides";
 import { PACKAGES } from "../src/data/packages";
-import { FAMILIES } from "../src/data/packageSummary";
+import { COMPONENT_FAMILIES } from "../src/data/packageSummary";
 import {
   CANONICAL_TAXONOMY_DESCRIPTION,
   CANONICAL_TAXONOMY_KEYWORDS,
@@ -138,7 +138,7 @@ const routes: RouteMeta[] = [
     route: "framework",
     title: "Composable Intelligence Framework",
     description:
-      `Explore ${FAMILIES.length} generated Swarmauri component families across tools, agents, models, parsers, middleware, crypto, storage, identity, evaluators, workflows, and integrations.`,
+      `Explore ${COMPONENT_FAMILIES.length} generated Swarmauri component families across tools, agents, models, parsers, middleware, crypto, storage, identity, evaluators, workflows, and integrations.`,
   },
   {
     route: "packages",

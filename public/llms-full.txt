@@ -1,6 +1,6 @@
 # Swarmauri Full LLM Index
 
-Generated: 2026-06-30T13:43:03.708Z
+Generated: 2026-06-30T17:57:21.695Z
 
 This file is the complete assistant-facing index for swarmauri.com. It is generated from the same source data as the nested XML sitemaps.
 
@@ -14,7 +14,7 @@ This file is the complete assistant-facing index for swarmauri.com. It is genera
 
 ## SDK Metadata
 
-- Swarmauri namespace package version: 0.9.1.dev5
+- Swarmauri namespace package version: 0.9.1.dev6
 - Monorepo version: 0.6.2.dev3
 - Python support: >=3.10,<3.15
 - Workspace member entries: 310
@@ -23,7 +23,7 @@ This file is the complete assistant-facing index for swarmauri.com. It is genera
 - Workspace-backed indexed records: 310
 - Duplicate workspace members: none
 - SDK metadata source: swarmauri-sdk/pkgs/package-index.toml
-- SDK metadata generated: 2026-06-27T11:33:16.265Z
+- SDK metadata generated: 2026-06-30T17:56:43.035Z
 
 ## Layers
 
@@ -137,7 +137,7 @@ This file is the complete assistant-facing index for swarmauri.com. It is genera
 - Family: typing
 - Role: atomic-foundation
 - Maturity: foundation
-- Version: 0.10.1.dev5
+- Version: 0.10.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_typing
@@ -161,7 +161,7 @@ print(package_module.__name__)
 - Family: interfaces
 - Role: interface-contract
 - Maturity: foundation
-- Version: 0.10.1.dev5
+- Version: 0.10.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_core
@@ -257,7 +257,7 @@ print(package_module.__name__)
 - Family: auth_idp
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev3
+- Version: 0.2.1.dev4
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_auth_idp_apple
@@ -281,7 +281,7 @@ print(package_module.__name__)
 - Family: auth_idp
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev3
+- Version: 0.2.1.dev4
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_auth_idp_aws
@@ -295,7 +295,7 @@ print(package_module.__name__)
 
 - Source path: pkgs/standards/swarmauri_auth_idp_aws
 - Docs/source link: https://github.com/swarmauri/swarmauri-sdk/tree/master/pkgs/standards/swarmauri_auth_idp_aws
-- Dependencies: swarmauri_core, swarmauri_base, httpx, boto3, requests
+- Dependencies: swarmauri_core, swarmauri_base, httpx, boto3, httpx
 - Description: AWS IAM Identity Center OAuth 2.0 / 2.1 login implementations for Swarmauri
 
 ### swarmauri_auth_idp_azure
@@ -305,7 +305,7 @@ print(package_module.__name__)
 - Family: auth_idp
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev3
+- Version: 0.2.1.dev4
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_auth_idp_azure
@@ -329,7 +329,7 @@ print(package_module.__name__)
 - Family: auth_idp
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev3
+- Version: 0.2.1.dev4
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_auth_idp_cognito
@@ -353,7 +353,7 @@ print(package_module.__name__)
 - Family: auth_idp
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev3
+- Version: 0.2.1.dev4
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_auth_idp_facebook
@@ -377,7 +377,7 @@ print(package_module.__name__)
 - Family: auth_idp
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev3
+- Version: 0.2.1.dev4
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_auth_idp_gitea
@@ -401,7 +401,7 @@ print(package_module.__name__)
 - Family: auth_idp
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev3
+- Version: 0.2.1.dev4
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_auth_idp_github
@@ -425,7 +425,7 @@ print(package_module.__name__)
 - Family: auth_idp
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev3
+- Version: 0.2.1.dev4
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_auth_idp_gitlab
@@ -449,7 +449,7 @@ print(package_module.__name__)
 - Family: auth_idp
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev3
+- Version: 0.2.1.dev4
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_auth_idp_google
@@ -473,7 +473,7 @@ print(package_module.__name__)
 - Family: auth_idp
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev3
+- Version: 0.2.1.dev4
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_auth_idp_keycloak
@@ -497,7 +497,7 @@ print(package_module.__name__)
 - Family: auth_idp
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev3
+- Version: 0.2.1.dev4
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_auth_idp_okta
@@ -521,7 +521,7 @@ print(package_module.__name__)
 - Family: auth_idp
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev3
+- Version: 0.2.1.dev4
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_auth_idp_salesforce
@@ -545,7 +545,7 @@ print(package_module.__name__)
 - Family: billing
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.10.1.dev5
+- Version: 0.10.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_billing_mock
@@ -569,7 +569,7 @@ print(package_module.__name__)
 - Family: billing
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.10.1.dev5
+- Version: 0.10.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_billing_stripe
@@ -593,7 +593,7 @@ print(package_module.__name__)
 - Family: certs
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.4.1.dev5
+- Version: 0.4.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_certs_local_ca
@@ -617,7 +617,7 @@ print(package_module.__name__)
 - Family: certs
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.4.1.dev5
+- Version: 0.4.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_certs_remote_ca
@@ -641,7 +641,7 @@ print(package_module.__name__)
 - Family: certs
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_certs_self_signed
@@ -665,7 +665,7 @@ print(package_module.__name__)
 - Family: certs
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.4.1.dev5
+- Version: 0.4.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_certs_x509verify
@@ -689,7 +689,7 @@ print(package_module.__name__)
 - Family: cipher_suite
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev5
+- Version: 0.2.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_cipher_suite_cades
@@ -713,7 +713,7 @@ print(package_module.__name__)
 - Family: cipher_suite
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev3
+- Version: 0.3.1.dev4
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_cipher_suite_cnsa20
@@ -737,7 +737,7 @@ print(package_module.__name__)
 - Family: cipher_suite
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev5
+- Version: 0.2.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_cipher_suite_cose
@@ -761,7 +761,7 @@ print(package_module.__name__)
 - Family: cipher_suite
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev5
+- Version: 0.2.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_cipher_suite_fips1403
@@ -785,7 +785,7 @@ print(package_module.__name__)
 - Family: cipher_suite
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev5
+- Version: 0.2.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_cipher_suite_fips203
@@ -809,7 +809,7 @@ print(package_module.__name__)
 - Family: cipher_suite
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev5
+- Version: 0.2.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_cipher_suite_fips204
@@ -833,7 +833,7 @@ print(package_module.__name__)
 - Family: cipher_suite
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev5
+- Version: 0.2.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_cipher_suite_fips205
@@ -857,7 +857,7 @@ print(package_module.__name__)
 - Family: cipher_suite
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev5
+- Version: 0.2.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_cipher_suite_ipsec
@@ -881,7 +881,7 @@ print(package_module.__name__)
 - Family: cipher_suite
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev5
+- Version: 0.2.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_cipher_suite_jwa
@@ -905,7 +905,7 @@ print(package_module.__name__)
 - Family: cipher_suite
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev5
+- Version: 0.2.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_cipher_suite_pades
@@ -929,7 +929,7 @@ print(package_module.__name__)
 - Family: cipher_suite
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev5
+- Version: 0.2.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_cipher_suite_pep458
@@ -953,7 +953,7 @@ print(package_module.__name__)
 - Family: cipher_suite
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev5
+- Version: 0.2.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_cipher_suite_sigstore
@@ -977,7 +977,7 @@ print(package_module.__name__)
 - Family: cipher_suite
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev5
+- Version: 0.2.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_cipher_suite_ssh
@@ -1001,7 +1001,7 @@ print(package_module.__name__)
 - Family: cipher_suite
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev5
+- Version: 0.2.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_cipher_suite_tls13
@@ -1025,7 +1025,7 @@ print(package_module.__name__)
 - Family: cipher_suite
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev5
+- Version: 0.2.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_cipher_suite_webauthn
@@ -1049,7 +1049,7 @@ print(package_module.__name__)
 - Family: cipher_suite
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev5
+- Version: 0.2.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_cipher_suite_xades
@@ -1073,7 +1073,7 @@ print(package_module.__name__)
 - Family: cipher_suite
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev5
+- Version: 0.2.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_cipher_suite_yubikey
@@ -1097,7 +1097,7 @@ print(package_module.__name__)
 - Family: cipher_suite
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev5
+- Version: 0.2.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_cipher_suite_yubikey_fips
@@ -1121,7 +1121,7 @@ print(package_module.__name__)
 - Family: crypto
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.4.1.dev5
+- Version: 0.4.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_crypto_ecdh_es_a128kw
@@ -1145,7 +1145,7 @@ print(package_module.__name__)
 - Family: crypto
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_crypto_jwe
@@ -1169,7 +1169,7 @@ print(package_module.__name__)
 - Family: crypto
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.4.1.dev5
+- Version: 0.4.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_crypto_nacl_pkcs11
@@ -1193,7 +1193,7 @@ print(package_module.__name__)
 - Family: crypto
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.4.1.dev5
+- Version: 0.4.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_crypto_paramiko
@@ -1217,7 +1217,7 @@ print(package_module.__name__)
 - Family: crypto
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_crypto_pgp
@@ -1241,7 +1241,7 @@ print(package_module.__name__)
 - Family: crypto
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.4.1.dev2
+- Version: 0.4.1.dev3
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_crypto_rust
@@ -1552,7 +1552,7 @@ print(package_module.__name__)
 - Family: embedding
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.10.1.dev2
+- Version: 0.10.1.dev3
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_embedding_doc2vec
@@ -1576,7 +1576,7 @@ print(package_module.__name__)
 - Family: embedding
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.10.1.dev2
+- Version: 0.10.1.dev3
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_embedding_nmf
@@ -1600,7 +1600,7 @@ print(package_module.__name__)
 - Family: evaluator
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.4.1.dev5
+- Version: 0.4.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_evaluator_abstractmethods
@@ -1624,7 +1624,7 @@ print(package_module.__name__)
 - Family: evaluator
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.4.1.dev5
+- Version: 0.4.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_evaluator_anyusage
@@ -1648,7 +1648,7 @@ print(package_module.__name__)
 - Family: evaluator
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_evaluator_constanttime
@@ -1672,7 +1672,7 @@ print(package_module.__name__)
 - Family: evaluator
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_evaluator_externalimports
@@ -1696,7 +1696,7 @@ print(package_module.__name__)
 - Family: evaluator
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_evaluator_subprocess
@@ -1720,7 +1720,7 @@ print(package_module.__name__)
 - Family: evaluatorpool
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_evaluatorpool_accessibility
@@ -1744,7 +1744,7 @@ print(package_module.__name__)
 - Family: example
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.6.4.dev4
+- Version: 0.6.4.dev5
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swm_example_package
@@ -1768,7 +1768,7 @@ print(package_module.__name__)
 - Family: gitfilter
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev2
+- Version: 0.3.1.dev3
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_gitfilter_gh_release
@@ -1792,7 +1792,7 @@ print(package_module.__name__)
 - Family: gitfilter
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev2
+- Version: 0.3.1.dev3
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_gitfilter_minio
@@ -1816,7 +1816,7 @@ print(package_module.__name__)
 - Family: gitfilter
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev2
+- Version: 0.3.1.dev3
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_gitfilter_s3fs
@@ -1840,7 +1840,7 @@ print(package_module.__name__)
 - Family: keyprovider
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.2.dev4
+- Version: 0.2.2.dev5
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_keyprovider_file
@@ -1864,7 +1864,7 @@ print(package_module.__name__)
 - Family: keyprovider
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.2.dev5
+- Version: 0.2.2.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_keyprovider_inmemory
@@ -1888,7 +1888,7 @@ print(package_module.__name__)
 - Family: keyprovider
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.2.dev4
+- Version: 0.2.2.dev5
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_keyprovider_local
@@ -1912,7 +1912,7 @@ print(package_module.__name__)
 - Family: keyprovider
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_keyprovider_ssh
@@ -1936,7 +1936,7 @@ print(package_module.__name__)
 - Family: metric
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.9.1.dev4
+- Version: 0.9.1.dev5
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swamauri_metric_wasserstein
@@ -1960,7 +1960,7 @@ print(package_module.__name__)
 - Family: middleware
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.8.1.dev5
+- Version: 0.8.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_middleware_bulkhead
@@ -1984,7 +1984,7 @@ print(package_module.__name__)
 - Family: middleware
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.8.1.dev5
+- Version: 0.8.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_middleware_cachecontrol
@@ -2008,7 +2008,7 @@ print(package_module.__name__)
 - Family: middleware
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.8.1.dev5
+- Version: 0.8.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_middleware_cors
@@ -2032,7 +2032,7 @@ print(package_module.__name__)
 - Family: middleware
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.7.1.dev5
+- Version: 0.7.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_middleware_exceptionhandling
@@ -2056,7 +2056,7 @@ print(package_module.__name__)
 - Family: middleware
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.8.1.dev5
+- Version: 0.8.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_middleware_gzipcompression
@@ -2080,7 +2080,7 @@ print(package_module.__name__)
 - Family: middleware
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.8.1.dev5
+- Version: 0.8.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_middleware_httpsig
@@ -2104,7 +2104,7 @@ print(package_module.__name__)
 - Family: middleware
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.8.1.dev5
+- Version: 0.8.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_middleware_jsonrpc
@@ -2128,7 +2128,7 @@ print(package_module.__name__)
 - Family: middleware
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_middleware_jwksverifier
@@ -2152,7 +2152,7 @@ print(package_module.__name__)
 - Family: middleware
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.8.1.dev5
+- Version: 0.8.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_middleware_jwt
@@ -2176,7 +2176,7 @@ print(package_module.__name__)
 - Family: middleware
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.7.1.dev5
+- Version: 0.7.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_middleware_llamaguard
@@ -2200,7 +2200,7 @@ print(package_module.__name__)
 - Family: middleware
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.8.1.dev5
+- Version: 0.8.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_middleware_logging
@@ -2224,7 +2224,7 @@ print(package_module.__name__)
 - Family: middleware
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.7.1.dev5
+- Version: 0.7.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_middleware_ratelimit
@@ -2248,7 +2248,7 @@ print(package_module.__name__)
 - Family: middleware
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.8.1.dev5
+- Version: 0.8.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_middleware_securityheaders
@@ -2272,7 +2272,7 @@ print(package_module.__name__)
 - Family: middleware
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.8.1.dev5
+- Version: 0.8.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_middleware_session
@@ -2296,7 +2296,7 @@ print(package_module.__name__)
 - Family: middleware
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.8.1.dev5
+- Version: 0.8.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_middleware_stdio
@@ -2320,7 +2320,7 @@ print(package_module.__name__)
 - Family: middleware
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.8.1.dev5
+- Version: 0.8.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_middleware_time
@@ -2344,7 +2344,7 @@ print(package_module.__name__)
 - Family: mre_crypto
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_mre_crypto_age
@@ -2368,7 +2368,7 @@ print(package_module.__name__)
 - Family: mre_crypto
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev5
+- Version: 0.2.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_mre_crypto_ecdh_es_kw
@@ -2392,7 +2392,7 @@ print(package_module.__name__)
 - Family: mre_crypto
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_mre_crypto_keyring
@@ -2416,7 +2416,7 @@ print(package_module.__name__)
 - Family: mre_crypto
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev3
+- Version: 0.3.1.dev4
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_mre_crypto_pgp
@@ -2440,7 +2440,7 @@ print(package_module.__name__)
 - Family: mre_crypto
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev5
+- Version: 0.2.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_mre_crypto_shamir
@@ -2488,7 +2488,7 @@ print(package_module.__name__)
 - Family: parser
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.9.1.dev5
+- Version: 0.9.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_parser_keywordextractor
@@ -2512,7 +2512,7 @@ print(package_module.__name__)
 - Family: pop
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.2.dev5
+- Version: 0.1.2.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_pop_cwt
@@ -2536,7 +2536,7 @@ print(package_module.__name__)
 - Family: pop
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.2.dev5
+- Version: 0.1.2.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_pop_dpop
@@ -2560,7 +2560,7 @@ print(package_module.__name__)
 - Family: pop
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.2.dev5
+- Version: 0.1.2.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_pop_x509
@@ -2584,7 +2584,7 @@ print(package_module.__name__)
 - Family: prompt
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.9.1.dev5
+- Version: 0.9.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_prompt_j2prompttemplate
@@ -2608,7 +2608,7 @@ print(package_module.__name__)
 - Family: publisher
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_publisher_rabbitmq
@@ -2632,7 +2632,7 @@ print(package_module.__name__)
 - Family: publisher
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_publisher_redis
@@ -2656,7 +2656,7 @@ print(package_module.__name__)
 - Family: publisher
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_publisher_webhook
@@ -2680,7 +2680,7 @@ print(package_module.__name__)
 - Family: signing
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_signing_ca
@@ -2704,7 +2704,7 @@ print(package_module.__name__)
 - Family: signing
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.1.dev5
+- Version: 0.1.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_signing_cms
@@ -2728,7 +2728,7 @@ print(package_module.__name__)
 - Family: signing
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_signing_ecdsa
@@ -2752,7 +2752,7 @@ print(package_module.__name__)
 - Family: signing
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev5
+- Version: 0.2.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_signing_ed25519
@@ -2776,7 +2776,7 @@ print(package_module.__name__)
 - Family: signing
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_signing_hmac
@@ -2800,7 +2800,7 @@ print(package_module.__name__)
 - Family: signing
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.1.dev3
+- Version: 0.1.1.dev4
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_signing_openpgp
@@ -2824,7 +2824,7 @@ print(package_module.__name__)
 - Family: signing
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.1.dev5
+- Version: 0.1.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_signing_pep458
@@ -2848,7 +2848,7 @@ print(package_module.__name__)
 - Family: signing
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev3
+- Version: 0.3.1.dev4
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_signing_pgp
@@ -2872,7 +2872,7 @@ print(package_module.__name__)
 - Family: signing
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_signing_rsa
@@ -2896,7 +2896,7 @@ print(package_module.__name__)
 - Family: signing
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_signing_secp256k1
@@ -2920,7 +2920,7 @@ print(package_module.__name__)
 - Family: signing
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.2.dev5
+- Version: 0.1.2.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_signing_sigv4
@@ -2944,7 +2944,7 @@ print(package_module.__name__)
 - Family: signing
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_signing_ssh
@@ -2968,7 +2968,7 @@ print(package_module.__name__)
 - Family: signing
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.1.dev5
+- Version: 0.1.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_signing_xmld
@@ -2992,7 +2992,7 @@ print(package_module.__name__)
 - Family: skills
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.9.1.dev5
+- Version: 0.9.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_skill_dummy_filesystem
@@ -3016,7 +3016,7 @@ print(package_module.__name__)
 - Family: skills
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.9.1.dev5
+- Version: 0.9.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_skill_dummy_local
@@ -3040,7 +3040,7 @@ print(package_module.__name__)
 - Family: skills
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.9.1.dev5
+- Version: 0.9.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_skill_filesystem
@@ -3064,7 +3064,7 @@ print(package_module.__name__)
 - Family: skills
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.9.1.dev5
+- Version: 0.9.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_skill_local
@@ -3088,7 +3088,7 @@ print(package_module.__name__)
 - Family: storage
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_storage_file
@@ -3112,7 +3112,7 @@ print(package_module.__name__)
 - Family: storage
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev5
+- Version: 0.2.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_storage_github
@@ -3136,7 +3136,7 @@ print(package_module.__name__)
 - Family: storage
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_storage_github_release
@@ -3160,7 +3160,7 @@ print(package_module.__name__)
 - Family: storage
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.1.dev5
+- Version: 0.1.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_storage_memory
@@ -3184,7 +3184,7 @@ print(package_module.__name__)
 - Family: storage
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.2.dev5
+- Version: 0.2.2.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_storage_minio
@@ -3208,7 +3208,7 @@ print(package_module.__name__)
 - Family: storage
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.0.dev0
+- Version: 0.1.0.dev1
 - Workspace backed: yes
 - Python support: >=3.10,<3.13
 - Install: uv add swarmauri_storage_s3
@@ -3232,7 +3232,7 @@ print(package_module.__name__)
 - Family: storage
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.0.dev0
+- Version: 0.1.0.dev1
 - Workspace backed: yes
 - Python support: >=3.10,<3.13
 - Install: uv add swarmauri_storage_s3_over_sftp
@@ -3280,7 +3280,7 @@ print(package_module.__name__)
 - Family: tokens
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_tokens_dpopboundjwt
@@ -3304,7 +3304,7 @@ print(package_module.__name__)
 - Family: tokens
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_tokens_introspection
@@ -3328,7 +3328,7 @@ print(package_module.__name__)
 - Family: tokens
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev5
+- Version: 0.2.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_tokens_paseto_v4
@@ -3352,7 +3352,7 @@ print(package_module.__name__)
 - Family: tokens
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_tokens_remoteoidc
@@ -3376,7 +3376,7 @@ print(package_module.__name__)
 - Family: tokens
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_tokens_rotatingjwt
@@ -3400,7 +3400,7 @@ print(package_module.__name__)
 - Family: tokens
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_tokens_sshcert
@@ -3424,7 +3424,7 @@ print(package_module.__name__)
 - Family: tokens
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_tokens_sshsig
@@ -3448,7 +3448,7 @@ print(package_module.__name__)
 - Family: tokens
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.2.1.dev5
+- Version: 0.2.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_tokens_tlsboundjwt
@@ -3472,7 +3472,7 @@ print(package_module.__name__)
 - Family: tool
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.9.1.dev5
+- Version: 0.9.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_tool_containerfeedchars
@@ -3496,7 +3496,7 @@ print(package_module.__name__)
 - Family: tool
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.9.1.dev5
+- Version: 0.9.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_tool_containermakepr
@@ -3520,7 +3520,7 @@ print(package_module.__name__)
 - Family: tool
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.9.1.dev5
+- Version: 0.9.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_tool_containernewsession
@@ -3544,7 +3544,7 @@ print(package_module.__name__)
 - Family: tool
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.9.1.dev5
+- Version: 0.9.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_tool_githubloader
@@ -3558,7 +3558,7 @@ print(package_module.__name__)
 
 - Source path: pkgs/standards/swarmauri_tool_githubloader
 - Docs/source link: https://github.com/swarmauri/swarmauri-sdk/tree/master/pkgs/standards/swarmauri_tool_githubloader
-- Dependencies: requests, swarmauri_core, swarmauri_base, swarmauri_standard
+- Dependencies: httpx, swarmauri_core, swarmauri_base, swarmauri_standard
 - Description: Load YAML-defined components directly from GitHub repositories.
 
 ### swarmauri_tool_httploaded
@@ -3568,7 +3568,7 @@ print(package_module.__name__)
 - Family: tool
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.9.1.dev5
+- Version: 0.9.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_tool_httploaded
@@ -3592,7 +3592,7 @@ print(package_module.__name__)
 - Family: tool
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.9.1.dev5
+- Version: 0.9.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_tool_matplotlib
@@ -3616,7 +3616,7 @@ print(package_module.__name__)
 - Family: tool
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.9.1.dev5
+- Version: 0.9.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_tool_skill_execution
@@ -3640,7 +3640,7 @@ print(package_module.__name__)
 - Family: transport
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.2.dev3
+- Version: 0.1.2.dev4
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_transport_asgi
@@ -3664,7 +3664,7 @@ print(package_module.__name__)
 - Family: transport
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.2.dev3
+- Version: 0.1.2.dev4
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_transport_h2
@@ -3688,7 +3688,7 @@ print(package_module.__name__)
 - Family: transport
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.2.dev3
+- Version: 0.1.2.dev4
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_transport_h2mux
@@ -3712,7 +3712,7 @@ print(package_module.__name__)
 - Family: transport
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.2.dev3
+- Version: 0.1.2.dev4
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_transport_meshsidecarhttp2
@@ -3736,7 +3736,7 @@ print(package_module.__name__)
 - Family: transport
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.2.dev3
+- Version: 0.1.2.dev4
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_transport_mtlsunicast
@@ -3760,7 +3760,7 @@ print(package_module.__name__)
 - Family: transport
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.1.dev3
+- Version: 0.1.1.dev4
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_transport_quic
@@ -3784,7 +3784,7 @@ print(package_module.__name__)
 - Family: transport
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.2.dev3
+- Version: 0.1.2.dev4
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_transport_sseoutbound
@@ -3808,7 +3808,7 @@ print(package_module.__name__)
 - Family: transport
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.2.dev3
+- Version: 0.1.2.dev4
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_transport_sshtunnel
@@ -3832,7 +3832,7 @@ print(package_module.__name__)
 - Family: transport
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.2.dev3
+- Version: 0.1.2.dev4
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_transport_stdio
@@ -3856,7 +3856,7 @@ print(package_module.__name__)
 - Family: transport
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.2.dev3
+- Version: 0.1.2.dev4
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_transport_tcpunicast
@@ -3880,7 +3880,7 @@ print(package_module.__name__)
 - Family: transport
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.1.dev3
+- Version: 0.1.1.dev4
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_transport_tls_unicast
@@ -3904,7 +3904,7 @@ print(package_module.__name__)
 - Family: transport
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.1.dev3
+- Version: 0.1.1.dev4
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_transport_udp
@@ -3928,7 +3928,7 @@ print(package_module.__name__)
 - Family: transport
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.1.dev3
+- Version: 0.1.1.dev4
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_transport_uds_unicast
@@ -3952,7 +3952,7 @@ print(package_module.__name__)
 - Family: transport
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.2.dev3
+- Version: 0.1.2.dev4
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_transport_wsjsonrpcmux
@@ -3976,7 +3976,7 @@ print(package_module.__name__)
 - Family: xmp
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.2.dev5
+- Version: 0.1.2.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_xmp_gif
@@ -4000,7 +4000,7 @@ print(package_module.__name__)
 - Family: xmp
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.2.dev5
+- Version: 0.1.2.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_xmp_jpeg
@@ -4024,7 +4024,7 @@ print(package_module.__name__)
 - Family: xmp
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.2.dev5
+- Version: 0.1.2.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_xmp_mp4
@@ -4048,7 +4048,7 @@ print(package_module.__name__)
 - Family: xmp
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.2.dev5
+- Version: 0.1.2.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_xmp_pdf
@@ -4072,7 +4072,7 @@ print(package_module.__name__)
 - Family: xmp
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.2.dev5
+- Version: 0.1.2.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_xmp_png
@@ -4096,7 +4096,7 @@ print(package_module.__name__)
 - Family: xmp
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.2.dev5
+- Version: 0.1.2.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_xmp_svg
@@ -4120,7 +4120,7 @@ print(package_module.__name__)
 - Family: xmp
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.2.dev5
+- Version: 0.1.2.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_xmp_tiff
@@ -4144,7 +4144,7 @@ print(package_module.__name__)
 - Family: xmp
 - Role: atomic-concrete
 - Maturity: standard
-- Version: 0.1.2.dev5
+- Version: 0.1.2.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_xmp_webp
@@ -4168,7 +4168,7 @@ print(package_module.__name__)
 - Family: certs
 - Role: composite-concrete
 - Maturity: standard
-- Version: 0.4.1.dev5
+- Version: 0.4.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_certs_composite
@@ -4192,7 +4192,7 @@ print(package_module.__name__)
 - Family: certs
 - Role: composite-concrete
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_certs_x509
@@ -4216,7 +4216,7 @@ print(package_module.__name__)
 - Family: crypto
 - Role: composite-concrete
 - Maturity: standard
-- Version: 0.3.1.dev2
+- Version: 0.3.1.dev3
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_crypto_composite
@@ -4240,7 +4240,7 @@ print(package_module.__name__)
 - Family: gitfilter
 - Role: composite-concrete
 - Maturity: standard
-- Version: 0.3.1.dev3
+- Version: 0.3.1.dev4
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_gitfilter_file
@@ -4264,7 +4264,7 @@ print(package_module.__name__)
 - Family: keyprovider
 - Role: composite-concrete
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_keyprovider_hierarchical
@@ -4288,7 +4288,7 @@ print(package_module.__name__)
 - Family: keyprovider
 - Role: composite-concrete
 - Maturity: standard
-- Version: 0.2.1.dev5
+- Version: 0.2.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_keyprovider_remote_jwks
@@ -4312,7 +4312,7 @@ print(package_module.__name__)
 - Family: keyproviders
 - Role: composite-concrete
 - Maturity: standard
-- Version: 0.2.1.dev5
+- Version: 0.2.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_keyproviders_mirrored
@@ -4336,7 +4336,7 @@ print(package_module.__name__)
 - Family: signing
 - Role: composite-concrete
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_signing_jws
@@ -4360,7 +4360,7 @@ print(package_module.__name__)
 - Family: signing
 - Role: composite-concrete
 - Maturity: standard
-- Version: 0.1.1.dev5
+- Version: 0.1.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_signing_pdf
@@ -4384,7 +4384,7 @@ print(package_module.__name__)
 - Family: tokens
 - Role: composite-concrete
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_tokens_composite
@@ -4408,7 +4408,7 @@ print(package_module.__name__)
 - Family: vectorstore
 - Role: composite-concrete
 - Maturity: standard
-- Version: 0.9.1.dev2
+- Version: 0.9.1.dev3
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_vectorstore_doc2vec
@@ -4432,7 +4432,7 @@ print(package_module.__name__)
 - Family: middleware
 - Role: orchestrator
 - Maturity: standard
-- Version: 0.8.1.dev5
+- Version: 0.8.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_middleware_auth
@@ -4456,7 +4456,7 @@ print(package_module.__name__)
 - Family: signing
 - Role: orchestrator
 - Maturity: standard
-- Version: 0.1.3.dev5
+- Version: 0.1.3.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_signing_dpop
@@ -4480,7 +4480,7 @@ print(package_module.__name__)
 - Family: tokens
 - Role: orchestrator
 - Maturity: standard
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_tokens_jwt
@@ -4504,7 +4504,7 @@ print(package_module.__name__)
 - Family: toolkit
 - Role: orchestrator
 - Maturity: standard
-- Version: 0.8.1.dev5
+- Version: 0.8.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_toolkit_containertoolkit
@@ -4528,7 +4528,7 @@ print(package_module.__name__)
 - Family: toolkit
 - Role: orchestrator
 - Maturity: standard
-- Version: 0.1.1.dev7
+- Version: 0.1.1.dev8
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_toolkit_runtime
@@ -4590,7 +4590,7 @@ print(package_module.__name__)
 
 - Source path: pkgs/community/swarmauri_billing_adyen
 - Docs/source link: https://github.com/swarmauri/swarmauri-sdk/tree/master/pkgs/community/swarmauri_billing_adyen
-- Dependencies: swarmauri_core, swarmauri_base, requests
+- Dependencies: swarmauri_core, swarmauri_base, httpx
 - Description: Adyen Checkout API backed Swarmauri billing provider for hosted sessions, payments, captures, cancels, refunds, and webhook validation.
 
 ### swarmauri_billing_authorize_net
@@ -4614,7 +4614,7 @@ print(package_module.__name__)
 
 - Source path: pkgs/community/swarmauri_billing_authorize_net
 - Docs/source link: https://github.com/swarmauri/swarmauri-sdk/tree/master/pkgs/community/swarmauri_billing_authorize_net
-- Dependencies: swarmauri_core, swarmauri_base, requests
+- Dependencies: swarmauri_core, swarmauri_base, httpx
 - Description: Authorize.Net JSON API backed Swarmauri billing provider for transactions, captures, voids, refunds, customer profiles, and webhook validation.
 
 ### swarmauri_billing_braintree
@@ -4662,7 +4662,7 @@ print(package_module.__name__)
 
 - Source path: pkgs/community/swarmauri_billing_paypal
 - Docs/source link: https://github.com/swarmauri/swarmauri-sdk/tree/master/pkgs/community/swarmauri_billing_paypal
-- Dependencies: swarmauri_core, swarmauri_base, requests
+- Dependencies: swarmauri_core, swarmauri_base, httpx
 - Description: PayPal REST backed Swarmauri billing provider for products, plans, orders, captures, refunds, subscriptions, invoices, payouts, disputes, and webhooks.
 
 ### swarmauri_billing_paystack
@@ -4950,7 +4950,7 @@ print(package_module.__name__)
 
 - Source path: pkgs/community/swarmauri_certservice_ms_adcs
 - Docs/source link: https://github.com/swarmauri/swarmauri-sdk/tree/master/pkgs/community/swarmauri_certservice_ms_adcs
-- Dependencies: requests, cryptography, swarmauri_core, swarmauri_base, swarmauri_standard
+- Dependencies: httpx, cryptography, swarmauri_core, swarmauri_base, swarmauri_standard
 - Description: Microsoft AD CS oriented Swarmauri certificate service for PKCS#10 CSR creation, local self-signed certificates, verification, parsing, and auth setup.
 
 ### swarmauri_certservice_scep
@@ -4974,7 +4974,7 @@ print(package_module.__name__)
 
 - Source path: pkgs/community/swarmauri_certservice_scep
 - Docs/source link: https://github.com/swarmauri/swarmauri-sdk/tree/master/pkgs/community/swarmauri_certservice_scep
-- Dependencies: requests, cryptography, swarmauri_core, swarmauri_base
+- Dependencies: httpx, cryptography, swarmauri_core, swarmauri_base
 - Description: SCEP-oriented Swarmauri certificate service for PKCS#10 CSR creation, challenge-password enrollment requests, response capture, and X.509 parsing.
 
 ### swarmauri_certservice_stepca
@@ -5032,7 +5032,7 @@ print(package_module.__name__)
 - Family: example
 - Role: atomic-concrete
 - Maturity: community
-- Version: 0.6.4.dev2
+- Version: 0.6.4.dev3
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swm_example_community_package
@@ -5094,7 +5094,7 @@ print(package_module.__name__)
 
 - Source path: pkgs/community/swarmauri_keyprovider_gcpkms
 - Docs/source link: https://github.com/swarmauri/swarmauri-sdk/tree/master/pkgs/community/swarmauri_keyprovider_gcpkms
-- Dependencies: google-auth, requests, cryptography, swarmauri_core, swarmauri_base, swarmauri_standard
+- Dependencies: none listed
 - Description: Google Cloud KMS-backed Swarmauri key provider for key metadata, encryption, signing, wrapping, public JWKS, and HKDF workflows.
 
 ### swarmauri_keyprovider_vaulttransit
@@ -5776,7 +5776,7 @@ print(package_module.__name__)
 - Family: parser
 - Role: atomic-concrete
 - Maturity: community
-- Version: 0.9.1.dev5
+- Version: 0.9.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_parser_pypdftk
@@ -5800,7 +5800,7 @@ print(package_module.__name__)
 - Family: parser
 - Role: atomic-concrete
 - Maturity: community
-- Version: 0.3.1.dev5
+- Version: 0.3.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_parser_slate
@@ -5848,7 +5848,7 @@ print(package_module.__name__)
 - Family: signing
 - Role: atomic-concrete
 - Maturity: community
-- Version: 0.2.1.dev5
+- Version: 0.2.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_signing_dsse
@@ -5872,7 +5872,7 @@ print(package_module.__name__)
 - Family: state
 - Role: atomic-concrete
 - Maturity: community
-- Version: 0.9.1.dev5
+- Version: 0.9.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_state_clipboard
@@ -5920,7 +5920,7 @@ print(package_module.__name__)
 - Family: tool
 - Role: atomic-concrete
 - Maturity: community
-- Version: 0.10.1.dev5
+- Version: 0.10.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_tool_captchagenerator
@@ -5968,7 +5968,7 @@ print(package_module.__name__)
 - Family: tool
 - Role: atomic-concrete
 - Maturity: community
-- Version: 0.10.1.dev5
+- Version: 0.10.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_tool_downloadpdf
@@ -6016,7 +6016,7 @@ print(package_module.__name__)
 - Family: tool
 - Role: atomic-concrete
 - Maturity: community
-- Version: 0.10.1.dev5
+- Version: 0.10.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_tool_folium
@@ -6040,7 +6040,7 @@ print(package_module.__name__)
 - Family: tool
 - Role: atomic-concrete
 - Maturity: community
-- Version: 0.10.1.dev5
+- Version: 0.10.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_tool_gmail
@@ -6088,7 +6088,7 @@ print(package_module.__name__)
 - Family: tool
 - Role: atomic-concrete
 - Maturity: community
-- Version: 0.9.1.dev5
+- Version: 0.9.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_tool_jupyterdisplay
@@ -6112,7 +6112,7 @@ print(package_module.__name__)
 - Family: tool
 - Role: atomic-concrete
 - Maturity: community
-- Version: 0.10.1.dev5
+- Version: 0.10.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_tool_jupyterdisplayhtml
@@ -6352,7 +6352,7 @@ print(package_module.__name__)
 - Family: tool
 - Role: atomic-concrete
 - Maturity: community
-- Version: 0.9.1.dev5
+- Version: 0.9.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_tool_jupytergetiopubmessage
@@ -6376,7 +6376,7 @@ print(package_module.__name__)
 - Family: tool
 - Role: atomic-concrete
 - Maturity: community
-- Version: 0.10.1.dev5
+- Version: 0.10.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_tool_jupytergetshellmessage
@@ -6448,7 +6448,7 @@ print(package_module.__name__)
 - Family: tool
 - Role: atomic-concrete
 - Maturity: community
-- Version: 0.9.1.dev5
+- Version: 0.9.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_tool_jupytershutdownkernel
@@ -6568,7 +6568,7 @@ print(package_module.__name__)
 - Family: tool
 - Role: atomic-concrete
 - Maturity: community
-- Version: 0.10.1.dev5
+- Version: 0.10.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_tool_psutil
@@ -6592,7 +6592,7 @@ print(package_module.__name__)
 - Family: tool
 - Role: atomic-concrete
 - Maturity: community
-- Version: 0.10.1.dev5
+- Version: 0.10.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_tool_qrcodegenerator
@@ -6616,7 +6616,7 @@ print(package_module.__name__)
 - Family: tool
 - Role: atomic-concrete
 - Maturity: community
-- Version: 0.4.1.dev5
+- Version: 0.4.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_tool_searchword
@@ -6630,7 +6630,7 @@ print(package_module.__name__)
 
 - Source path: pkgs/community/swarmauri_tool_searchword
 - Docs/source link: https://github.com/swarmauri/swarmauri-sdk/tree/master/pkgs/community/swarmauri_tool_searchword
-- Dependencies: pydantic, requests, swarmauri_core, swarmauri_base, swarmauri_standard
+- Dependencies: pydantic, httpx, swarmauri_core, swarmauri_base, swarmauri_standard
 - Description: Case-insensitive Swarmauri file-search tool for counting and highlighting word or phrase matches.
 
 ### swarmauri_tool_sentencecomplexity
@@ -6712,7 +6712,7 @@ print(package_module.__name__)
 - Family: tool
 - Role: atomic-concrete
 - Maturity: community
-- Version: 0.9.1.dev5
+- Version: 0.9.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_tool_textlength
@@ -6736,7 +6736,7 @@ print(package_module.__name__)
 - Family: tool
 - Role: atomic-concrete
 - Maturity: community
-- Version: 0.10.1.dev5
+- Version: 0.10.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_tool_webscraping
@@ -6760,7 +6760,7 @@ print(package_module.__name__)
 - Family: tool
 - Role: atomic-concrete
 - Maturity: community
-- Version: 0.9.1.dev5
+- Version: 0.9.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_tool_zapierhook
@@ -6784,7 +6784,7 @@ print(package_module.__name__)
 - Family: vectorstore
 - Role: atomic-concrete
 - Maturity: community
-- Version: 0.10.1.dev2
+- Version: 0.10.1.dev3
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_vectorstore_annoy
@@ -6808,7 +6808,7 @@ print(package_module.__name__)
 - Family: vectorstore
 - Role: atomic-concrete
 - Maturity: community
-- Version: 0.10.1.dev2
+- Version: 0.10.1.dev3
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_vectorstore_cloudweaviate
@@ -6832,7 +6832,7 @@ print(package_module.__name__)
 - Family: vectorstore
 - Role: atomic-concrete
 - Maturity: community
-- Version: 0.10.1.dev2
+- Version: 0.10.1.dev3
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_vectorstore_duckdb
@@ -6856,7 +6856,7 @@ print(package_module.__name__)
 - Family: vectorstore
 - Role: atomic-concrete
 - Maturity: community
-- Version: 0.1.1.dev5
+- Version: 0.1.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_vectorstore_fs
@@ -6880,7 +6880,7 @@ print(package_module.__name__)
 - Family: vectorstore
 - Role: atomic-concrete
 - Maturity: community
-- Version: 0.10.1.dev6
+- Version: 0.10.1.dev7
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_vectorstore_git
@@ -7048,7 +7048,7 @@ print(package_module.__name__)
 - Family: vectorstore
 - Role: composite-concrete
 - Maturity: community
-- Version: 0.10.1.dev5
+- Version: 0.10.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_vectorstore_mlm
@@ -7072,7 +7072,7 @@ print(package_module.__name__)
 - Family: toolkit
 - Role: orchestrator
 - Maturity: community
-- Version: 0.9.1.dev5
+- Version: 0.9.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_toolkit_github
@@ -7096,7 +7096,7 @@ print(package_module.__name__)
 - Family: toolkit
 - Role: orchestrator
 - Maturity: community
-- Version: 0.4.1.dev5
+- Version: 0.4.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri_toolkit_jupytertoolkit
@@ -7120,7 +7120,7 @@ print(package_module.__name__)
 - Family: embedxmp
 - Role: plugin
 - Maturity: plugin
-- Version: 0.1.5.dev2
+- Version: 0.1.5.dev3
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add EmbedXMP
@@ -7144,7 +7144,7 @@ print(package_module.__name__)
 - Family: example
 - Role: plugin
 - Maturity: plugin
-- Version: 0.6.6.dev4
+- Version: 0.6.6.dev5
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swm_example_plugin
@@ -7168,7 +7168,7 @@ print(package_module.__name__)
 - Family: zdx
 - Role: plugin
 - Maturity: plugin
-- Version: 0.2.4.dev4
+- Version: 0.2.4.dev5
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add zdx
@@ -7192,7 +7192,7 @@ print(package_module.__name__)
 - Family: mediasigner
 - Role: plugin-composite
 - Maturity: plugin
-- Version: 0.6.6.dev1
+- Version: 0.6.6.dev2
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add MediaSigner
@@ -7690,7 +7690,7 @@ print(package_module.__name__)
 - Family: monotone
 - Role: experimental-atomic
 - Maturity: experimental
-- Version: 0.1.1.dev6
+- Version: 0.1.1.dev7
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add monotone-ops
@@ -7714,7 +7714,7 @@ print(package_module.__name__)
 - Family: mto
 - Role: experimental-atomic
 - Maturity: experimental
-- Version: 0.1.1.dev7
+- Version: 0.1.1.dev8
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add mto
@@ -7952,7 +7952,7 @@ print(package_module.__name__)
 - Family: tigr
 - Role: experimental-atomic
 - Maturity: experimental
-- Version: 0.1.1.dev5
+- Version: 0.1.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add tigr
@@ -8096,7 +8096,7 @@ print(package_module.__name__)
 - Family: facade
 - Role: facade
 - Maturity: facade
-- Version: 0.9.1.dev5
+- Version: 0.9.1.dev6
 - Workspace backed: yes
 - Python support: >=3.10,<3.15
 - Install: uv add swarmauri
@@ -8182,7 +8182,7 @@ print(package_module.__name__)
 
 - Source path: pkgs/deprecated/swarmauri_experimental
 - Docs/source link: https://github.com/swarmauri/swarmauri-sdk/tree/master/pkgs/deprecated/swarmauri_experimental
-- Dependencies: swarmauri, gensim, neo4j, numpy, openai, pydantic, requests, tensorflow, torch, transformers, typing_extensions
+- Dependencies: swarmauri, gensim, neo4j, numpy, openai, pydantic, httpx, tensorflow, torch, transformers, typing_extensions
 - Description: This repository includes experimental components. (Inactive: experimental packages are now standalone.)
 
 ### swarmauri_vectorstore_tfidf
@@ -8440,10 +8440,10 @@ print(tool.model_dump_json())
 - URL: https://swarmauri.com/updates/swarmauri-sdk-granular-package-portfolio
 - Date: 2026-06-22
 - Category: Release Notes
-- Summary: Swarmauri 0.9.1.dev5 now presents the namespace package as the primary release signal, with 310 active workspace members and 337 indexed package records organized by layer, role, and maturity.
+- Summary: Swarmauri 0.9.1.dev6 now presents the namespace package as the primary release signal, with 310 active workspace members and 337 indexed package records organized by layer, role, and maturity.
 - Body: The Swarmauri package portfolio has been reorganized around a source-generated package index so developers can choose between the aggregate `swarmauri` facade and focused split packages without guessing where capabilities live.
 
-The current public release signal is the `swarmauri` namespace package at `0.9.1.dev5`. The repository-level workspace still has its own internal monorepo version, but the website header, update copy, and package portfolio should treat the namespace package as the user-facing SDK version.
+The current public release signal is the `swarmauri` namespace package at `0.9.1.dev6`. The repository-level workspace still has its own internal monorepo version, but the website header, update copy, and package portfolio should treat the namespace package as the user-facing SDK version.
 
 ## What changed
 

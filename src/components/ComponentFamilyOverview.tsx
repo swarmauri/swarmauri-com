@@ -1,7 +1,7 @@
 import React from "react";
 import { Boxes, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { FAMILIES, SDK_METADATA } from "../data/packageSummary";
+import { COMPONENT_FAMILIES } from "../data/packageSummary";
 import { CANONICAL_TAXONOMY_SUMMARY } from "../data/taxonomy";
 
 type ComponentFamilyOverviewProps = {
@@ -12,19 +12,47 @@ type ComponentFamilyOverviewProps = {
 
 function familyLabel(name: string) {
   const overrides: Record<string, string> = {
+    auth_idp: "AuthIDP",
+    certservice: "CertService",
+    cipher_suite: "CipherSuite",
+    dataconnector: "DataConnector",
+    documentstore: "DocumentStore",
+    evaluatorpool: "EvaluatorPool",
+    evaluator_result: "EvaluatorResult",
+    gitfilter: "GitFilter",
+    image_gen: "ImageGen",
+    inner_product: "InnerProduct",
+    keyprovider: "KeyProvider",
+    logger_formatter: "LoggerFormatter",
+    logger_handler: "LoggerHandler",
     llm: "LLM",
-    xmp: "XMP",
-    ocr: "OCR",
     mcp: "MCP",
+    mre_crypto: "MRECrypto",
+    ocr: "OCR",
+    pop: "POP",
+    prompt_template: "PromptTemplate",
+    rate_limit: "RateLimit",
+    schema_converter: "SchemaConverter",
+    service_registry: "ServiceRegistry",
+    standard_kernel: "StandardKernel",
+    "standard-kernel": "StandardKernel",
+    stt: "STT",
+    task_mgmt_strategy: "TaskMgmtStrategy",
+    tool_llm: "ToolLLM",
+    tracing: "Tracing",
+    tts: "TTS",
+    vectorstore: "VectorStore",
+    vlm: "VLM",
+    xmp: "XMP",
     jwt: "JWT",
   };
 
   return (
     overrides[name] ??
     name
-      .split("_")
+      .split(/[_-]+/)
       .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-      .join(" ")
+      .join("")
   );
 }
 
@@ -34,6 +62,10 @@ export default function ComponentFamilyOverview({
   description = CANONICAL_TAXONOMY_SUMMARY,
 }: ComponentFamilyOverviewProps) {
   const detailed = variant === "detailed";
+  const componentTotal = COMPONENT_FAMILIES.reduce(
+    (total, family) => total + family.count,
+    0,
+  );
 
   return (
     <section
@@ -45,7 +77,7 @@ export default function ComponentFamilyOverview({
           <div className="flex items-center gap-2 text-indigo-600">
             <Boxes className="w-5 h-5" />
             <span className="text-xs font-bold uppercase tracking-wider">
-              Generated from Package Index
+              Generated from SDK Components
             </span>
           </div>
           <h2 className="text-2xl font-bold tracking-tight text-zinc-900">
@@ -58,10 +90,10 @@ export default function ComponentFamilyOverview({
 
         <div className="flex flex-wrap gap-2 text-xs">
           <span className="px-2.5 py-1 rounded bg-zinc-100 text-zinc-700 border border-zinc-200 font-mono">
-            {FAMILIES.length} families
+            {COMPONENT_FAMILIES.length} families
           </span>
           <span className="px-2.5 py-1 rounded bg-zinc-100 text-zinc-700 border border-zinc-200 font-mono">
-            {SDK_METADATA.totalIndexedRecords} indexed records
+            {componentTotal} components
           </span>
         </div>
       </div>
@@ -73,12 +105,11 @@ export default function ComponentFamilyOverview({
             : "flex flex-wrap gap-2"
         }
       >
-        {FAMILIES.map((family) =>
+        {COMPONENT_FAMILIES.map((family) =>
           detailed ? (
-            <Link
+            <article
               key={family.name}
-              to={`/packages?family=${encodeURIComponent(family.name)}`}
-              className="group rounded-lg border border-zinc-200 bg-zinc-50/60 p-3.5 transition-colors hover:border-indigo-200 hover:bg-indigo-50/50"
+              className="rounded-lg border border-zinc-200 bg-zinc-50/60 p-3.5"
             >
               <div className="flex items-start justify-between gap-3">
                 <div className="space-y-1">
@@ -93,16 +124,15 @@ export default function ComponentFamilyOverview({
                   {family.count}
                 </span>
               </div>
-            </Link>
+            </article>
           ) : (
-            <Link
+            <span
               key={family.name}
-              to={`/packages?family=${encodeURIComponent(family.name)}`}
-              className="inline-flex items-center gap-1.5 rounded-md border border-zinc-200 bg-zinc-50 px-2.5 py-1.5 text-[11px] font-mono text-zinc-700 transition-colors hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-700"
+              className="inline-flex items-center gap-1.5 rounded-md border border-zinc-200 bg-zinc-50 px-2.5 py-1.5 text-[11px] font-mono text-zinc-700"
             >
               <span>{familyLabel(family.name)}</span>
               <span className="text-zinc-600">{family.count}</span>
-            </Link>
+            </span>
           ),
         )}
       </div>

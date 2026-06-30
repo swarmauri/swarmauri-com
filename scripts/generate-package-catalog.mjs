@@ -55,6 +55,54 @@ const FAMILY_DESCRIPTIONS = {
   xmp: "Extensible Metadata Platform encoders and metadata helpers.",
 };
 
+const COMPONENT_PACKAGE_LAYERS = new Set(["40-standards", "50-community", "60-plugins"]);
+
+const STANDARD_COMPONENT_FAMILY_ALIASES = {
+  agents: "agents",
+  chains: "chain",
+  chunkers: "chunker",
+  conversations: "conversation",
+  dataconnectors: "dataconnector",
+  distances: "distance",
+  documents: "document",
+  embeddings: "embedding",
+  evaluator_pools: "evaluatorpool",
+  evaluator_results: "evaluator_result",
+  image_gens: "image_gen",
+  inner_products: "inner_product",
+  key_providers: "keyprovider",
+  llms: "llm",
+  logger_formatters: "logger_formatter",
+  logger_handlers: "logger_handler",
+  loggers: "logger",
+  measurements: "measurement",
+  messages: "message",
+  metrics: "metric",
+  norms: "norm",
+  parsers: "parser",
+  pipelines: "pipeline",
+  prompt_templates: "prompt_template",
+  prompts: "prompt",
+  pseudometrics: "pseudometric",
+  rate_limits: "rate_limit",
+  schema_converters: "schema_converter",
+  seminorms: "seminorm",
+  service_registries: "service_registry",
+  similarities: "similarity",
+  stt: "stt",
+  swarms: "swarm",
+  task_mgmt_strategies: "task_mgmt_strategy",
+  tool_llms: "tool_llm",
+  toolkits: "toolkit",
+  tools: "tool",
+  tracing: "tracing",
+  transports: "transport",
+  tts: "tts",
+  vector_stores: "vectorstore",
+  vectors: "vector",
+  vlms: "vlm",
+};
+
 const MATURITY_DESCRIPTIONS = {
   foundation: "Foundational package used by the SDK architecture.",
   "standard-kernel": "Bundled first-party standard component kernel.",
@@ -314,6 +362,43 @@ function layerName(layerId) {
   return labels[layerId] || layerId;
 }
 
+function listPythonFiles(dirPath) {
+  if (!fs.existsSync(dirPath)) return [];
+  const entries = fs.readdirSync(dirPath, { withFileTypes: true });
+  return entries.flatMap((entry) => {
+    const entryPath = path.join(dirPath, entry.name);
+    if (entry.isDirectory()) {
+      if (entry.name === "__pycache__" || entry.name.startsWith(".")) return [];
+      return listPythonFiles(entryPath);
+    }
+    if (entry.isFile() && entry.name.endsWith(".py") && entry.name !== "__init__.py") {
+      return [entryPath];
+    }
+    return [];
+  });
+}
+
+function countPythonClasses(filePath) {
+  const text = fs.readFileSync(filePath, "utf8");
+  return [...text.matchAll(/^class\s+[A-Z][A-Za-z0-9_]*\b/gm)].length;
+}
+
+function standardComponentFamilyCounts() {
+  const standardRoot = path.join(sdkPkgsRoot, "swarmauri_standard", "swarmauri_standard");
+  const counts = new Map();
+  if (!fs.existsSync(standardRoot)) return counts;
+
+  for (const [dirName, family] of Object.entries(STANDARD_COMPONENT_FAMILY_ALIASES)) {
+    const dirPath = path.join(standardRoot, dirName);
+    const count = listPythonFiles(dirPath).reduce((total, filePath) => total + countPythonClasses(filePath), 0);
+    if (count > 0) {
+      counts.set(family, (counts.get(family) || 0) + count);
+    }
+  }
+
+  return counts;
+}
+
 function writeDataFile(data) {
   const summaryContent = `import { LayerInfo, FamilyInfo, MaturityInfo } from "../types";
 
@@ -324,6 +409,8 @@ export const SDK_METADATA = ${JSON.stringify(data.metadata, null, 2)};
 export const LAYERS: LayerInfo[] = ${JSON.stringify(data.layers, null, 2)};
 
 export const FAMILIES: FamilyInfo[] = ${JSON.stringify(data.families, null, 2)};
+
+export const COMPONENT_FAMILIES: FamilyInfo[] = ${JSON.stringify(data.componentFamilies, null, 2)};
 
 export const MATURITIES: MaturityInfo[] = ${JSON.stringify(data.maturities, null, 2)};
 `;
@@ -354,6 +441,7 @@ function main() {
 
   const layerCounts = new Map();
   const familyCounts = new Map();
+  const componentFamilyCounts = standardComponentFamilyCounts();
   const maturityCounts = new Map();
   const packages = [];
 
@@ -375,6 +463,9 @@ function main() {
 
     layerCounts.set(layer, (layerCounts.get(layer) || 0) + 1);
     familyCounts.set(family, (familyCounts.get(family) || 0) + 1);
+    if (COMPONENT_PACKAGE_LAYERS.has(layer) && maturity !== "experimental") {
+      componentFamilyCounts.set(family, (componentFamilyCounts.get(family) || 0) + 1);
+    }
     maturityCounts.set(maturity, (maturityCounts.get(maturity) || 0) + 1);
 
     packages.push({
@@ -417,6 +508,14 @@ function main() {
       description: FAMILY_DESCRIPTIONS[name] || `Swarmauri ${name} package family.`,
     }));
 
+  const componentFamilies = [...componentFamilyCounts.entries()]
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .map(([name, count]) => ({
+      name,
+      count,
+      description: FAMILY_DESCRIPTIONS[name] || `Swarmauri ${name.replace(/_/g, " ")} components.`,
+    }));
+
   const maturities = [...maturityCounts.entries()]
     .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
     .map(([name, count]) => ({
@@ -443,6 +542,7 @@ function main() {
     },
     layers,
     families,
+    componentFamilies,
     maturities,
     packages,
   });

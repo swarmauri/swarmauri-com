@@ -20,13 +20,13 @@ Swarmauri is Composable Intelligence infrastructure: a contract-first Python eco
 
 ## Current SDK Metadata
 
-- Swarmauri namespace package version: 0.9.1.dev5
+- Swarmauri namespace package version: 0.9.1.dev6
 - Monorepo version: 0.6.2.dev3
 - Python support: >=3.10,<3.15
 - Workspace members: 310
 - Indexed package records: 337
 - Source: swarmauri-sdk/pkgs/package-index.toml
-- Site metadata generated: 2026-06-30T13:43:03.708Z
+- Site metadata generated: 2026-06-30T17:57:21.695Z
 
 ## Layer Summary
 
