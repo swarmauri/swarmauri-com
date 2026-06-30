@@ -1,6 +1,7 @@
 import React from "react";
 import { Search } from "lucide-react";
 import { LayerInfo, FamilyInfo, MaturityInfo } from "../types";
+import { familyLabel } from "../utils/familyLabels";
 
 interface CatalogFiltersProps {
   searchQuery: string;
@@ -80,7 +81,7 @@ export default function CatalogFilters({
           <option value="all">All Families ({FAMILIES.length})</option>
           {FAMILIES.map((family) => (
             <option key={family.name} value={family.name}>
-              {family.name} ({family.count})
+              {familyLabel(family.name)} ({family.count})
             </option>
           ))}
         </select>

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, Github, Layers, Package, Cpu, BookOpen, FileText, Users } from "lucide-react";
 
+const SITE_LOGO_SRC = "/swarmauri-site-logo.svg?v=20260630-2";
+
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
@@ -33,7 +35,7 @@ export default function Header() {
           {/* Symbol-only brand mark */}
           <Link to="/" className="flex items-center cursor-pointer" id="logo-link" aria-label="Swarmauri home">
             <img
-              src="/swarmauri-site-logo.svg"
+              src={SITE_LOGO_SRC}
               alt=""
               className="h-10 w-10"
               id="logo-mark"

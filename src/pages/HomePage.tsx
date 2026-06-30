@@ -8,27 +8,7 @@ import {
 } from "../data/taxonomy";
 import SEO from "../components/SEO";
 import ComponentFamilyOverview from "../components/ComponentFamilyOverview";
-
-function familyLabel(name: string) {
-  const labels: Record<string, string> = {
-    auth_idp: "AuthIDP",
-    certservice: "CertService",
-    llm: "LLM",
-    cipher_suite: "CipherSuite",
-    dataconnector: "DataConnector",
-    image_gen: "ImageGen",
-    keyprovider: "KeyProvider",
-    vectorstore: "VectorStore",
-  };
-
-  return (
-    labels[name] ??
-    name
-      .split(/[_-]+/)
-      .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-      .join("")
-  );
-}
+import { familyLabel } from "../utils/familyLabels";
 
 export default function HomePage() {
   const [copiedText, setCopiedText] = useState("");

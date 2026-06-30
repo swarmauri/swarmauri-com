@@ -3,58 +3,13 @@ import { Boxes, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { COMPONENT_FAMILIES } from "../data/packageSummary";
 import { CANONICAL_TAXONOMY_SUMMARY } from "../data/taxonomy";
+import { familyLabel } from "../utils/familyLabels";
 
 type ComponentFamilyOverviewProps = {
   variant?: "compact" | "detailed";
   title?: string;
   description?: string;
 };
-
-function familyLabel(name: string) {
-  const overrides: Record<string, string> = {
-    auth_idp: "AuthIDP",
-    certservice: "CertService",
-    cipher_suite: "CipherSuite",
-    dataconnector: "DataConnector",
-    documentstore: "DocumentStore",
-    evaluatorpool: "EvaluatorPool",
-    evaluator_result: "EvaluatorResult",
-    gitfilter: "GitFilter",
-    image_gen: "ImageGen",
-    inner_product: "InnerProduct",
-    keyprovider: "KeyProvider",
-    logger_formatter: "LoggerFormatter",
-    logger_handler: "LoggerHandler",
-    llm: "LLM",
-    mcp: "MCP",
-    mre_crypto: "MRECrypto",
-    ocr: "OCR",
-    pop: "POP",
-    prompt_template: "PromptTemplate",
-    rate_limit: "RateLimit",
-    schema_converter: "SchemaConverter",
-    service_registry: "ServiceRegistry",
-    standard_kernel: "StandardKernel",
-    "standard-kernel": "StandardKernel",
-    stt: "STT",
-    task_mgmt_strategy: "TaskMgmtStrategy",
-    tool_llm: "ToolLLM",
-    tracing: "Tracing",
-    tts: "TTS",
-    vectorstore: "VectorStore",
-    vlm: "VLM",
-    xmp: "XMP",
-    jwt: "JWT",
-  };
-
-  return (
-    overrides[name] ??
-    name
-      .split(/[_-]+/)
-      .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-      .join("")
-  );
-}
 
 export default function ComponentFamilyOverview({
   variant = "compact",
