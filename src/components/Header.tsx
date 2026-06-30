@@ -33,7 +33,7 @@ export default function Header() {
           {/* Symbol-only brand mark */}
           <Link to="/" className="flex items-center cursor-pointer" id="logo-link" aria-label="Swarmauri home">
             <img
-              src="/swarmauri-mark-black.png"
+              src="/swarmauri-site-logo.svg"
               alt=""
               className="h-10 w-10"
               id="logo-mark"
