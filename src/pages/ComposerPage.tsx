@@ -19,23 +19,25 @@ export default function ComposerPage() {
 
   // Compile dependencies list based on configuration
   const composedMeta = useMemo(() => {
-    const pkgs = ["swarmauri"];
-    const imports = ["# 1. Base imports\nfrom swarmauri.standard import LocalModel"];
+    const pkgs = ["swarmauri", "swarmauri_standard"];
+    const imports = ["# 1. Activate Swarmauri namespace discovery\nimport swarmauri"];
     
     // Add model imports
     if (selectedModel === "OpenAIModel") {
       pkgs.push("swarmauri_llm_openai");
       imports.push(
-        "from swarmauri_llm_openai.models.OpenAIModel import (\n" +
+        "from swarmauri_llm_openai.OpenAIModel import (\n" +
           "    OpenAIModel,\n" +
           ")",
       );
     } else if (selectedModel === "GroqModel") {
       pkgs.push("swarmauri_llm_groq");
-      imports.push("from swarmauri_llm_groq.models.GroqModel import GroqModel");
-    } else if (selectedModel === "GeminiModel") {
+      imports.push("from swarmauri_llm_groq.GroqModel import GroqModel");
+    } else if (selectedModel === "GeminiProModel") {
       pkgs.push("swarmauri_llm_gemini");
-      imports.push("from swarmauri_llm_gemini.models.GeminiModel import GeminiModel");
+      imports.push(
+        "from swarmauri_llm_gemini.GeminiProModel import GeminiProModel",
+      );
     }
 
     // Add tool imports
@@ -45,35 +47,20 @@ export default function ComposerPage() {
           "    CalculatorTool,\n" +
           ")",
       );
-    } else if (selectedTool === "WebSearchTool") {
-      pkgs.push("swarmauri_tool_websearch");
+    } else if (selectedTool === "ImportMemoryModuleTool") {
       imports.push(
-        "from swarmauri_tool_websearch.tools.WebSearchTool import (\n" +
-          "    WebSearchTool,\n" +
+        "from swarmauri_standard.tools.ImportMemoryModuleTool import (\n" +
+          "    ImportMemoryModuleTool,\n" +
           ")",
       );
     }
-
-    // Add memory
-    imports.push(
-      "from swarmauri_standard.memories.MaxTokenMemory import (\n" +
-        "    MaxTokenMemory,\n" +
-        ")",
-    );
 
     // Add security
     if (selectedSecurity === "Ed25519") {
       pkgs.push("swarmauri_signing_ed25519");
       imports.push(
-        "from swarmauri_signing_ed25519.signing.Ed25519Signer import (\n" +
-          "    Ed25519Signer,\n" +
-          ")",
-      );
-    } else if (selectedSecurity === "AesGcm") {
-      pkgs.push("swarmauri_cipher_suite_aes");
-      imports.push(
-        "from swarmauri_cipher_suite_aes.ciphers.AesGcmCipher import (\n" +
-          "    AesGcmCipher,\n" +
+        "from swarmauri_signing_ed25519.Ed25519EnvelopeSigner import (\n" +
+          "    Ed25519EnvelopeSigner,\n" +
           ")",
       );
     }
@@ -96,34 +83,27 @@ export default function ComposerPage() {
       setupLines += `model = OpenAIModel(api_key="sk-openai-...")\n`;
     } else if (selectedModel === "GroqModel") {
       setupLines += `model = GroqModel(api_key="gsk-groq-...")\n`;
-    } else if (selectedModel === "GeminiModel") {
-      setupLines += `model = GeminiModel(api_key="AIzaSy...")\n`;
-    } else {
-      setupLines += `model = LocalModel(name="offline-first")\n`;
+    } else if (selectedModel === "GeminiProModel") {
+      setupLines += `model = GeminiProModel(api_key="AIzaSy...")\n`;
     }
 
     // Instantiate tool
     if (selectedTool === "CalculatorTool") {
       setupLines += `tool = CalculatorTool()\n`;
-    } else if (selectedTool === "WebSearchTool") {
-      setupLines += `tool = WebSearchTool(api_key="search-api-key")\n`;
+    } else if (selectedTool === "ImportMemoryModuleTool") {
+      setupLines += `tool = ImportMemoryModuleTool()\n`;
     }
 
-    // Instantiate memory
+    // Configure memory budget
     if (selectedMemory === "WindowMemory") {
-      setupLines += `memory = MaxTokenMemory(max_tokens=2048)\n`;
+      setupLines += `memory_budget_tokens = 2048\n`;
     } else {
-      setupLines += `memory = MaxTokenMemory(max_tokens=4096)\n`;
+      setupLines += `memory_budget_tokens = 4096\n`;
     }
 
     // Security block
     if (selectedSecurity === "Ed25519") {
-      setupLines += `signer = Ed25519Signer()\nprint("Secure signature active.")\n`;
-    } else if (selectedSecurity === "AesGcm") {
-      setupLines += `cipher = AesGcmCipher(
-    secret_key=b"32_byte_symmetric_secret_key..."
-)
-print("Symmetric state cipher initialized.")\n`;
+      setupLines += `signer_cls = Ed25519EnvelopeSigner\nprint("Ed25519 signer available.")\n`;
     }
 
     setupLines += `

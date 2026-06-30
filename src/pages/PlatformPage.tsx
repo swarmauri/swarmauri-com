@@ -95,7 +95,7 @@ export default function PlatformPage() {
             <h3 className="font-bold text-md text-zinc-900">Stable Namespace Resolution</h3>
           </div>
           <p className="text-xs text-zinc-600 leading-relaxed">
-            The aggregate <code className="text-[11px] bg-zinc-100 px-1 font-mono rounded">swarmauri</code> package orchestrates dynamic imports. This means developers use clean imports like <code className="text-[11px] bg-zinc-100 px-1 font-mono rounded">from swarmauri.standard import LocalModel</code> while the underlying loader automatically routes the request to split standard or community libraries securely behind the scenes.
+            The aggregate <code className="text-[11px] bg-zinc-100 px-1 font-mono rounded">swarmauri</code> package installs the public namespace importer and plugin discovery hooks. After <code className="text-[11px] bg-zinc-100 px-1 font-mono rounded">import swarmauri</code>, registered paths such as <code className="text-[11px] bg-zinc-100 px-1 font-mono rounded">from swarmauri.tools.CalculatorTool import CalculatorTool</code> resolve through the interface and citizenship registries to installed first-party, community, or plugin implementation packages.
           </p>
         </div>
 
@@ -138,7 +138,7 @@ export default function PlatformPage() {
             <ul className="space-y-2 text-xs text-zinc-600">
               <li className="flex items-start space-x-2">
                 <CheckCircle className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
-                <span>Simplest, cleanest imports across the standard library.</span>
+                <span>Stable public namespace paths for installed components.</span>
               </li>
               <li className="flex items-start space-x-2">
                 <CheckCircle className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
@@ -146,7 +146,7 @@ export default function PlatformPage() {
               </li>
               <li className="flex items-start space-x-2">
                 <CheckCircle className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
-                <span>Automatic discovery and loading of split-packages.</span>
+                <span>Entry-point discovery and registry-backed resolution for split packages.</span>
               </li>
             </ul>
           </div>

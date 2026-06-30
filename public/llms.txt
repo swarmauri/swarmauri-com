@@ -26,7 +26,7 @@ Swarmauri is Composable Intelligence infrastructure: a contract-first Python eco
 - Workspace members: 310
 - Indexed package records: 337
 - Source: swarmauri-sdk/pkgs/package-index.toml
-- Site metadata generated: 2026-06-30T18:40:41.812Z
+- Site metadata generated: 2026-06-30T18:46:49.969Z
 
 ## Layer Summary
 

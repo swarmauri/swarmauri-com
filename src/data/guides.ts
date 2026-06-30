@@ -5,22 +5,22 @@ export const GUIDE_TOPICS: GuideTopic[] = [
     id: "quickstart",
     title: "1. Unified Namespace Quickstart",
     description:
-      "Install the main namespace package when you want broad access to standard Swarmauri components.",
-    codeBlock: `from swarmauri.standard import LocalModel
-from swarmauri_standard.tools.CalculatorTool import (
+      "Install the main namespace package when you want stable public paths for installed Swarmauri components.",
+    codeBlock: `import swarmauri
+
+from swarmauri.tools.CalculatorTool import (
     CalculatorTool,
 )
 
-model = LocalModel(name="offline-first")
 tool = CalculatorTool()
 
-print(f"Loaded: {model.name} with tool: {tool.name}")`,
+print(f"Loaded tool through Swarmauri namespace: {tool.name}")`,
     explanation:
-      "The aggregate swarmauri package is a convenience facade. It is best for notebooks, tutorials, prototypes, and applications that benefit from clean imports across the standard library.",
+      "The aggregate swarmauri package installs the namespace importer, interface registry access, citizenship registry access, and plugin discovery hooks. Use it when you want stable public import paths over installed component packages.",
     faqs: [
       {
         question: "Why should I use the unified facade package?",
-        answer: "The aggregate `swarmauri` package is a convenience wrapper. It enables quick prototyping, interactive notebook sessions, and fast onboarding with clean imports across standard components."
+        answer: "The aggregate `swarmauri` package installs the public namespace importer and plugin discovery layer. It is useful when application code should import installed components through stable `swarmauri.<component_kind>.<ClassName>` paths."
       },
       {
         question: "Is it recommended to use the unified package in high-performance production microservices?",

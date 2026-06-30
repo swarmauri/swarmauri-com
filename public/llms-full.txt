@@ -1,6 +1,6 @@
 # Swarmauri Full LLM Index
 
-Generated: 2026-06-30T18:40:41.812Z
+Generated: 2026-06-30T18:46:49.969Z
 
 This file is the complete assistant-facing index for swarmauri.com. It is generated from the same source data as the nested XML sitemaps.
 
@@ -8214,19 +8214,19 @@ print(package_module.__name__)
 ### 1. Unified Namespace Quickstart
 
 - URL: https://swarmauri.com/guides/quickstart
-- Description: Install the main namespace package when you want broad access to standard Swarmauri components.
-- Explanation: The aggregate swarmauri package is a convenience facade. It is best for notebooks, tutorials, prototypes, and applications that benefit from clean imports across the standard library.
+- Description: Install the main namespace package when you want stable public paths for installed Swarmauri components.
+- Explanation: The aggregate swarmauri package installs the namespace importer, interface registry access, citizenship registry access, and plugin discovery hooks. Use it when you want stable public import paths over installed component packages.
 
 ```python
-from swarmauri.standard import LocalModel
-from swarmauri_standard.tools.CalculatorTool import (
+import swarmauri
+
+from swarmauri.tools.CalculatorTool import (
     CalculatorTool,
 )
 
-model = LocalModel(name="offline-first")
 tool = CalculatorTool()
 
-print(f"Loaded: {model.name} with tool: {tool.name}")
+print(f"Loaded tool through Swarmauri namespace: {tool.name}")
 ```
 
 ### 2. Minimal Contract Install

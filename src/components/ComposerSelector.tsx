@@ -40,8 +40,7 @@ export default function ComposerSelector({
           {[
             { id: "OpenAIModel", name: "OpenAI", desc: "GPT-4o, o1" },
             { id: "GroqModel", name: "Groq", desc: "Llama-3, Mixtral" },
-            { id: "GeminiModel", name: "Gemini", desc: "Gemini 1.5, 2.0" },
-            { id: "LocalModel", name: "Local/Offline", desc: "Custom weights" },
+            { id: "GeminiProModel", name: "Gemini", desc: "Gemini 1.5, 2.0" },
           ].map((item) => (
             <button
               key={item.id}
@@ -70,14 +69,14 @@ export default function ComposerSelector({
           className="w-full border border-zinc-300 rounded-md p-2.5 focus:outline-none focus:ring-1 focus:ring-zinc-900 text-xs bg-white"
         >
           <option value="CalculatorTool">CalculatorTool (Swarmauri Standard)</option>
-          <option value="WebSearchTool">WebSearchTool (Swarmauri Community API)</option>
+          <option value="ImportMemoryModuleTool">ImportMemoryModuleTool (Swarmauri Standard)</option>
         </select>
       </div>
 
       {/* Memory Option */}
       <div className="space-y-2">
         <label className="text-xs font-bold uppercase tracking-wider text-zinc-500 block">
-          Session Memory Management
+          Prompt Budget
         </label>
         <div className="flex gap-4">
           <label className="flex items-center space-x-2 text-xs text-zinc-600 cursor-pointer">
@@ -88,7 +87,7 @@ export default function ComposerSelector({
               onChange={() => setSelectedMemory("WindowMemory")}
               className="text-zinc-900 focus:ring-zinc-900"
             />
-            <span>MaxTokenMemory (2k)</span>
+            <span>Context budget (2k)</span>
           </label>
           <label className="flex items-center space-x-2 text-xs text-zinc-600 cursor-pointer">
             <input
@@ -98,7 +97,7 @@ export default function ComposerSelector({
               onChange={() => setSelectedMemory("FullMemory")}
               className="text-zinc-900 focus:ring-zinc-900"
             />
-            <span>MaxTokenMemory (4k)</span>
+            <span>Context budget (4k)</span>
           </label>
         </div>
       </div>
@@ -114,8 +113,7 @@ export default function ComposerSelector({
           className="w-full border border-zinc-300 rounded-md p-2.5 focus:outline-none focus:ring-1 focus:ring-zinc-900 text-xs bg-white"
         >
           <option value="None">None (Standard execution)</option>
-          <option value="Ed25519">Ed25519 Signatures (NIST Cryptography)</option>
-          <option value="AesGcm">AES-256-GCM Symmetrical Cipher</option>
+          <option value="Ed25519">Ed25519 Envelope Signer</option>
         </select>
       </div>
     </div>
