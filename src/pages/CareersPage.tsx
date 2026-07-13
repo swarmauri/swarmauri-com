@@ -34,20 +34,29 @@ export default function CareersPage() {
       description: role.description,
       datePosted: "2026-06-26",
       hiringOrganization: {
-        id: "https://swarmauri.com#organization",
+        "@type": "Organization",
+        "@id": "https://swarmauri.com#organization",
         name: "Swarmauri",
         url: "https://swarmauri.com"
       },
       validThrough: "2027-06-26",
       employmentType: "FULL_TIME",
       jobLocation: {
-        id: "https://swarmauri.com/careers#location",
-        addressCountry: "US"
+        "@type": "Place",
+        "@id": "https://swarmauri.com/careers#location",
+        address: {
+          "@type": "PostalAddress",
+          addressCountry: "US"
+        }
       },
       baseSalary: {
+        "@type": "MonetaryAmount",
         currency: "USD",
-        value: 140000,
-        unitText: "YEAR"
+        value: {
+          "@type": "QuantitativeValue",
+          value: 140000,
+          unitText: "YEAR"
+        }
       }
     });
   };
