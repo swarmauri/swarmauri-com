@@ -9,11 +9,15 @@ services:
     expose:
       - "80"
     networks:
-      dockerwp:
+      swarmauri-com-private: {}
+      portwyrm-edge:
         aliases:
           - swarmauri-com
 
 networks:
-  dockerwp:
-    name: dockerwp
+  swarmauri-com-private:
+    name: swarmauri-com-private
+    internal: true
+  portwyrm-edge:
+    name: portwyrm-edge
     external: true
